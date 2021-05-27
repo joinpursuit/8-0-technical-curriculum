@@ -17,6 +17,8 @@ By the end of this lesson you should be able to:
 
 ---
 
+## Guiding Questions
+
 - What is an algorithm? Define it in your own words.
 
 - Many algorithms require an input. What does the term "input" mean in this context?

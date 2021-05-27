@@ -30,7 +30,7 @@ While each of these algorithms can be written in code, they can also be simply d
 
 You likely follow all kinds of instructions in your daily life. For example, whenever you follow a recipe, you are following a list of instructions with an intended outcome. Take a look at the following recipe for chocolate chip cookies.
 
-```md
+```
 Preheat oven to 350 degrees Fahrenheit. Then, cream together the butter,
 white sugar, and brown sugar until smooth. Beat in the eggs one at a time,
 then stir in the vanilla. Dissolve baking soda in hot water. Add to batter
@@ -41,7 +41,7 @@ oven, or until the edges are nicely browned.
 
 The above description includes a number of steps to follow. In fact, these steps could be rewritten to look even more like a step-by-step process.
 
-```md
+```
 1. Preheat oven to 350 degrees Fahrenheit.
 2. Cream together the butter, white sugar, and brown sugar until smooth.
 3. Beat in the eggs to the butter and sugar mixture one at a time.
@@ -65,7 +65,7 @@ There's one component missing from the algorithm above: ingredients! Just like w
 
 While not required, almost every algorithm makes use of some kind of input. That input is used to help the algorithm accomplish its intended goal, or output. In the example above of baking cookies, the input for the recipe is the actual ingredients list.
 
-```md
+```
 - 1 cup butter, softened
 - 1 cup white sugar
 - 1 cup packed brown sugar
@@ -91,13 +91,13 @@ To write an algorithm in plain language, you should answer the following questio
 
 Once you've answered these questions, you should write a set of instructions that is as precise as possible. For example, if you were writing an algorithm for how to make a peanut butter and jelly sandwich, you might write a step that sounds like this:
 
-```md
+```
 Spread jelly and peanut butter on the bread.
 ```
 
 However, this step is unclear. Do you spread both the jelly and peanut butter on the same piece of bread? Does it matter which side you spread it on? A better step may read like this:
 
-```md
+```
 Spread jelly on one piece of bread, filling the surface area of the
 bread's crumb, as opposed to its crust. Spread the peanut butter on
 the other piece of bread, in a similar fashion.
@@ -113,7 +113,7 @@ The above reads more precise. Precise algorithms have a better chance of resulti
 
 Recall this step from earlier that was part of the algorithm for baking chocolate chip cookies.
 
-```md
+```
 9. Bake for about 10 minutes in the preheated oven, or until the edges are nicely browned.
 ```
 
