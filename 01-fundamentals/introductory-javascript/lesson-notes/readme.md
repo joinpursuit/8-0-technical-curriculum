@@ -83,6 +83,10 @@ By the end of this lesson you should be able to:
   const welcomePhrase = `Welcome, ${programmerName}!`;
   ```
 
+- You may have noticed that variables with more than one word are put together. For example, `welcomePhrase`. Can you have a variable with a space?
+
+- The common casing convention in JavaScript is camel case. What is a casing convention? What is camel case?
+
 - Standard arithmetic operators such as `+` and `-` can be used in JavaScript. For division, you can use `/`. For multiplication, you can use `*`. You can also use parenthesis to impose an order of operations. Keeping that in mind, mentally evaluate the following code.
 
   ```js
