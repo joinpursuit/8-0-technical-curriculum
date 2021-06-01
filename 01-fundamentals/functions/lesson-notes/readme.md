@@ -191,12 +191,24 @@ By the end of this lesson you should be able to:
 
   In your own words, describe how the above code is different than using `console.log()`. What are the implications of these differences?
 
-- When the function below is called, what will be printed to the console and why? What is the return value of the function?
+- When the function below is called, will anything be printed to the console? What is the return value of the function?
 
   ```js
   function availablePetNotice(name, kind, date) {
     return `${name} the ${kind} is up for adoption on ${date}!`;
     console.log("End of function.");
+  }
+  ```
+
+- When the function below is called, will anything be printed to the console? What are the possible return values of the function?
+
+  ```js
+  function availablePetNotice(name, kind, date) {
+    if (kind === "dog") {
+      return `This dog goes up for adoption on ${date}!`;
+    } else {
+      return `${name} the ${kind} is up for adoption on ${date}!`;
+    }
   }
   ```
 
