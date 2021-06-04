@@ -2,5 +2,5 @@
 
 There are multiple readings for this topic:
 
-- [Arrays](./arrays.md)
-- [Objects](./objects.md)
+- [Arrays](./reading/arrays.md)
+- [Objects](./reading/objects.md)
