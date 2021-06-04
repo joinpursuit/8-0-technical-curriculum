@@ -44,7 +44,7 @@ Arrays (like strings) like strings can be accessed with indexes and have a `leng
 
 Each element in an array has its own index number which represents the elements location in the array - these start at 0 and increase by 1 for every subsequent element. We can access each single element in an array by using square brackets in which we write that elements's index number.
 
-![array](./assets/array_elements.jpg)
+![array](../assets/array_elements.jpg)
 
 We can put any type of variables or data as elements of an array. We can even mix different types in a single array or put an array itself as one
 of the elements.

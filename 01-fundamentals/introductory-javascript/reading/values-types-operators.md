@@ -380,7 +380,7 @@ true
 
 We can write down all the possible combinations of operators in a table. We use `A` and `B` to represent two expressions that are either true or false. We write in each row a unique combination of the possible values of `A` and of `B`. Given those values, we write the result of providing `A` and `B` to the `&&` operator. This is called a **truth table**:
 
-![truth table](./images/truth-table.png)
+![truth table](../assets/truth-table.png)
 
 You don't have to memorize this, with practice you will be able to look at an expression and figure out the answer, so you won't even need it!
 
@@ -520,7 +520,7 @@ true
 false
 ```
 
-![bad truth table](./images/bad-table.png)
+![bad truth table](../assets/bad-table.png)
 
 This is insane to look at, but again, don't worry about memorizing it. Just be careful what assumptions you make about which values are equal!
 
