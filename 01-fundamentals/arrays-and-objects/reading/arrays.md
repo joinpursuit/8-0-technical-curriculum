@@ -181,6 +181,18 @@ let arr = str.split("o");
 // arr will be [ 'hell', ' w', 'rld' ]
 ```
 
+### Concat
+
+Concat is a method that joins two arrays.
+
+```js
+let a = [1, 2, 3];
+let b = [4, 5, 6];
+console.log(a.concat(b)); // [1, 2, 3, 4, 5, 6]
+console.log(a); // [1, 2, 3]
+console.log(b); // [4, 5, 6]
+```
+
 ### Slice
 
 Arrays have a [`slice`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice) method that works by taking a slice of the array. The method takes in two arguments. The first is the starting index (inclusive), the second argument is the ending index (exclusive).
@@ -222,18 +234,6 @@ arr.splice(1, 2, "fish");
 ```
 
 `splice` **returns** an array containing the elements that were removed. The modification happens on the array that the method was called from.
-
-### Concat
-
-Concat is a method that joins two arrays.
-
-```js
-let a = [1, 2, 3];
-let b = [4, 5, 6];
-console.log(a.concat(b)); // [1, 2, 3, 4, 5, 6]
-console.log(a); // [1, 2, 3]
-console.log(b); // [4, 5, 6]
-```
 
 # 4. Array Equality Test
 
