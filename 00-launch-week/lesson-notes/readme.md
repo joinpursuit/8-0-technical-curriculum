@@ -5,7 +5,7 @@
 Please complete the following before the lesson begins:
 
 - Open Chrome.
-- Open Slack and go to your course’s private channel.
+- Open Slack and go to the private channel for your class.
 - Login to your Pursuit email account.
 - Login to [Repl.it](https://replit.com/).
 - Login to Canvas and go to the Signing Up for Repl.it lesson.
@@ -29,7 +29,7 @@ By the end of this lesson you should be able to:
 
 - Click the “New repl” button on the left-hand side of the screen. Under language, select “JavaScript.” You should see a small yellow icon next to the word JavaScript.
 
-  Today you’ll be learning how to use Repl.it. Instead of the default nonsense name, what would be a good name for this Repl.it?
+  Today you’ll be learning how to use Repl.it. Instead of the default nonsense name, what would be a good name for this repl?
 
 - Click the “Create repl” button at which point you will be brought to a new page with three different sections. Copy and paste the code below into the middle section and then press the “Run” button at the top of the screen.
 
@@ -43,11 +43,11 @@ By the end of this lesson you should be able to:
 
 > For the next few questions, you will work with others in a breakout room.
 
-- Choose one person to host the Repl.it. That person should click the "Invite" button in the upper-right corner of the screen and copy the join link at the bottom of the window that pops up. Share this link in the Zoom chat. Everyone else should click that link.
+- Choose one person to host the repl. That person should click the "Invite" button in the upper-right corner of the screen and copy the join link at the bottom of the window that pops up. Share this link in the Zoom chat. Everyone else should click that link.
 
-  What happens when everyone has clicked that link?
+  What happens when someone clicks the link?
 
-- One person should comment out the code that currently exists in the Repl.it. (Remember that you can comment out code with `//`.) A different person should copy and paste the following code into the Repl.it. _If there are only two people in your group, you can remove the third `console.log()`._
+- One person should comment out the code that currently exists in the repl. (Remember that you can comment out code with `//`.) A different person should copy and paste the following code into the repl. _If there are only two people in your group, you can remove the third `console.log()`._
 
   ```js
   console.log(
@@ -81,7 +81,7 @@ By the end of this lesson you should be able to:
 
 - Copy and paste the code above into the Repl.it and then hit the Run button. Was your guess correct? If not, what did you miss?
 
-> Your instructor will bring you back to the classroom in just a bit. _Do not close_ the tab open to the Repl.it you were just working on.
+> Your instructor will bring you back to the classroom in just a bit. _Do not close_ the tab open to the repl you were just working on.
 >
 > In the meantime, get to know each other! You could ask each other the following questions while you wait:
 >
@@ -92,7 +92,7 @@ By the end of this lesson you should be able to:
 
 ---
 
-- In your group's Repl.it, click the name of the Repl.it in the top-left corner. Then, click the three dots menu (i.e. "..."). Finally, click the "Fork" option.
+- In your group's repl, if you did not create the repl you and your group worked on, click the name of the repl in the top-left corner. Then, click the three dots menu (i.e. "..."). Finally, click the "Fork" option.
 
   Did anything change on your page? What did this option do?
 
