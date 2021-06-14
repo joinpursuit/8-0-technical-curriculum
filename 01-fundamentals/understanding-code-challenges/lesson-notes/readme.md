@@ -65,7 +65,7 @@ By the end of this lesson you should be able to:
 
   ```js
   describe("describeNumberOfPlants()", () => {
-    it("should say there are no plants (plural) if the count is less than 1", () => {
+    test("should say there are no plants (plural) if the count is less than 1", () => {
       const plantName = "Jade Plant";
       const count = 0;
       const actual = describeNumberOfPlants(plantName, count);
@@ -106,7 +106,7 @@ function increasePlantCount() {}
 
 ```js
 describe("#increasePlantCount()", () => {
-  it("should increase the count and return a string describing what happened", () => {
+  test("should increase the count and return a string describing what happened", () => {
     const plantName = "Jade Plant";
     const currentCount = 2;
     const additionalPlants = 1;

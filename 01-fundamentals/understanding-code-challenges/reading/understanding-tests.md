@@ -106,7 +106,7 @@ The tests for the `greetings()` function will look very complicated at first. Do
 
 ```js
 describe("greetings()", () => {
-  it("should greet the person by name when the time of day is 'morning'", () => {
+  test("should greet the person by name when the time of day is 'morning'", () => {
     const timeOfDay = "morning";
     const guest = "Emily";
     const actual = greetings(timeOfDay, guest);
@@ -121,9 +121,9 @@ describe("greetings()", () => {
 Some of the code above will look very different, but some may actually look familiar. You can read the code above in the following way:
 
 - This test is "describing" the `greetings()` function.
-- "It" "should greet the person by name when the time of day is 'morning'".
+- The "test" declares that it "should greet the person by name when the time of day is 'morning'".
 - When the `greetings()` function is called with the values `"morning"` and `"Emily"`, the `expected` output is `"Good morning, Emily."`.
 
 Although the syntax may not be completely clear, the Jest tests can read nicely when you know what to look for. With all the information you've gathered, you likely have a better idea of how the `greetings()` function should work.
 
-There are additional test cases underneath this first one. Each test case begins with the `it()` function. Each function that is tested will start with a `describe()` function.
+There are additional test cases underneath this first one. Each test case begins with the `test()` function. Each function that is tested will start with a `describe()` function.
