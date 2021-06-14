@@ -9,7 +9,7 @@ JavaScript arrays are used to store multiple values in a single variable.
 
 ---
 
-# 1. Array Introduction
+# Array Introduction
 
 An array provides a convenient way to store a collection of **things / data**. Say we want to keep the numbers `2`, `3`, `5`, `7`, and `11` - all in one place.
 Instead of creating five separate variables we can create an array to store all these values.
