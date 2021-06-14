@@ -110,6 +110,22 @@ By the end of this lesson you should be able to:
   console.log(drink.colors.unshift("Yellow"));
   ```
 
+- Mentally evaluate the code below. What will be logged, if anything? Once you have your guess, you may check your answer by running the code.
+
+  ```js
+  const key = "name";
+  const drink = { name: "Gatorade", colors: ["Red", "Orange", "Blue"] };
+  console.log(drink[key][0]);
+  ```
+
+- Mentally evaluate the code below. What will be logged, if anything? Once you have your guess, you may check your answer by running the code.
+
+  ```js
+  const key = "colors";
+  const drink = { name: "Gatorade", colors: ["Red", "Orange", "Blue"] };
+  console.log(drink[key][0]);
+  ```
+
 ## Exercise
 
 Copy the code below into your repl. Then, access the values requested as described.

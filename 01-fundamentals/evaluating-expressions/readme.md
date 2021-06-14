@@ -11,6 +11,7 @@ By the end of this lesson you should be able to:
 - Describe what it means for an expression to return a value.
 - Identify the evaluated values of common methods.
 - Access deeply nested values within arrays and objects.
+- Use
 
 ---
 
@@ -105,7 +106,7 @@ function removeLastSoda(sodas) {
 }
 ```
 
-## Deeply nested values
+## Nested values
 
 While not unexpected, it can at times be difficult to understand how to access values deeply nested inside of an array or object. For example, take a look at the following data structure.
 
@@ -157,3 +158,59 @@ sodas[1] -> { name: "Sprite", rating: 4 }
 ```
 
 Accessing deeply nested values in this way is very common in programming. Understanding what data type is being returned can be hugely beneficial when common across problems like these. It's worth it to begin practicing accessing these values.
+
+## Interpolated keys
+
+With objects, it's possible to use a variable to access values in the same way you would a key.
+
+```js
+const sodas = [
+  {
+    name: "Dr. Pepper",
+    rating: 3,
+  },
+  {
+    name: "Sprite",
+    rating: 4,
+  },
+];
+const key = "name";
+console.log(sodas[0][key]); //> "Dr. Pepper"
+```
+
+In the code above, the following is happening:
+
+1. The `sodas` array is accessed at index `0`. This returns an object.
+1. The object is accessed at a particular key. The key is whatever is stored in the `key` variable.
+1. The return value is the string that is stored inside of the object at the `name` key.
+
+The code above can be confusing, so it may be better to write it like the example below.
+
+```js
+const drPepper = sodas[0];
+const name = drPepper[key];
+console.log(name);
+```
+
+### Interpolated keys and dot notation
+
+You may be tempted to use dot notation with variable names, but this will not work!
+
+```js
+const sodas = [
+  {
+    name: "Dr. Pepper",
+    rating: 3,
+  },
+  {
+    name: "Sprite",
+    rating: 4,
+  },
+];
+const key = "name";
+console.log(sodas[0].key); //> undefined
+```
+
+Why did the code above log `undefined`. JavaScript doesn't know that, in this situation, the intention is for `.key` to become `.name`. Instead, it looks for a literal key of `key` on the object that is returned from `sodas[0]`.
+
+In order for key interpolation to happen correctly, you will _need_ to use square brackets. This is because whatever is between the square brackets is an expression that is evaluated _before_ the accessing happens.
