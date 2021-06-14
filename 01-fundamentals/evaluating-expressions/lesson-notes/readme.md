@@ -28,28 +28,28 @@ By the end of this lesson you should be able to:
   let rating = (soda.rating = 4);
   ```
 
-- Mentally evaluate the code below. What will be logged? Once you have your guess, you may check your answer by running the code.
+- Mentally evaluate the code below. What will be logged, if anything? Once you have your guess, you may check your answer by running the code.
 
   ```js
   const soda = { name: "Sprite", rating: 4 };
   console.log(soda.rating--);
   ```
 
-- Mentally evaluate the code below. What will be logged? Once you have your guess, you may check your answer by running the code.
+- Mentally evaluate the code below. What will be logged, if anything? Once you have your guess, you may check your answer by running the code.
 
   ```js
   const soda = { name: "Sprite", rating: 4 };
   console.log((++soda.rating).toFixed());
   ```
 
-- Mentally evaluate the code below. What will be logged? Once you have your guess, you may check your answer by running the code.
+- Mentally evaluate the code below. What will be logged, if anything? Once you have your guess, you may check your answer by running the code.
 
   ```js
   const soda = { name: "Sprite", rating: 4 };
   console.log((++soda.rating).toFixed());
   ```
 
-- Mentally evaluate the code below. What will be logged? Once you have your guess, you may check your answer by running the code.
+- Mentally evaluate the code below. What will be logged, if anything? Once you have your guess, you may check your answer by running the code.
 
   ```js
   const sodas = [{ name: "Sprite", rating: 4 }];
@@ -57,7 +57,7 @@ By the end of this lesson you should be able to:
   console.log(sodas.push(pepsi));
   ```
 
-- Mentally evaluate the code below. What will be logged? Once you have your guess, you may check your answer by running the code.
+- Mentally evaluate the code below. What will be logged, if anything? Once you have your guess, you may check your answer by running the code.
 
   ```js
   const sodas = [{ name: "Sprite", rating: 4 }];
@@ -66,7 +66,7 @@ By the end of this lesson you should be able to:
   console.log(sodas.shift().name);
   ```
 
-- Mentally evaluate the code below. What will be logged? Once you have your guess, you may check your answer by running the code.
+- Mentally evaluate the code below. What will be logged, if anything? Once you have your guess, you may check your answer by running the code.
 
   ```js
   const sodas = [{ name: "Sprite", rating: 4 }];
@@ -75,35 +75,35 @@ By the end of this lesson you should be able to:
   console.log(sodas.pop().name[0]);
   ```
 
-- Mentally evaluate the code below. What will be logged? Once you have your guess, you may check your answer by running the code.
+- Mentally evaluate the code below. What will be logged, if anything? Once you have your guess, you may check your answer by running the code.
 
   ```js
   const drink = { name: "Gatorade", colors: ["Red", "Orange", "Blue"] };
   console.log(drink.colors);
   ```
 
-- Mentally evaluate the code below. What will be logged? Once you have your guess, you may check your answer by running the code.
+- Mentally evaluate the code below. What will be logged, if anything? Once you have your guess, you may check your answer by running the code.
 
   ```js
   const drink = { name: "Gatorade", colors: ["Red", "Orange", "Blue"] };
   console.log(drink.colors[1]);
   ```
 
-- Mentally evaluate the code below. What will be logged? Once you have your guess, you may check your answer by running the code.
+- Mentally evaluate the code below. What will be logged, if anything? Once you have your guess, you may check your answer by running the code.
 
   ```js
   const drink = { name: "Gatorade", colors: ["Red", "Orange", "Blue"] };
   console.log(drink.colors.length);
   ```
 
-- Mentally evaluate the code below. What will be logged? Once you have your guess, you may check your answer by running the code.
+- Mentally evaluate the code below. What will be logged, if anything? Once you have your guess, you may check your answer by running the code.
 
   ```js
   const drink = { name: "Gatorade", colors: ["Red", "Orange", "Blue"] };
   console.log(drink.colors[1].length);
   ```
 
-- Mentally evaluate the code below. What will be logged? Once you have your guess, you may check your answer by running the code.
+- Mentally evaluate the code below. What will be logged, if anything? Once you have your guess, you may check your answer by running the code.
 
   ```js
   const drink = { name: "Gatorade", colors: ["Red", "Orange", "Blue"] };
