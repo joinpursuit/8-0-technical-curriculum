@@ -11,7 +11,6 @@ By the end of this lesson you should be able to:
 - Describe what it means for an expression to return a value.
 - Identify the evaluated values of common methods.
 - Access deeply nested values within arrays and objects.
-- Use
 
 ---
 
