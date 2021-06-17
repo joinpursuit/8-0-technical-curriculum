@@ -153,6 +153,21 @@ By the end of this lesson you should be able to:
   printBedStats({ brand: "Casper", rating: 3.9 });
   ```
 
+- Take a look at the following code. Before running it, make a guess as to what you think it will do.
+
+  ```js
+  function printBedStats(bed) {
+    let result = [];
+    for (let key in bed) {
+      let value = bed[key];
+      result.push(value);
+    }
+    return result;
+  }
+
+  printBedStats({ brand: "Casper", rating: 3.9 });
+  ```
+
 ## Exercise
 
 Use the JSDoc comment below to write the `printHighestRatedMattresses()` function. You may use any of the loops you've learned so far.
@@ -163,10 +178,11 @@ Then, check in with an instructor.
 
 ```js
 /**
- * Prints the name of all mattress brands that have a rating equal to or greater than 4.0.
+ * Puts the name of all mattress brands that have a rating equal to or greater than 4.0 into an array.
  * @param {Object[]} mattresses - An array of mattress objects.
  * @param {string} mattresses[].brand - The name of the mattress brand.
  * @param {number} mattresses[].rating - The rating of the mattress, out of 5.
+ * @returns {string[]} An array of mattress brand names.
  */
 function printHighestRatedMattresses() {}
 
@@ -180,5 +196,5 @@ const mattresses = [
 ];
 
 const result = printHighestRatedMattresses(mattresses);
-console.log(result);
+console.log(result); //> [ "Avocado", "Tuft & Needle" ]
 ```
