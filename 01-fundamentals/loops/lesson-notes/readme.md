@@ -1,4 +1,4 @@
-# Introductory JavaScript
+# Loops
 
 ## Setup
 
