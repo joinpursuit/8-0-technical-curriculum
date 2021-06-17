@@ -44,20 +44,20 @@ Once you've completed the problem, check in with an instructor.
  * @param {string} direction - A string that should be either "left" or "right".
  * @returns {number[]} The original array, with all the numbers shifted to the left or to the right.
  */
-function rotateAndClean(array, direction) {}
+function rotateAndRemoveZeroes(array, direction) {}
 
-console.log(rotateAndClean([1, 2, 3], "right"));
+console.log(rotateAndRemoveZeroes([1, 2, 3], "right"));
 //> [ 3, 1, 2 ]
 
-console.log(rotateAndClean([1, 2, 3], "left"));
+console.log(rotateAndRemoveZeroes([1, 2, 3], "left"));
 //> [ 2, 3, 1 ]
 
-console.log(rotateAndClean([0, 1, 0], "left"));
+console.log(rotateAndRemoveZeroes([0, 1, 0], "left"));
 //> [ 1, 0 ]
 
-console.log(rotateAndClean([1, 0, 0], "right"));
+console.log(rotateAndRemoveZeroes([1, 0, 0], "right"));
 //> [ 1, 0 ]
 
-console.log(rotateAndClean([1, 2, 3], "sideways"));
+console.log(rotateAndRemoveZeroes([1, 2, 3], "sideways"));
 //> null
 ```
