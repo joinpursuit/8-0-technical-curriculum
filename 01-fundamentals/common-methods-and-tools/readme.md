@@ -9,7 +9,7 @@ Additionally, review the following documentation:
 - [.toLowerCase()][lowercase]
 - [.toUpperCase()][uppercase]
 - [.trim()][trim]
-- [Unary operator][unary]
+- [Number()][number]
 - [.toFixed()][fixed]
 - [String .includes()][string-includes]
 - [.replace()][replace] (ignore the part about regular expressions)
@@ -22,7 +22,7 @@ Additionally, review the following documentation:
 [lowercase]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 [uppercase]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 [trim]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim
-[unary]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus
+[number]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#function_syntax
 [fixed]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
 [string-includes]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/includes
 [replace]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/replace

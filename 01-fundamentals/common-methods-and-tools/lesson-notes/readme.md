@@ -37,20 +37,20 @@ If there are any lingering questions, write them down so that you can ask your i
 
 #### Groups
 
-| #   | Topics                                                                                             |
-| --- | -------------------------------------------------------------------------------------------------- |
-| 1   | [.toLowerCase()][lowercase], [.toUpperCase()][uppercase], [.trim()][trim]                          |
-| 2   | [Unary plus][unary], [.toFixed()][fixed], [Increment (++)][increment], [Decrement (--)][decrement] |
-| 3   | [.pop()][pop], [.shift()][shift], [.unshift()][unshift]                                            |
-| 4   | [String .includes()][string-includes], [.replace()][replace] (ignore RegExp)                       |
-| 5   | [Bracket notation with strings and .charAt()][character-at], [.join()][join]                       |
-| 6   | [.concat()][concat], [.split()][split]                                                             |
-| 7   | [Array .includes()][array-includes], [Array .indexOf()][array-index-of]                            |
+| #   | Topics                                                                                            |
+| --- | ------------------------------------------------------------------------------------------------- |
+| 1   | [.toLowerCase()][lowercase], [.toUpperCase()][uppercase], [.trim()][trim]                         |
+| 2   | [Number()][number], [.toFixed()][fixed], [Increment (++)][increment], [Decrement (--)][decrement] |
+| 3   | [.pop()][pop], [.shift()][shift], [.unshift()][unshift]                                           |
+| 4   | [String .includes()][string-includes], [.replace()][replace] (ignore RegExp)                      |
+| 5   | [Bracket notation with strings and .charAt()][character-at], [.join()][join]                      |
+| 6   | [.concat()][concat], [.split()][split]                                                            |
+| 7   | [Array .includes()][array-includes], [Array .indexOf()][array-index-of]                           |
 
 [lowercase]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toLowerCase
 [uppercase]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/toUpperCase
 [trim]: http://mozilla.orghttps://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/trim
-[unary]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Unary_plus
+[number]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number#function_syntax
 [fixed]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
 [pop]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop
 [shift]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift
