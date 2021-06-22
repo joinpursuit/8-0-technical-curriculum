@@ -35,6 +35,8 @@ By the end of this lesson you should be able to:
 
 - How do you create different paragraphs with Markdown? Include two different paragraphs in your Markdown file.
 
+- How do you write a comment in Markdown? Write a comment somewhere in your file. Note that it should not show up in the Preview!
+
 - How do you bold text in Markdown? Try bolding some text in your Markdown file.
 
 - How do you italicize text in Markdown? Try italicizing some text in your Markdown file.
