@@ -10,11 +10,11 @@ This repository includes reading related to the topics taught in the Pursuit 8.0
 
 The Pursuit program is split up into six distinct modules.
 
-| Module                                      |
-| ------------------------------------------- |
-| [Fundamentals](./01-fundamentals/readme.md) |
-| [Building Web Apps]()                       |
-| [React + Redux]()                           |
-| [Backend Development]()                     |
-| [Capstone]()                                |
-| [Computer Science]()                        |
+| Module              |
+| ------------------- |
+| Fundamentals        |
+| Building Web Apps   |
+| React + Redux       |
+| Backend Development |
+| Capstone            |
+| Computer Science    |
