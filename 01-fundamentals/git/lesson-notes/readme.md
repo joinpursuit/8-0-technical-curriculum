@@ -43,6 +43,8 @@ By the end of this lesson you should be able to:
 
   Then, from the command line, look at the files and folders inside of this directory. Has anything changed on the command line? Are there any files or folders in the directory?
 
+- What does `main` refer to in your git repository?
+
 - Run the following command to open up the folder with the Finder program.
 
   ```bash
