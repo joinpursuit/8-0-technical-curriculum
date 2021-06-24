@@ -157,7 +157,7 @@ By the end of this lesson you should be able to:
 
 - It's time to make your first commit! What is a commit?
 
-- To make a commit you'll use the following command. The `-m` is what is called a "flag", which adds some additional information to the command.
+- To make a commit you'll use the following command. The `-m` is a flag for the `git commit` command and represents the message that will be associated with this commit.
 
   Run the command below exactly.
 

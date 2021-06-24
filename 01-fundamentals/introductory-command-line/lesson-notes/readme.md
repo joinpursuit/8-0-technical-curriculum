@@ -16,6 +16,8 @@ By the end of this lesson you should be able to:
 - Define and build relative paths.
 - Use the `open` command from the command line.
 - Use the command line to navigate via absolute and relative paths.
+- List files and folders in your current directory with `ls`.
+- Define and use flags on the command line.
 - Create new directories with the `mkdir` command.
 - Create new files with the `touch` command.
 - Install and use the `code` command to open VSCode.
@@ -69,6 +71,28 @@ By the end of this lesson you should be able to:
 - `pwd`, `open`, and `ls` are all examples of commands. What is a command?
 
 - Commands are a bit like functions. For example, the `open` command you used earlier took an argument of `.`. How would you describe the argument that the `open` command takes?
+
+- In addition to arguments, commands can include flags. In the context of the command line, what is a flag?
+
+- How can you identify flags in a command?
+
+- Try running the following command in your terminal window.
+
+  ```bash
+  ls -a
+  ```
+
+  How does the `-a` flag change the `ls` command?
+
+- Try running the following command in your terminal window.
+
+  ```bash
+  ls -l
+  ```
+
+  How does the `-l` flag change the `ls` command?
+
+- How can you combine both the `-a` and `-l` flags together?
 
 - Try running the following command in your terminal window, which uses a relative path:
 
