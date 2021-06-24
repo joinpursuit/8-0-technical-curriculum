@@ -36,7 +36,7 @@ In the previous lesson we only used _expressions_ in our code. But on their own,
 "bat" + "man";
 ```
 
-Each of the expressions will be evaluated (become a value), and then get discarded. None of the expressions will have any permanent ffect on anything.
+Each of the expressions will be evaluated (become a value), and then get discarded. None of the expressions will have any permanent effect on anything.
 
 ## 2. console.log
 
@@ -44,7 +44,7 @@ The first kind of effect we need is to display text to the console. After all, w
 
 Thus far, we have been using the node REPL, where the value returned by an expression was logged for us. To write programs, however, we will be creating text files that contain JavaScript. Javascript filenames end in `.js`
 
-If we try to run a file with the code we looked at before, nothing will get logged. In order to log something in a JavaScript file, we need to use the `console.log` function. This will print (AKA **log**) whatever we type inside the parentheses to your terminal window (the **console**).
+If we try to run a file with the code we looked at before, nothing will get logged. In order to log something in a JavaScript file, we need to use the `console.log` function. This will print (AKA **log**) whatever we type inside the parentheses to the **console**.
 
 It is important to note that `console.log` prints information to the screen but _does not_ return / evaluate to anything itself. This gets at the difference between _returning_ and _logging_. When something returns something, it means that it evaluates to that and can be utilized by other code (for example, comparisons).
 
@@ -53,27 +53,15 @@ The return value of `console.log` is `undefined`. If you wanted to do `console.l
 ```js
 // running a file:
 console.log("bat" + "man");
-// => undefined, but it WILL print "batman" to the terminal
+// => `undefined`, but it WILL print "batman"
 
 console.log("bat" + "man") === "bat" + "man";
-// => false, because we're comparing undefined to "batman"
+// => false, because we're comparing `undefined` to "batman"
 ```
 
-1. Create a folder called `variables`
-<details>
-  <summary> Hint </summary>
-  <p>
-
-```
-mkdir variables
-```
-
-  </p> 
-</details>
-
-2. cd into the directory and then create a file called test.js.
-3. Copy the previous code into the file.
-4. Now run your file by entering `node test.js` in your terminal.
+1. Create a new repl.
+1. Copy the previous code into the file.
+1. Now run your file by pressing the run button.
 
 ## 3. Creating a variable
 

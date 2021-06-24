@@ -33,7 +33,7 @@ Along with `types`, we also have `operators`, which are things that we can use t
 
 ## Numbers
 
-Open up your javascript `repl` by typing `node` in your terminal. You can follow along and try out some things!
+Open up a new JavaScript repl. You can follow along and try out some things!
 
 To create a number, we just type the value of the number. Both positive and negative numbers work:
 
