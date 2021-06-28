@@ -72,9 +72,9 @@ By the end of this lesson you should be able to:
 
 - Commands are a bit like functions. For example, the `open` command you used earlier took an argument of `.`. How would you describe the argument that the `open` command takes?
 
-- In addition to arguments, commands can include flags. In the context of the command line, what is a flag?
+- In addition to arguments, commands can include flags or options. In the context of the command line, what is a flag or option?
 
-- How can you identify flags in a command?
+- How can you identify flags or options in a command?
 
 - Try running the following command in your terminal window.
 
