@@ -33,15 +33,15 @@ After consider these factors and others, Google engineers would then need to fig
 
 There are many ways to go about solving this problem, some better than others. As a software developer, when you encounter a problem you don't instantly know how to solve, it can be useful to have a structured technique for approaching the problem so that you stay on track.
 
-### Polya's problem solving technique
+## Polya's problem solving technique
 
-One structured technique for solving any kind of problem is [Polya's Problem Solving Technique](https://math.berkeley.edu/~gmelvin/polya.pdf). Developed in the 1940s, this simple to understand technique can be applied in all kinds of situations. Polya's technique has four discrete steps, each of which can be applied to challenges you encounter in both the real world and while writing code.
+One structured technique for solving any kind of problem is [Polya's Problem Solving Technique](https://math.berkeley.edu/~gmelvin/polya.pdf). Developed in the 1940s, this technique can be applied in all kinds of situations. Polya's technique has four discrete steps, each of which can be applied to challenges you encounter in both the real world and while writing code.
 
-## Understand the problem
+### Understand the problem
 
 The first step is to understand the question. This means making sure you understand what the question is asking as well as asking clarifying questions.
 
-### Key terms
+#### Key terms
 
 For example, take a look at the following coding prompt:
 
@@ -58,7 +58,7 @@ This question is dense with technical and mathematic terms. In order to understa
 
 Without understanding the terms above, you'll certainly find it difficult to develop a solution for this problem. This is why your first step in approaching a problem should be to make sure you understand all of the key terms present in the problem prompt.
 
-### Inputs and output
+#### Inputs and output
 
 Although applicable to all kinds of problems, it's particularly important with coding problems to understand the inputs and the output. Inputs refers to what information you will have in order to solve the problem. Output refers to what kind of result is needed.
 
@@ -70,7 +70,7 @@ How many slices of pizza can be bought for $25?
 
 In the question above, the input you have is the amount of money: $25. The output is the number of slices that can be bought.
 
-### Clarifying questions
+#### Clarifying questions
 
 Additionally, it's normal to question the boundaries of the problem, so you can better find a solution. These kind of clarifying questions are useful for understand what you should and should not focus on.
 
@@ -89,11 +89,11 @@ The question above is pretty specific, but when you dig into the problem, you ma
 
 These kind of questions allow you to figure out both base requirements and edge cases.
 
-## Devise a plan
+### Devise a plan
 
 Once you accurately understand the problem to the best of your ability, it's time to figure out how you are going to solve it. While a few problems have a single way of completing them, many complex problems allow for multiple approaches.
 
-### Seek multiple paths
+#### Seek multiple paths
 
 Consider the following problem:
 
@@ -108,13 +108,13 @@ After spending time understanding the problem, including inputs and outputs, it'
 
 Is there a "right" answer here? Not necessarily. If each one achieves the same goal, then in many ways it's up to you which path to choose. However, the second option above is a bit simpler. Coming up with multiple options can sometimes lead to you finding a more elegant solution.
 
-### Coding paths
+#### Coding paths
 
-Particularly when it comes to coding, there are a lot of ways to attain the same result. For example, `if/else` statements are sometimes interchangeable with `switch` statements. Whenever you use a native array method like `.map()` you could be using a `for` loop. Arrays and objects can often be used similarly, depending on the type of problem.
+Particularly when it comes to coding, there are a lot of ways to attain the same result. For example, `if/else` statements are sometimes interchangeable with `switch` statements. Whenever you use a method like `.push()` you could be using array indexing. Arrays and objects can often be used similarly, depending on the type of problem.
 
 With code, it's important to consider qualities like efficiency, readability, and flexibility. It's also important to consider which path seems most possible for you to do.
 
-## Solve it
+### Solve it
 
 Once you understand the problem and have a path to take in mind, it's time to actually solve the problem. At this point, coming up with a solution will still be difficult. However, with all the work you've done up to this point, it should be significantly easier than attempting do all of the previous steps at once.
 
@@ -134,11 +134,11 @@ The above plan essentially describes your implementation. To get started, you'll
 
 That's not to say it won't be tricky. You would need to remember how to write a function, return a value, and how to use the `.sort()` method. However, these are all concepts that can be looked up quickly. If you have a plan in place, writing the solution will be much easier.
 
-## Reflect back
+### Reflect back
 
 Once you've written your solution, it's important to reflect back on what you've just done. While there are many important reasons to look back, two of the most important are to check your solution for correctness and then check for potential improvements.
 
-### Check for correctness
+#### Check for correctness
 
 Depending on how you're solving your problem, checking for correctness may be very easy. If you're writing code, you could run your code to see if you get the desired result. You might also run tests against your code, to verify it works in a number of ways.
 
@@ -150,7 +150,7 @@ Write an application for a fellowship that will be accepted.
 
 If you are tackling the above problem, you can't really know if your application will be accepted until it is or is not. However, you can certainly do your best to check your work, make sure you've completed the application in full, and check for any mistakes you may have made.
 
-### Making improvements
+#### Making improvements
 
 There are almost always ways to improve your solution. Whether by making it more efficient or elegant, it's important to look back at difficult problems you face and consider how you could make it better next time.
 
