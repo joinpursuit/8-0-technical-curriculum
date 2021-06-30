@@ -4,7 +4,7 @@
 
 Please complete the following before the lesson begins:
 
-- Open and this [Markdown file](./warmup.md).
+- Open this [Markdown file](./warmup.md).
 - Complete the Warmup Questions & Tasks detailed at the top of the file.
 
 ## Learning Objectives
