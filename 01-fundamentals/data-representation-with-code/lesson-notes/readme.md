@@ -4,7 +4,7 @@
 
 Please complete the following before the lesson begins:
 
-- Open and then fork this [repl]().
+- Open and then fork this [repl](https://replit.com/@Pursuit/Warmup-Data-Representation-with-Code#index.js).
 - Complete the Warmup Questions & Tasks detailed at the top of the repl.
 
 ## Learning Objectives
