@@ -1,12 +1,5 @@
 # Evaluating Expressions
 
-## Setup
-
-Please complete the following before the lesson begins:
-
-- Open and then fork this [repl](https://replit.com/@Pursuit/Warmup-Evaluating-Expressions#index.js).
-- Complete the Warmup Questions & Tasks detailed at the top of the repl.
-
 ## Learning Objectives
 
 By the end of this lesson you should be able to:
@@ -125,57 +118,3 @@ By the end of this lesson you should be able to:
   const drink = { name: "Gatorade", colors: ["Red", "Orange", "Blue"] };
   console.log(drink[key][0]);
   ```
-
-## Exercise
-
-Copy the code below into your repl. Then, access the values requested as described.
-
-Once you're done, check in with an instructor.
-
-```js
-const drinks = [
-  {
-    brand: "Pepsi",
-    flavors: [
-      { name: "Pepsi", rating: 4 },
-      { name: "Diet Pepsi", rating: 5 },
-    ],
-  },
-  {
-    brand: "Coca-Cola",
-    flavors: [
-      { name: "Coca-Cola (Classic)", rating: 5 },
-      { name: "Diet Coke", rating: 3 },
-      { name: "Coca-Cola Zero Sugar", rating: 3 },
-    ],
-  },
-  {
-    brand: "Mountain Dew",
-    flavors: [
-      { name: "Major Melon", rating: 2 },
-      { name: "Code Red", rating: 4 },
-      { name: "Voltage", rating: 3 },
-    ],
-  },
-];
-
-// 1. Replace `null` below with code to access the value "Major Melon".
-const majorMelon = null;
-console.log(majorMelon);
-
-// 2. Replace `null` below with code to access all of the flavors of the Pepsi brand.
-const pepsiFlavors = null;
-console.log(pepsiFlavors);
-
-// 3. Replace `null` below with code that will remove "Voltage" from the list of Mountain Dew flavors.
-const voltage = null;
-console.log(voltage);
-
-// 4. Replace `null` below with code that will create the string "Diet Coke: 3". You will need to access the above array multiple times.
-const dietCokeWithRating = null;
-console.log(dietCokeWithRating);
-
-// 5. Replace `null` below with code that will return the average rating for all Mountain Dew flavors. You will need to access the above array multiple times.
-const mountainDewAverageRating = null;
-console.log(mountainDewAverageRating);
-```

@@ -1,13 +1,5 @@
 # Accumulator Pattern
 
-## Setup
-
-Please complete the following before the lesson begins:
-
-- Open the [warmup.js](./warmup.js) file.
-- Copy the contents of this file into a local `.js` file so that you can run it.
-- Complete the Warmup Questions & Tasks detailed at the top of the file.
-
 ## Learning Objectives
 
 By the end of this lesson you should be able to:

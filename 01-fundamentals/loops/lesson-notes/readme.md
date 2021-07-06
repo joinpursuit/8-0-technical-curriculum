@@ -1,12 +1,5 @@
 # Loops
 
-## Setup
-
-Please complete the following before the lesson begins:
-
-- Open and then fork this [repl](https://replit.com/@Pursuit/Warmup-Loops#index.js).
-- Complete the Warmup Questions & Tasks detailed at the top of the repl.
-
 ## Learning Objectives
 
 By the end of this lesson you should be able to:
@@ -167,34 +160,3 @@ By the end of this lesson you should be able to:
 
   printBedStats({ brand: "Casper", rating: 3.9 });
   ```
-
-## Exercise
-
-Use the JSDoc comment below to write the `printHighestRatedMattresses()` function. You may use any of the loops you've learned so far.
-
-Once you've completed the exercise, update your code to use a different loop.
-
-Then, check in with an instructor.
-
-```js
-/**
- * Puts the name of all mattress brands that have a rating equal to or greater than 4.0 into an array.
- * @param {Object[]} mattresses - An array of mattress objects.
- * @param {string} mattresses[].brand - The name of the mattress brand.
- * @param {number} mattresses[].rating - The rating of the mattress, out of 5.
- * @returns {string[]} An array of mattress brand names.
- */
-function printHighestRatedMattresses() {}
-
-const mattresses = [
-  { brand: "Casper", rating: 3.9 },
-  { brand: "Tempur-Pedic Cloud", rating: 3.7 },
-  { brand: "Avocado", rating: 4.2 },
-  { brand: "saatva", rating: 3.9 },
-  { brand: "Tuft & Needle", rating: 4.0 },
-  { brand: "Leesa Original", rating: 3.6 },
-];
-
-const result = printHighestRatedMattresses(mattresses);
-console.log(result); //> [ "Avocado", "Tuft & Needle" ]
-```

@@ -1,12 +1,5 @@
 # Arrays
 
-## Setup
-
-Please complete the following before the lesson begins:
-
-- Open and then fork this [repl](https://replit.com/@Pursuit/Warmup-Arrays#index.js).
-- Complete the Warmup Questions & Tasks detailed at the top of the repl.
-
 ## Learning Objectives
 
 By the end of this lesson you should be able to:
@@ -109,55 +102,3 @@ By the end of this lesson you should be able to:
 - Take a moment to reflect on the the different ways of using bracket notation to modify arrays. In what ways are they similar and in what ways are they different?
 
   For example, how is updating an array similar to adding a new element?
-
-## Exercise
-
-Copy the code below into your repl. Then, make changes to the array as indicated in the comments.
-
-Once you're done, check in with an instructor.
-
-```js
-const computerScientists = [
-  "Alan Turing",
-  "Ada Lovelace",
-  "Grace Hopper",
-  "Steve Wozniak",
-  "Barbara Liskov",
-  "Katherine Johnson",
-];
-
-/*
-  1. Access the first element in the array and log it to the console.
-*/
-
-/*
-  2. Add a new element to the `computerScientists` array with the value of "Melba Roy Mouton". Use the `.length` property to identify the index at which you will need to add the value.
-*/
-
-/*
-  3. Update "Katherine Johnson" to be "Katherine G. Johnson".
-*/
-
-/*
-  4. Insert the value of "Donald Knuth" at index 8.
-*/
-
-/*
-  5. Add your own name in the empty space created between "Melba Roy Mouton" and "Donald Knuth".
-*/
-
-/*
-  6. Log out the array. It should look similar to the array below:
-  [
-    "Alan Turing",
-    "Ada Lovelace",
-    "Grace Hopper",
-    "Steve Wozniak",
-    "Barbara Liskov",
-    "Katherine G. Johnson",
-    "Melba Roy Mouton",
-    "YOUR NAME",
-    "Donald Knuth",
-  ];
-*/
-```

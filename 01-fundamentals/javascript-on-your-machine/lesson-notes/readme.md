@@ -1,12 +1,5 @@
 # JavaScript on Your Machine
 
-## Setup
-
-Please complete the following before the lesson begins:
-
-- Open and then fork this [repl](https://replit.com/@Pursuit/Warmup-JavaScript-on-Your-Machine).
-- Complete the Warmup Questions & Tasks detailed at the top of the repl.
-
 ## Learning Objectives
 
 By the end of this lesson you should be able to:
@@ -86,35 +79,3 @@ By the end of this lesson you should be able to:
 - How can you exit the NodeJS REPL?
 
 - Is it possible to write a full function over multiple lines in the REPL? How?
-
-## Exercise
-
-Create a new `.js` file with the following code. Follow the JSDoc instructions to complete the `showAnimalCount()` function.
-
-Then, update the code so that instead of using `"Horse"`, it uses input from the command line.
-
-Once you're done, check in with an instructor.
-
-```js
-/**
- * Returns a string representation of the number of animals in the array.
- * @param {object[]} animals - An array of animal objects. See the structure of each object below.
- * @param {string} name - The name of the animal you wish to show.
- * @return {string} A string with a number of emojis equal to the number of animals. Each emoji should be separated by a space.
- */
-function showAnimalCount(animals, name) {}
-
-const animals = [
-  { count: 2, emoji: "🐖", name: "Pig" },
-  { count: 1, emoji: "🐈", name: "Cat" },
-  { count: 2, emoji: "🐎", name: "Horse" },
-  { count: 4, emoji: "🐄", name: "Cow" },
-  { count: 3, emoji: "🐐", name: "Goat" },
-];
-
-const pigs = showAnimalCount(animals, "Pig");
-console.log(pigs); //> "🐖 🐖"
-
-const cows = showAnimalCount(animals, "Cow");
-console.log(cows); //> "🐄 🐄 🐄 🐄"
-```

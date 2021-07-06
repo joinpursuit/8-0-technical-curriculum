@@ -1,12 +1,5 @@
 # Functions
 
-## Setup
-
-Please complete the following before the lesson begins:
-
-- Open and then fork this [repl](https://replit.com/@Pursuit/Warmup-Functions).
-- Complete the Warmup Questions & Tasks detailed at the top of the repl.
-
 ## Learning Objectives
 
 By the end of this lesson you should be able to:
@@ -219,62 +212,3 @@ By the end of this lesson you should be able to:
     return console.log(`${name} the ${kind} is up for adoption on ${date}!`);
   }
   ```
-
-## Exercise
-
-Copy the code below into your repl. Then, follow the instructions in the comments to write a number of functions. Don't forget to call your functions!
-
-```js
-/*
-  1. Write a function called `meow` that has no parameters. All it should do when called is log out the text "Meow!".
-
-  Ex.
-    meow(); //> "Meow"
-*/
-
-/*
-  2. Write a function called `petIntroduction` that has a single parameter, called `name`. When the function is called, it should log out the text "Hello, my name is NAME!" where `NAME` is the first argument passed in to the function call.
-
-  Ex.
-    petIntroduction("Queso"); //> "Hello, my name is Queso!"
-*/
-
-/*
-  3. Write a function called `petCosts` that takes two parameters. The first should be called `kind` and the second should be called `cost`. When called, the function should print the text "Adopting a KIND costs $COST." where `KIND` is replaced by the first argument and `COST` is replaced by the second argument.
-
-  Ex.
-    petCosts("cat", 150); //> "Adopting a cat costs $150."
-*/
-
-/*
-  4. Update the `petCosts` function so that instead of printing the text to the console, it returns the string.
-
-  Ex.
-    const result = petCosts("cat", 150);
-    console.log(result); //> "Adopting a cat costs $150."
-*/
-
-/*
-  5. Write a function called `petAdoptionDetails` that takes three parameters: `name`, `kind`, and `age`. When called, the function should return the string "NAME the KIND is AGE old." Replace `NAME`, `KIND`, and `AGE` with the appropriate parameters.
-
-  Ex.
-    const result = petAdoptionDetails("Queso", "cat", "7 months");
-    console.log(result); //> "Queso the cat is 7 months old."
-*/
-
-/*
-  6. Update the `petAdoptionDetails` function so that if any of the parameters are missing, the value returned is the string "Not enough information provided."
-
-  Ex.
-    const result = petAdoptionDetails("Queso");
-    console.log(result); //> "Not enough information provided."
-*/
-
-/*
-  7. Make two updates to the `petAdoptionDetails` function. First, add a fourth parameter called `cost`. Then, inside the function body of `petAdoptionDetails`, use the `petCosts` function you built earlier and add the result of that function call to the string you are building in `petAdoptionDetails`.
-
-  Ex.
-    const result = petAdoptionDetails("Queso", "cat", "7 months", 150);
-    console.log(result); //> "Queso the cat is 7 months old. Adopting a cat costs $150."
-*/
-```

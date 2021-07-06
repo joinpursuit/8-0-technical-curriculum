@@ -1,12 +1,5 @@
 # Understanding Code Challenges
 
-## Setup
-
-Please complete the following before the lesson begins:
-
-- Open and then fork this [repl](https://replit.com/@Pursuit/Warmup-Understanding-Code-Challenges).
-- Complete the Warmup Questions & Tasks detailed at the top of the repl.
-
 ## Learning Objectives
 
 By the end of this lesson you should be able to:
@@ -86,37 +79,3 @@ By the end of this lesson you should be able to:
 - Based on what you know about the function and the test, do you think this test case will pass?
 
 - What other test cases can you imagine should be included in the tests?
-
-## Exercise
-
-Take a look at the following JSDoc comment and test. Based on the comment and test, write the function you believe would make the test pass.
-
-Once you're done, check in with an instructor.
-
-```js
-/**
- * Increases the count of a plant and returns a description of the event.
- * @param {string} plantName - Name of the plant.
- * @param {number} currentCount - The current number of plants.
- * @param {number} additionalPlants - The added number of plants.
- * @returns {string} A description of the plant count.
- */
-function increasePlantCount() {}
-```
-
-```js
-describe("#increasePlantCount()", () => {
-  test("should increase the count and return a string describing what happened", () => {
-    const plantName = "Jade Plant";
-    const currentCount = 2;
-    const additionalPlants = 1;
-    const actual = increasePlantCount(
-      plantName,
-      currentCount,
-      additionalPlants
-    );
-    const expected = "Jade Plant count has increased from 2 to 3.";
-    expect(actual).toEqual(expected);
-  });
-});
-```

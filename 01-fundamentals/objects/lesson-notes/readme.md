@@ -1,12 +1,5 @@
 # Objects
 
-## Setup
-
-Please complete the following before the lesson begins:
-
-- Open and then fork this [repl](https://replit.com/@Pursuit/Warmup-Objects).
-- Complete the Warmup Questions & Tasks detailed at the top of the repl.
-
 ## Learning Objectives
 
 By the end of this lesson you should be able to:
@@ -119,59 +112,3 @@ By the end of this lesson you should be able to:
 - Now that you have seen both arrays and objects, take a moment to consider the similarities and differences between the two. Consider their syntax, how the information is stored, and how the information is organized.
 
   Based on the above, think of an analogy that helps you distinguish between arrays and objects.
-
-## Exercise
-
-Copy the code below into your repl. Then, make changes to the object as indicated in the comments.
-
-Once you're done, check in with an instructor.
-
-```js
-const language = {};
-
-/*
-  1. The object currently has no key-value pairs. Add a new key of `name` set to the value of "COBOL".
-*/
-
-/*
-  2. Add another key-value pair where the key is `createdAtYear` and the value is `1959`.
-*/
-
-/*
-  3. Add another key-value pair where the key is `acronym` and the value is `"COBOL"`.
-*/
-
-/*
-  4. Update the object so that the key of `name` now has the value of "common business-oriented language".
-*/
-
-/*
-  5. Add another key-value pair. For this one, the key will be `inventor` and the value will be equal to the following object:
-  { firstName: "Grace", lastName: "Hopper" }
-
-  Don't over think this; it will work just like the others!
-*/
-
-/*
-  6. Log out the entire `language` object. It should look something like this:
-  {
-    acronym: "COBOL",
-    createdAtYear: 1959,
-    name: "common business-oriented language",
-    inventor: {
-      firstName: "Grace",
-      lastName: "Hopper"
-    }
-  }
-*/
-
-/*
-  7. Access the value stored inside the `inventor` key and log it to the console.
-*/
-
-/*
-  8. Access the value stored inside of `firstName` key inside of the object stored under the `inventor` key.
-  
-  While you have not learned explicitly how to do this, give it your best attempt.
-*/
-```

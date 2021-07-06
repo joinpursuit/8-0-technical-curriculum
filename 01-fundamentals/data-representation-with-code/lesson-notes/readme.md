@@ -1,12 +1,5 @@
 # Arrays
 
-## Setup
-
-Please complete the following before the lesson begins:
-
-- Open and then fork this [repl](https://replit.com/@Pursuit/Warmup-Data-Representation-with-Code#index.js).
-- Complete the Warmup Questions & Tasks detailed at the top of the repl.
-
 ## Learning Objectives
 
 By the end of this lesson you should be able to:
@@ -37,11 +30,3 @@ By the end of this lesson you should be able to:
   | Books     | An application that helps you find a book club based on your interests. |
   | Fashion   | A store that sells clothing from independent designers.                 |
   | Education | An application that connects you with free classes in your city.        |
-
-## Exercise
-
-Read the brief below that describes a kind of object. Then, mockup three examples of that kind of object.
-
-Once your done, check in with your instructor.
-
-> Represent the concept of a **company** in code. Each company should have a name, headquarters full address, what year it was founded, the number of employees, its industry, whether or not it is a non-profit, and who its current CEO is. For the CEO, include the CEO's name.
