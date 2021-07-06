@@ -1,12 +1,5 @@
 # Markdown
 
-## Setup
-
-Please complete the following before the lesson begins:
-
-- Open this [Markdown file](./warmup.md).
-- Complete the Warmup Questions & Tasks detailed at the top of the file.
-
 ## Learning Objectives
 
 By the end of this lesson you should be able to:
@@ -70,27 +63,3 @@ By the end of this lesson you should be able to:
   ```
 
   Update your codeblock so that it uses JavaScript syntax highlighting.
-
-## Exercise
-
-All of the lesson notes you have been viewing have been written in Markdown!
-
-At the top of this page, you might see a link to a file called `readme.md`. Go ahead and click that link.
-
-![Image showing how to find the readme.md](../assets/readme.png)
-
-Next, locate where it says "Raw". If you can't find it, try clicking the three dots at the top of the file and then select "View raw".
-
-![Image showing how to find the Raw button](../assets/raw.png)
-
-Once you've done so, you should see what looks to be Markdown!
-
-Finally, answer the following questions before checking in with an instructor.
-
-1. What level of heading is the "Exercise" text? (e.g. H1, H2, H3...)
-
-1. How is the Warmup for this lesson linked in this file?
-
-1. Take a look at the codeblock that is formatted in the JavaScript syntax. Instead of writing `javascript` next to the three back ticks, what is there?
-
-1. Do the images in this file have alternate text? How do you know?

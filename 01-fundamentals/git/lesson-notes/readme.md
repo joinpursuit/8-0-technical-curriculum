@@ -1,12 +1,5 @@
 # Git
 
-## Setup
-
-Please complete the following before the lesson begins:
-
-- Open this [Markdown file](./warmup.md).
-- Complete the Warmup Questions & Tasks detailed at the top of the file.
-
 ## Learning Objectives
 
 By the end of this lesson you should be able to:
@@ -202,23 +195,3 @@ By the end of this lesson you should be able to:
 - This time, run `git commit` but use the `-m` flag with an appropriate message. Then, check your repository's history with `git log`.
 
   What commit message did you write? What do you think makes a good commit message?
-
-## Exercise
-
-Complete the tasks below. Once you're done, check in with an instructor.
-
-1. Create three new `.md` files:
-
-```
-red.md
-yellow.md
-blue.md
-```
-
-1. Stage each file.
-
-1. In each of the files, add the names of each colors as well as a few shades. For example, in the `red.md` file, you might add: "Maroon, Crimson, Scarlet".
-
-1. Stage all of the new changes to the files. You can add all changes at once with `git add -A`.
-
-1. Commit all the files. Include a sensible commit message.

@@ -1,12 +1,5 @@
 ## Introductory Command Line
 
-## Setup
-
-Please complete the following before the lesson begins:
-
-- Open and this [Markdown file](./warmup.md).
-- Complete the Warmup Questions & Tasks detailed at the top of the file.
-
 ## Learning Objectives
 
 By the end of this lesson you should be able to:
@@ -196,29 +189,3 @@ By the end of this lesson you should be able to:
 - Each of the files in `another-test-directory` has a different file extension. What is a file extension and what does each file extension represent on the files you've created?
 
 Once you're done, you can drag the `another-test-directory` folder to the trash.
-
-## Exercise
-
-Create the following folder structure using only the command line. The `pursuit/` directory should be created in your home directory. You can check your work using the Finder as well as use Finder to remove any mistakes.
-
-```
-pursuit/
-├── examples-and-notes/
-├── labs/
-├── projects/
-└── readme.md
-```
-
-Once you've created each folder, try doing the following:
-
-1. Navigate (i.e. `cd`) from your home directory to the `pursuit/` directory in one command.
-
-1. Navigate from your home directory to the `labs/` directory in one command.
-
-1. Navigate from the `examples-and-notes/` directory to your `Desktop/` in one command.
-
-1. From your home directory, use the `open` command to open up the `pursuit/` folder.
-
-1. From your home directory, use the `code` command to open up the `readme.md` file.
-
-Once you're done, check in with an instructor.

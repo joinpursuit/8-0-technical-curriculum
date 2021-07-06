@@ -1,12 +1,5 @@
 # Problem Solving Methodology
 
-## Setup
-
-Please complete the following before the lesson begins:
-
-- Open this [Markdown file](./warmup.md).
-- Complete the Warmup Questions & Tasks detailed at the top of the file.
-
 ## Learning Objectives
 
 By the end of this lesson you should be able to:
@@ -50,21 +43,3 @@ By the end of this lesson you should be able to:
 - Take a look at the following logic problem. Use Polya's Problem Solving Technique to help you solve this problem. Even if you think you know the answer, go through each step of the process.
 
   > A girl meets a snake and a deer in the forest. The snake lies every Monday, Tuesday and Wednesday and the other days he speaks the truth. The deer lies on Thursdays, Fridays and Saturdays, and the other days of the week she speaks the truth. “Yesterday I was lying,” the snake told the girl. “So was I,” said the a deer. What day is it?
-
-## Exercise
-
-Take a look at the following coding challenge. Use Polya's Problem Solving Technique to help you solve this problem. Even if you think you know the answer, go through each step of the process.
-
-> _Build-a-Boar_ is a new toy store where you can build your own stuffed animals. Write a function that helps you to calculate the cost based on the following information.
->
-> The starting cost for every stuffed animal is $10. The rest of the cost is dependent on the _size_, _base model_, and _number of accessories._
->
-> The stuffed animal can be Small, Medium, Large, or Extra Large. Small stuffed animals add $5 to the cost, Medium stuffed animals add $7, Large stuffed animals add $11, and Extra Large stuffed animals add $18.
->
-> The base model comes in three different kinds: Common, Uncommon, or Rare. Common base models _multiply the cost_ of the size by 1.5. Uncommon base models multiply the cost of the size by 2, and Rare base models multiply the cost by 3.
->
-> For each accessory, the total cost increases by $2. If 7 or more accessories are bought, the total cost of the stuffed animal decreases by $5.
->
-> For example, imagine you build an Uncommon Medium stuffed animal with 10 accessories. The cost starts at $10. Medium-sized stuffed animals cost $7, which is multiplied by 2 because the base model is Uncommon, for a total of $14. Added to the starting cost, the current total is $24. Each accessory is $2, which adds $20 to the total price, for a total of $44. However, more than 7 accessories were bought, so a discount of $5 is applied, leading to a final total of $39.
-
-Once you've solved the problem, check in with an instructor.

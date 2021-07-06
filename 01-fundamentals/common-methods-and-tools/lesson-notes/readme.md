@@ -1,12 +1,5 @@
 # Common Methods and Tools
 
-## Setup
-
-Please complete the following before the lesson begins:
-
-- Open and then fork this [repl](https://replit.com/@Pursuit/Warmup-Common-Methods-and-Tools#index.js).
-- Complete the Warmup Questions & Tasks detailed at the top of the repl.
-
 ## Learning Objectives
 
 - Manipulate strings with common methods and tools.
@@ -65,43 +58,3 @@ If there are any lingering questions, write them down so that you can ask your i
 [decrement]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Decrement
 [array-includes]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes
 [array-index-of]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
-
-## Exercise
-
-Copy the following code into your repl. Then, solve each problem as described.
-
-Once you're done, check in with an instructor.
-
-```js
-// 1. Convert the string "   Hammer   " to "hammer".
-let problem1 = "   Hammer   ";
-console.log(problem1);
-
-// 2. Convert the string " screw driver " to "SCREWDRIVER".
-let problem2 = " screw driver ";
-console.log(problem2);
-
-// 3. Convert the string "wRENCH" to "Wrench".
-let problem3 = "wRENCH";
-console.log(problem3);
-
-// 4. Use the `.push()` or `.unshift()` method to add three tools to the array.
-let problem4 = [];
-console.log(problem4);
-
-// 5. Use the `.pop()` or `.shift()` method to remove one tool from the array.
-let problem5 = ["hammer", "nail"];
-console.log(problem5);
-
-// 6. Combine the two arrays, `problem4` and `problem5`, below.
-let problem6 = null;
-console.log(problem6);
-
-// 7. Round the number below to two decimal places. (i.e. 14.99)
-let problem7 = 14.999999994;
-console.log(problem7);
-
-// 8. Convert the text below into a number. (i.e. 14.99)
-let problem8 = "$14.99";
-console.log(problem8);
-```

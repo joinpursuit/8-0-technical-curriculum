@@ -1,12 +1,5 @@
 # Scope
 
-## Setup
-
-Please complete the following before the lesson begins:
-
-- Open and then fork this [repl](https://replit.com/@Pursuit/Warmup-Scope#index.js).
-- Complete the Warmup Questions & Tasks detailed at the top of the repl.
-
 ## Learning Objectives
 
 - Define global scope.
@@ -75,14 +68,3 @@ Please complete the following before the lesson begins:
   ```
 
 - How is block scope different than local scope?
-
-## Exercise
-
-Write a function that validates a string that is supposed to be an email. The string should:
-
-- Include only one `@` symbol, which should not be the first character of the string.
-- Include a `.` symbol, which should not be the first or last character of the string.
-
-For each variable in your code, write a comment describing what scope it is in.
-
-Once you're done, check in with an instructor.

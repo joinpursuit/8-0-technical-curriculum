@@ -1,13 +1,5 @@
 # Built-in Methods
 
-## Setup
-
-Please complete the following before the lesson begins:
-
-- Open the [warmup.js](./warmup.js) file.
-- Copy the contents of this file into a local `.js` file so that you can run it.
-- Complete the Warmup Questions & Tasks detailed at the top of the file.
-
 ## Learning Objectives
 
 By the end of this lesson you should be able to:
@@ -61,26 +53,3 @@ By the end of this lesson you should be able to:
   > Given an object with a number of keys, choose a key at random and return the value of that key.
   >
   > e.g. `{ firstName: "Francisco", lastName: "Carrillo", age: 28 }`
-
-## Exercise
-
-Write the function as describe below. Once you're done, check in with an instructor.
-
-```js
-/**
- * Returns a single element from an array of unknown length. If the array is empty, returns `null`.
- * @param {*[]} array - An array of any number of elements.
- * @returns {*} Returns a single element from the array, randomly.
- */
-function pluck(array) {}
-
-// Examples
-const example1 = [10, 20, 30, 40, 50];
-console.log(pluck(example1)); //> 10, 20, 30, 40, or 50
-
-const example2 = ["Anton", "Lydia", "Erin"];
-console.log(pluck(example2)); //> "Anton", "Lydia", or "Erin"
-
-const example3 = [];
-console.log(pluck(example3)); //> null
-```

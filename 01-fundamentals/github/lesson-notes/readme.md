@@ -1,12 +1,5 @@
 # GitHub
 
-## Setup
-
-Please complete the following before the lesson begins:
-
-- Open this [Markdown file](./warmup.md).
-- Complete the Warmup Questions & Tasks detailed at the top of the file.
-
 ## Learning Objectives
 
 By the end of this lesson you should be able to:
@@ -120,11 +113,3 @@ By the end of this lesson you should be able to:
 - Before forking and cloning, what steps should you take to make sure the process works?
 
 - What is a pull request?
-
-## Exercise
-
-Fork and clone the repository below. Then, follow the instructions in the `readme.md` file.
-
-Once you're done, create a pull request against the original repository. Then, check in with an instructor.
-
-- [Forking with GitHub Exercise](https://github.com/joinpursuit/8-0-forking-with-github-exercise)

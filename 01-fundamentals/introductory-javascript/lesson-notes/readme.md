@@ -1,12 +1,5 @@
 # Introductory JavaScript
 
-## Setup
-
-Please complete the following before the lesson begins:
-
-- Open and then fork this [repl](https://replit.com/@Pursuit/Warmup-Introductory-JavaScript).
-- Complete the Warmup Questions & Tasks detailed at the top of the repl.
-
 ## Learning Objectives
 
 By the end of this lesson you should be able to:
@@ -163,38 +156,3 @@ By the end of this lesson you should be able to:
 - What are some of the differences between an `if/else` statement and a ternary expression?
 
 - More generally, how might you distinguish between statements and expressions?
-
-## Exercise
-
-For each of the problems below, first read through each lines of code. Make a guess as to what value will be printed to the console for each problem. Then, test your hypothesis by running the code.
-
-```js
-// 1.
-const problem1 = true && (false || true);
-console.log("Problem 1:", problem1);
-
-// 2.
-let multiplier2 = 3;
-multiplier2 -= 2;
-const problem2 = multiplier2 > 0 && multiplier2 < 3;
-console.log("Problem 2:", problem2);
-
-// 3.
-let name3 = "Ada";
-name3 += "Lovelace";
-const phrase3 = `I know of a programmer named ${name3}.`;
-console.log("Problem 3:", phrase3);
-
-// 4.
-if (null) {
-  console.log("Problem 4: Null is a truthy value.");
-} else if (0) {
-  console.log("Problem 4: 0 is a truthy value.");
-} else if ("") {
-  console.log("Problem 4: An empty string is a truthy value.");
-} else if (Infinity) {
-  console.log("Problem 4: Infinity is a truthy value.");
-} else {
-  console.log("Problem 4: None of the provided values are truthy.");
-}
-```

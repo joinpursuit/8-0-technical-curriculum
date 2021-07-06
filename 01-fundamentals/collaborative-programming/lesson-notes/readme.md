@@ -1,12 +1,5 @@
 # Collaborative Programming
 
-## Setup
-
-Please complete the following before the lesson begins:
-
-- Open and then fork this [repl](https://replit.com/@Pursuit/Warmup-Collaborative-Programming#index.js).
-- Complete the Warmup Questions & Tasks detailed at the top of the repl.
-
 ## Learning Objectives
 
 - Describe the two main roles in pair programming.
