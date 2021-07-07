@@ -121,15 +121,15 @@ console.log(game.developer.join(", "));
 //> Uncaught TypeError: Cannot read property 'join' of undefined
 ```
 
-This error message is incredibly helpful once you understand what it is saying. By `property 'join'`, the interpreter means the `join()` function. So why can't the `join()` method be "read" of `undefined`?
+This error message is incredibly helpful once you understand what it is saying. By `property 'join'`, the interpreter means the `join()` function. The error is saying that `undefined` does not have a `'join'` property. This means that there is no `.join()` method accessible via `undefined`. This is correct; `.join()` must be called on an array, not `undefined`.
 
-Notice there's a small misspelling: instead of `developers`, plural, what is being logged is `developer`, singular.
+So where is `undefined` showing up? Notice there's a small misspelling: instead of `developers`, plural, what is being logged is `developer`, singular.
 
 If you were to access `game.developer`, the value `undefined` will be returned because no key is present in the object with that name. Calling `.join()` on `undefined` will simply not work.
 
-```
-game.developer -> undefined
-undefined.join() -> TypeError
+```js
+console.log(game.developer); //> undefined
+undefined.join(); //> TypeError
 ```
 
 You can also see this error by calling a method on a data type that does not have it.
