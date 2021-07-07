@@ -25,7 +25,7 @@
 
 - What are some situations where you might see a `TypeError`?
 
-- Find and fix the error(s) in the following code.
+- Run the code below. Then, answer each question or complete each task below the code block.
 
   ```js
   function levelUpCharacter(characer) {
@@ -42,11 +42,17 @@
   console.log(barret);
   ```
 
-- The code below does not cause any kind of error however it doesn't work as intended. Identify the error and then describe _why_ no error is thrown.
+  - What type of error occurred? Why?
+
+  - Where does the error occur? How did you find it?
+
+  - Now that you know more about the error, fix the error(s) to get the code working.
+
+- Run the code below. Then, answer each question or complete each task below the code block.
 
   ```js
   function levelUpCharacter(character) {
-    if (character.levil >= 20) {
+    if (character.levil > 20) {
       character.level = 20;
     } else {
       character.level++;
@@ -56,7 +62,15 @@
 
   const barret = { name: "Barret", level: 21 };
   levelUpCharacter(barret);
-  console.log(barret);
+  console.log(barret); //> `barret.level` should be 20.
   ```
 
-- In cases where no explicit error is thrown, how do you think you would go about identifying that there's a problem? Solving that problem?
+  - Was an error thrown when the code was run?
+
+  - Did the function work as expected? Why or why not?
+
+  - What's the problem with the code above? _Why does it not throw an error?_
+
+  - How could you fix the code above so that it works as intended?
+
+- In cases where no explicit error is thrown, how do you think you would go about identifying that there's a problem?
