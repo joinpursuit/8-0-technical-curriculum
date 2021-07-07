@@ -70,7 +70,7 @@ We now have a boilerplate Git repo that we can store our files in and track thei
 
 We can check the status of our Git repo by typing `git status`. This will tell us which files, if any, have changed since we last updated our Git repo. Check out what happens when we type `git status`:
 
-![001](screenshots/001.png)
+![001](assets/001.png)
 
 We see here that the README.md file is “untracked”, which means git isn't paying attention to the contents of it. We can add it using the `git add` command:
 
@@ -86,7 +86,7 @@ $ git add .
 
 Here the `.` tells Git to add **all** untracked files from the current folder (even if, in this case, there’s only one) to the repo, thereby updating the status of each file in the repo. Now if we write `git status` again:
 
-![002](screenshots/002.png)
+![002](assets/002.png)
 
 As implied by the word _unstage_, the status of the file has been promoted from untracked to _staged_, which means the file is ready to be _committed_ to the repository. Untracked / unstaged and staged are two of the four states commonly used by Git.
 
@@ -132,7 +132,7 @@ Then type `git diff` to see the changes.
 
 Git shows the difference between the last commit and unstaged changes in the current project:
 
-![003](screenshots/003.png)
+![003](assets/003.png)
 
 > The + indicates a line was added, and shows the contents of the line.
 
@@ -156,7 +156,7 @@ In fact, simply adding the changes is sufficient; running `git add -a` would als
 
 We can confirm that the change went through by running `git log`:
 
-![004](screenshots/004.png)
+![004](assets/004.png)
 
 ### Adding a Markdown tag
 
@@ -168,11 +168,11 @@ Adding a `#` before the text `hello world` will cause it to appear as a header:
 
 As before, we’ll run git status and git diff to learn more about what we’re going to commit to Git. The status simply indicates that `README.md` has been modified:
 
-![005](screenshots/005.png)
+![005](assets/005.png)
 
 Meanwhile, the diff shows that one line has been deleted (indicated with -) and another added (indicated with +):
 
-![006](screenshots/006.png)
+![006](assets/006.png)
 
 At this point, we’re ready to add and commit our changes.
 
@@ -195,13 +195,13 @@ My name is Lev
 
 As usual, we can see the changes represented by our addition using `git diff`:
 
-![007](screenshots/007.png)
+![007](assets/007.png)
 
 ### Git log
 
 The `git log` command can show the entire commit history of our repo. For each commit, it will show its id, the author, the date, and the commit message. To limit the number of commits we can add the flag `-[number]`: this will show the provided number of commits, from newest to oldest.
 
-![011](screenshots/011.png)
+![011](assets/011.png)
 
 Github also shows us this in a different format on a nice webpage, but sometimes it's helpful just to quickly look in our terminal.
 
