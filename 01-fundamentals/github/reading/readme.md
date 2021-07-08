@@ -210,3 +210,13 @@ After you click the "Create pull request" button, you'll see an area what you ca
 ![Image of the creating a new pull request.](../assets/reading/create-pull-request.png)
 
 As a developer, this is where you might describe what changes you're suggesting. If you're using a pull request to submit an assignment for Pursuit, you can just press the "Create pull request" button.
+
+You can find your pull request by returning to the original repository and then clicking the Pull Requests tab. There you will see all of the pull requests for this repository.
+
+![Image of the pull requests page.](../assets/reading/pull-requests-page.png)
+
+You can click on the link to your specific pull request to get back to the page that shows you the details of your pull request.
+
+![Image of the specific pull request page with URL highlighted.](../assets/reading/pull-requests-show.png)
+
+The URL on this page is a direct URL to your pull request. Keep this in mind, as you will need to submit a link to your pull request URL on some assignments.
