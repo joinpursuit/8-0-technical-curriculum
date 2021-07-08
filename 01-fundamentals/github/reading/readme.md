@@ -97,7 +97,7 @@ After clicking the "Create repository" button, you will be brought to a new page
 
 Because you should have already created a repository, you'll be following the instructions under the heading "...or push an existing repository from the command line."
 
-### Push your code
+## Push your code
 
 There are three commands that are run to connect your local repository to your remote repository. Typically, you can copy and paste these commands directly into your terminal. However, it's important to generally understand what each command is doing.
 
@@ -175,9 +175,13 @@ You now have a local version of your remote repository. Your local repository:
 
 You can now work on your forked repository in the same way you would work on any local repository. Make changes, stage those changes, and make new commits. You can also push your changes from your local repository to the forked repository in the same way.
 
-### Creating a pull request
+## Pull requests
 
 Once you've added at least one new commit, you can create a pull request. Pull requests are a way to suggest changes to a repository without forcefully changing that repository. In a real development workflow, someone would be tasked with reviewing that pull request and determining whether or not your code should be accepted.
+
+At Pursuit, you will begin by using pull requests to submit your work. Your instructors can then add feedback to your pull requests, as if it were a code review.
+
+### Creating a pull request
 
 To create a pull request, click on the "Contribute" dropdown and then click the green "Open pull request" button.
 
@@ -217,6 +221,6 @@ You can find your pull request by returning to the original repository and then 
 
 You can click on the link to your specific pull request to get back to the page that shows you the details of your pull request.
 
-![Image of the specific pull request page with URL highlighted.](../assets/reading/pull-requests-show.png)
+![Image of the specific pull request page with URL highlighted.](../assets/reading/pull-request-show.png)
 
 The URL on this page is a direct URL to your pull request. Keep this in mind, as you will need to submit a link to your pull request URL on some assignments.

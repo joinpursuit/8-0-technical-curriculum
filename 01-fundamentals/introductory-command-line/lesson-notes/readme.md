@@ -29,7 +29,7 @@ By the end of this lesson you should be able to:
 
 - What is the difference between a directory and a file?
 
-- Can a file live in two different directories?
+- Can a file live in two different directories? Why or why not?
 
 - Open a new terminal window and then type the following command: `pwd`. Then, hit enter.
 
@@ -47,7 +47,7 @@ By the end of this lesson you should be able to:
 
 - What does it mean for a path to be absolute?
 
-- In the same terminal window, type `open .`.
+- In the same terminal window, type `open .` and then answer the following questions:
 
   What does the `open` command do?
 
@@ -55,7 +55,7 @@ By the end of this lesson you should be able to:
 
 - What is your "home directory?"
 
-- In the Finder program, you should now see a number of additional folders and possibly files.
+- In the Finder program, you should see a number of folders and potentially files in your home directory.
 
   In your terminal window, type `ls`.
 
@@ -95,6 +95,8 @@ By the end of this lesson you should be able to:
 
   How do you know the above path is a relative path?
 
+  > **Note:** If the above command does not work, it likely means you've somehow gotten out of your home directory. Close the terminal program and then reopen it. Then, try running the command above again.
+
 - What does it mean for a path to be relative?
 
 - Try running the following command in your terminal window, which uses a relative path:
@@ -104,6 +106,8 @@ By the end of this lesson you should be able to:
   ```
 
   What folder opened up in Finder? Why?
+
+  > **Note:** If the above command does not work, it likely means you've somehow gotten out of your home directory. Close the terminal program and then reopen it. Then, try running the command above again.
 
 - Is there a difference between running `open ./Desktop` and `open Desktop`?
 
@@ -138,11 +142,11 @@ By the end of this lesson you should be able to:
 
 - Do you think `~/Desktop` an absolute or relative path? Why?
 
-- In the terminal, use the `open` command to open up your home directory. Then, create a new file inside with the name `test-directory`.
+- In the terminal, use the `open` command to open up your home directory. Then, create a new folder inside with the name `test-directory`.
 
   In the terminal, what command can you use to see this new directory?
 
-- In the Finder, delete the `test-directory`. (Do not delete any other folders!)
+- In the Finder, delete the `test-directory`. _(Do not delete any other folders!)_
 
   In the terminal, run the following command and then look to your Finder window.
 
@@ -168,7 +172,7 @@ By the end of this lesson you should be able to:
   cd ..
   ```
 
-  What directory are you currently in? What does `..` represent?
+  What directory are you currently in after running the above command? What does `..` represent?
 
 - Open up VSCode. What is VSCode? Why do developers not use something like Word or TextEdit to write code?
 
