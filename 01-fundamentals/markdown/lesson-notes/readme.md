@@ -16,7 +16,7 @@ By the end of this lesson you should be able to:
 
 - What are some of the benefits to using Markdown as opposed to other text formats?
 
-- What file extension is used to denote a file uses Markdown?
+- What file extension is used to denote a file that uses Markdown?
 
 - Create a new Markdown file on your computer and open it with VSCode.
 

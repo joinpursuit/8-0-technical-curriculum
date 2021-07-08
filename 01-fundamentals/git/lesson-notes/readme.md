@@ -6,7 +6,7 @@ By the end of this lesson you should be able to:
 
 - Describe the purpose of the `git` program.
 - Initialize a `git` repository.
-- Remove the hidden `.git` folder from a directory from the Finder.
+- Remove the hidden `.git` folder from a directory with Finder.
 - View the current status of a repository with `git status`.
 - Stage files with `git add`.
 - Un-stage files with `git rm --cached` and `git restore --staged`.
@@ -35,6 +35,8 @@ By the end of this lesson you should be able to:
   ```
 
   Then, from the command line, look at the files and folders inside of this directory. Has anything changed on the command line? Are there any files or folders in the directory?
+
+- What is a git repository?
 
 - What does `main` refer to in your git repository?
 
@@ -67,7 +69,11 @@ By the end of this lesson you should be able to:
   code .
   ```
 
-  Then, re-initialize the git repository. After re-initializing the repository, does anything look different in VSCode?
+  Then, re-initialize the git repository from the command line with `git init`.
+
+  After re-initializing the repository, what looks different in VSCode?
+
+  > **Note:** If nothing looks different, try closing VSCode and reopening it.
 
 - You can view useful information about the current state of a repository with the `git status` command.
 
@@ -82,6 +88,8 @@ By the end of this lesson you should be able to:
   Then, check the status of your repository. What has changed?
 
 - What is the difference between a file being "unstaged" (or "untracked") and "staged"? Reference the readings and other sources to help determine your answer.
+
+- What does the `git add` command do?
 
 - After running `git status`, you should see something like the following.
 
@@ -130,7 +138,9 @@ By the end of this lesson you should be able to:
 
   What has changed? Why?
 
-- Re-add your name to the file. Make sure to save the file afterwards. Then, run the following command in your repository:
+- Re-add your name to the file. Make sure to save the file afterwards.
+
+  Then, run the following command in your repository:
 
   ```bash
   git diff
