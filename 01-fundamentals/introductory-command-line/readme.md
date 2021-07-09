@@ -135,15 +135,15 @@ The `ls` command lists the contents of the current directory.
 
 Output:
 
-![ls output](images/ls_ex1.png)
+![ls output](./assets/ls_ex1.png)
 
 We can also list the contents of any directory by just providing the path.
 
-![ls output](images/ls_ex2.png)
+![ls output](./assets/ls_ex2.png)
 
 And we can change how the output looks by providing a flag! The most useful one is probably `-l`, because it makes the output `long` which puts every result on its own line, making it easier to read when you have a lot of files.
 
-![ls output](images/ls_ex3.png)
+![ls output](./assets/ls_ex3.png)
 
 ## Navigation
 
