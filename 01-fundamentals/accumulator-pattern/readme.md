@@ -26,11 +26,13 @@ Some patterns have syntax built-in to the language. For example, you could consi
 Because this is a fundamental pattern that occurs in lots of programs, languages have specific syntax for dealing with it.
 
 ```js
-const flip = Math.floor(Math.random() * 2);
-if (flip === 1) {
-  console.log("Heads!");
+const rolls = [4, 2];
+if (rolls.length === 0) {
+  console.log("No dice have been rolled.");
+} else if (rolls.length === 1) {
+  console.log("1 die has been rolled.");
 } else {
-  console.log("Tails!");
+  console.log(`${rolls.length} dice have been rolled.`);
 }
 ```
 
@@ -42,7 +44,7 @@ Other patterns occur often but may not have specific syntax involved. For exampl
 
 ```js
 function rollDie(sides) {
-  if (typeof sides !== "number" || Number.isNaN(sides)) {
+  if (typeof sides !== "number") {
     return "Value inputted must be a number.";
   }
 
@@ -85,7 +87,7 @@ In this case, it makes sense to be looking for a number. This means your accumul
 > **Note:** In the code below, a function has been defined to wrap the accumulator pattern. This is not strictly necessary as you can use the accumulator pattern without a function.
 
 ```js
-function hasSix(rolls) {
+function calculateTotal(rolls) {
   let accumulator = 0;
 
   // More code will go here!
@@ -94,7 +96,7 @@ function hasSix(rolls) {
 }
 
 const rolls = [4, 5, 6, 1];
-console.log(hasSix(rolls));
+console.log(calculateTotal(rolls));
 ```
 
 In the code above, the accumulator has been set to be a numerical value of `0`. At the very end, that value is returned. This is the "wrapping" of our accumulator pattern.
@@ -104,7 +106,7 @@ In the code above, the accumulator has been set to be a numerical value of `0`. 
 Because you'll be aggregating a series of values, you will always include some kind of loop. Typically, you'll want to include a loop that goes over every element of the collection.
 
 ```js
-function hasSix(rolls) {
+function calculateTotal(rolls) {
   let accumulator = 0;
 
   for (let roll of rolls) {
@@ -115,7 +117,7 @@ function hasSix(rolls) {
 }
 
 const rolls = [4, 5, 6, 1];
-console.log(hasSix(rolls));
+console.log(calculateTotal(rolls));
 ```
 
 In the code above, a loop has been added to iterate over every element of the `rolls` array. Still, nothing is happening to the accumulator.
@@ -129,7 +131,7 @@ With the code written above, _it wouldn't matter._ The loop would not run but yo
 Now you are ready to perform the "accumulation." To accumulate, you will write code that modifies the accumulator in each iteration.
 
 ```js
-function hasSix(rolls) {
+function calculateTotal(rolls) {
   let accumulator = 0;
 
   for (let roll of rolls) {
@@ -140,7 +142,7 @@ function hasSix(rolls) {
 }
 
 const rolls = [4, 5, 6, 1];
-console.log(hasSix(rolls)); //> 16
+console.log(calculateTotal(rolls)); //> 16
 ```
 
 The pattern above you see is the accumulator pattern. You've likely already written code like this. What's important about the accumulator pattern is both the process as well as its versatility. This pattern can be applied to all kinds of situations.
@@ -253,16 +255,17 @@ function getUniqueRolls(rolls) {
     accumulator[roll] = true;
   }
 
-  return Object.keys(accumulator);
+  return accumulator;
 }
 
 const rolls = [4, 5, 6, 1, 5, 4, 4, 1];
-console.log(getUniqueRolls(rolls)); //> ; [ "1", "4", "5", "6" ]
+console.log(getUniqueRolls(rolls));
+//> { '1': true, '4': true, '5': true, '6': true }
 ```
 
-In the example above, an object is created with each key being the number and each value just being the value `true`. Because objects can't have multiple keys of the same name, there will be no duplicates. By using `Object.keys()`, you receive all of the unique values.
+In the example above, an object is created with each key being the number and each value just being the value `true`. Because objects can't have multiple keys of the same name, there will be no duplicates. This shows us which numbers appear in the array.
 
-Unfortunately, the function above will return all the values as strings. You could update the function with _another_ accumulator pattern to solve this.
+Unfortunately, if we wanted to use those numbers, it might be difficult to do so. You could update the function with _another_ accumulator pattern to transform these keys into an array.
 
 ```js
 function getUniqueRolls(rolls) {
@@ -272,12 +275,10 @@ function getUniqueRolls(rolls) {
     accumulator[roll] = true;
   }
 
-  const keys = Object.keys(accumulator);
-
   // Second accumulator pattern starts here!
   let result = [];
 
-  for (let key of keys) {
+  for (let key in accumulator) {
     result.push(Number(key));
   }
 
