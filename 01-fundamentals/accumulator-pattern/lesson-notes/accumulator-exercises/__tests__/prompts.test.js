@@ -63,11 +63,8 @@ describe("sumAllNumbers()", () => {
     expect(actual).toEqual(expected);
   });
 
-  test("should return a string that says 'argument must contain numbers only in the array'", () => {
-    const nums = [0, 3, 4, 5, 69, 29, 30, 21, 25, 49, NaN, 75, 74, 43, 23, 1];
-    const actual = sumAllNumbers(nums);
-    const expected = "argument must contain numbers only in the array";
-    expect(actual).toEqual(expected);
+  test("solution should account for NaN", () => {
+    expect(sumAllNumbers.toString().includes("isNaN(")).toEqual(true);
   });
 });
 
