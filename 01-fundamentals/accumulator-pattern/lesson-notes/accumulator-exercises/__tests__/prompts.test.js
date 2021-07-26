@@ -1,4 +1,4 @@
-const { sumAllNumbers, presentAllStates, hasSpace, isValid, kebabCase, find, filterAbbreviations } = require("../");
+const { sumAllNumbers, presentAllStates, hasSpace, isValid, kebabCase, find, filterAbbreviations } = require("../prompts.js");
 
 describe("sumAllNumbers()", () => {
   test("should return sum of all numbers", () => {
