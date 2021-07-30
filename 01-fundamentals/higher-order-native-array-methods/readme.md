@@ -1,4 +1,4 @@
-# Higher Order Array Methods
+# Higher Order Native Array Methods
 
 ## Learning Objectives
 
