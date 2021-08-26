@@ -85,7 +85,7 @@ To define a grid we use the grid value of the `display` property. Inside your CS
 
 When we open our new page it will look exactly the same as before. Declaring `display: grid;` gives you a one column grid, so your items will continue to display one below the other as they do in normal flow.
 
-To see something that looks more like a grid we can add some columns. Add the grid-template-columns property to your container:
+To see something that looks more like a grid we can add some columns. Add the `grid-template-columns` property to your container:
 
 ```css
 .container {
