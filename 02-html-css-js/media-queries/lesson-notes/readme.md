@@ -15,6 +15,8 @@ By the end of this lesson you should be able to:
 
 - What does "mobile-first" mean in regards to responsive design?
 
+- What `meta` element attribute is required for your page to be responsive?
+
 - What is a media query?
 
 - Write a media query that will apply a set of rules while the screen size is less than 500px.
