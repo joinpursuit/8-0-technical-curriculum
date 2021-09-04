@@ -6,7 +6,8 @@ By the end of this lesson you should be able to:
 
 - Describe the properties of the CSS box model
 - Define padding, margin, and borders for customizing an HTML element
-- Compare and contrast default display properties 
+- Compare and contrast default display properties
+- Determine appropriate positioning strategy for your layout
 
 ---
 
@@ -20,54 +21,76 @@ By the end of this lesson you should be able to:
 
 - What are the default displays for common elements `p`, `img`, `button` ?
 
-- Using technical language, describe how the following CSS would affect an HTML page. Feel free to look up the properties and values.
-
-  ```css
-  #jaws {
-    color: blue;
-  }
-  ```
+- What does `margin: auto` do in the example below?
 
 - Using technical language, describe how the following CSS would affect an HTML page. Feel free to look up the properties and values.
 
-  ```css
-  .important-quote {
-    border-bottom: 3px solid red;
-  }
-  ```
+```html
+<section>
+    <article>
+        <p>Very informative. So article<p>
+        <p><a>here</a> click<p>
+    </article>
+    <article>
+        <img src="./doge.png" alt=""Doge/>
+        <p>What ever happened to <span>Doge</span>?</p>
+    </article>
+</section>
+```
+
+```css
+section {
+    width: 80%;
+    margin: 16px auto;
+}
+```
+
+Adding some more CSS to the above example:
+
+```css
+article {
+    display: inline-block;
+    width: 50%;
+    padding: 10px;
+    margin: 4px;
+    border: 5px solid purple;
+}
+
+
+p > span {
+    color: peachpuff;
+}
+```
 
 - Using technical language, describe how the following CSS would affect an HTML page. Feel free to look up the properties and values.
 
-  ```css
-  h2.movie-title {
-    font-size: 30px;
-  }
-  ```
+    - Would the articles appear next to each other or would one be below the other?
 
-- The reading suggested relying on classes for styling as opposed to elements or IDs. Why so?
+    - What would the total width of one article be if the width of the `section` is 1000px?
 
-- Take a look at the following HTML. Then, answer each question below it.
+    - How could you constrain the width of the articles to be exactly 500px?
 
-  ```html
-  <body>
-    <div class="quotes">
-      <p class="active movie-quote rocky">"Yo, Adrian!" <span>- Rocky</span></p>
-      <p class="movie-quote titanic">
-        "I'm the king of the world!" <span>- Titanic</span>
-      </p>
-      <p class="movie-quote dracula">
-        "Listen to them. Children of the night. What music they make."
-        <span>- Dracula</span>
-      </p>
-    </div>
-  </body>
-  ```
+<hr>
 
-  - What CSS selector could you use to affect all paragraphs with a class of `movie-quote`?
-  - What CSS selector could you use to affect any `active` element?
-  - What CSS selector could you use to affect all `span` elements within an element with the `quotes` class?
-  - What CSS selector could you use to affect both the `titanic` and `dracula` classes?
+- By default the anchor tag inline, inline-block or block? Describe how it would look in the given example
+    - as inline?
+    - as block?
+    - as inline block?
 
-- What is a pseudo-class?
+- If you wanted to make the anchor tag appear as a big button, could you style it with CSS, or would you need to use a `button` tag. 
 
-- What selector would you use to style links when they are being hovered over?
+- Is it better practice to style the `a` tag or use a `button` tag, why?
+
+Review:
+
+- What is the advantage of using `p > span` over `p`?
+
+- What is the difference between `p > span`, `p span`, and `p, span`
+
+
+BONUS
+- Can margins be set to a negative property?
+
+- What about padding?
+
+Hint: try it!
