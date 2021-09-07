@@ -109,9 +109,9 @@ Math.ceil(76); //> 76
 The `Math.floor()` method gets the _floor_, or lowest value from a number with decimal values.
 
 ```js
-Math.ceil(76.1); //> 76
-Math.ceil(76.9); //> 76
-Math.ceil(76.9999999); //> 76
+Math.floor(76.1); //> 76
+Math.floor(76.9); //> 76
+Math.floor(76.9999999); //> 76
 ```
 
 It will not change a whole integer, however.
