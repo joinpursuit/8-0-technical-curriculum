@@ -96,7 +96,7 @@ To see something that looks more like a grid we can add some columns. Add the `g
 
 ![gridTwoColumns](./assets/gridTwoColumns.png)
 
-Using the `grid-template-columns` property, we specified that we needed exactly 2 columns, both with a width of 200 pixels.
+Using the `grid-template-columns` property, we specified that we needed exactly 2 columns, one with a width of 200 pixels and one with a width of 400 pixels.
 We can add additional columns by adding more values to the property.
 
 ```css
