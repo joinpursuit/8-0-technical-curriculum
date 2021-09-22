@@ -52,7 +52,7 @@ console.log(heading);
 
 ### querySelectorAll()
 
-To select multiple elements, you should use `document.querySelector()` which will select _all elements_ that match the given selector. This will return a [NodeList](https://developer.mozilla.org/en-US/docs/Web/API/NodeList), which is an array-like structure.
+To select multiple elements, you should use `document.querySelectorAll()` which will select _all elements_ that match the given selector. This will return a [NodeList](https://developer.mozilla.org/en-US/docs/Web/API/NodeList), which is an array-like structure.
 
 ```js
 const paragraphs = document.querySelectorAll("p");
