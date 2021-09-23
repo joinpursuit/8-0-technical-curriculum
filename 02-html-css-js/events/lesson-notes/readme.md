@@ -13,7 +13,7 @@ By the end of this lesson you should be able to:
 
 Begin by forking the following Repl.it.
 
-- [Repl.it: Dog Site](https://replit.com/@Pursuit/DOM-Manipulation-Dog-Site)
+- [Repl.it: Dog Site](https://replit.com/@Pursuit/Events-Dog-Site)
 
 ## Guiding questions
 
