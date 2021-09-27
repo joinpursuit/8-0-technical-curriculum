@@ -194,7 +194,3 @@ form.addEventListener("submit", (event) => {
 For a more full example of this, you may visit the repl below.
 
 - [Events with Forms: Submitting](https://replit.com/@Pursuit/Events-with-Forms-Submitting)
-
-```js
-const heading = genre ? `<h3>${title} (${genre})</h3>` : `<h3>${title}</h3>`;
-```
