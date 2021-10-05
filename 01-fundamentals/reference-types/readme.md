@@ -1,6 +1,6 @@
 # Reference Types
 
-Recall that earlier on you heard about primitive types. In particular, you learned about five different primitive types in JavaScript you would use often: undefined, null, string, number, and boolean. Notice that list excludes objects.
+Recall that earlier on you heard about primitive types. In particular, you learned about five different primitive types in JavaScript you would use often: `undefined`, `null`, `string`, `number`, and `boolean`. Notice that list excludes objects.
 
 In this lesson, you'll learn about reference types. Reference types are very different than primitive types in a few important ways. By the end of this lesson you'll be able to distinguish between the two types and learn about destructive and non-destructive methods.
 
@@ -82,7 +82,7 @@ However, the second case is trickier. When passing a reference type from one var
 
 This means that when setting `luciano.isHappy` to `false`, the object that is referenced by both `luciano` and `hollie` is changed.
 
-This same effect happens with arrays, since arrays are also primitive types.
+This same effect happens with arrays, since arrays are also reference types.
 
 ```js
 let lucianoHobbies = [];
