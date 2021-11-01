@@ -1,4 +1,4 @@
-# CRUD in React
+# React CRUD
 
 Until now, you've learned how to make use of React to conditionally render content using JavaScript. You've seen how React allows you to integrate external APIs into your page and how you can make React applications feel like complex websites through routing.
 
@@ -25,6 +25,16 @@ Recall why you're learning React and how it will interact with other parts of a 
 - Data stored in the database is requested by the server, which then serves that information up to your browser. For example, when you add a new song to a playlist through an application like Spotify, a request is sent to the server and then to the database which stores that song in your particular playlist.
 
 This concert of requests and promises allows for you to have a unique experience on a website. React allows for you to build a rich and complex frontend experience for your user. However, it also needs to play its part in facilitating this concert of requests.
+
+### The big picture
+
+Consider some of the external APIs you've used in the past. Thus far, you've sent them GET requests -- that is, you've requested data from their servers to display on your page.
+
+For example, consider the [Veterinarian API](https://github.com/joinpursuit/resource-veterinarian-api) you may have used in previous labs. This API allows you to retrieve data about staff and clients for a veterinarian hospital.
+
+However, imagine you want to build an application that doesn't just display information, but _modifies it._ How can you add new clients? Change the titles of existing staff?
+
+This lesson will be the first of many that will show you how to do the above. In doing so, you'll be able to build real complex applications that are highly interactive and responsive to users.
 
 ## Resources
 
