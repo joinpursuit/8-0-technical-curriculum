@@ -254,6 +254,57 @@ Then, update your `Show` component to include the following HTML. Leave the hard
 </section>
 ```
 
+Next, add the following CSS to a `Show.css` file. Connect it to your `Show` component.
+
+```css
+.shows-show-wrapper {
+  margin: 0 auto;
+  width: 70%;
+}
+
+.shows-show {
+  border: 1px solid var(--primary);
+  border-radius: 3px;
+  color: var(--gray);
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+.shows-show article {
+  padding: 10px 25px;
+}
+
+.shows-show aside {
+  background: var(--primary);
+  color: var(--light);
+}
+
+.shows-show aside p {
+  display: inline-block;
+  font-size: 14px;
+  margin: 10px 25px;
+  padding: 0;
+  width: auto;
+}
+
+.shows-show aside span {
+  font-weight: bold;
+}
+
+.shows-show aside button {
+  background: none;
+  border: none;
+  color: var(--light);
+  cursor: pointer;
+  margin: 10px 25px;
+  text-decoration: underline;
+}
+
+.shows-show aside button:hover {
+  text-decoration: none;
+}
+```
+
 Next, you'll need to think about how to get the specific television show to appear on the show page. Consider the information available to you at this moment:
 
 - The `ShowsIndex` component contains a `shows` property that contains all shows.
