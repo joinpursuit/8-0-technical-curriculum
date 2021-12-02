@@ -37,7 +37,8 @@ In small groups, complete the following:
   take group-merge-conflicts
   git init
   echo ".DS_Store" > .gitignore
-  git commit -am "Initial commit"
+  git add .
+  git commit -m "Initial commit"
   ```
 - Create a new repository on GitHub.
 - Connect the local repository with your remote repository.

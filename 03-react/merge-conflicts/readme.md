@@ -48,7 +48,8 @@ To best understand conflicts, it's helpful to see one directly. The steps below 
    take github-conflict-example
    git init
    echo ".DS_Store" > .gitignore
-   git commit -am "Initial commit"
+   git commit .
+   git commit -m "Initial commit"
    ```
 
 1. Next, you'll want to create a file that can cause a conflict. Create an `index.js` file and copy the following code inside of it.
