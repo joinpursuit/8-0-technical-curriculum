@@ -44,7 +44,7 @@ In small groups, complete the following:
 - Connect the local repository with your remote repository.
 - Invite your other team members to collaborate on the repository with you.
 
-1. All other members of the team should clone down the repository. This means that everyone should have the exact same repository and commits.
+2. All other members of the team should clone down the repository. This means that everyone should have the exact same repository and commits.
 
 1. The team lead should then add, commit, and push a new file called `index.js`. This can all be done on the `main` branch. Include the following code inside that file.
 
