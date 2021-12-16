@@ -27,7 +27,7 @@ By the end of this lesson you should be able to:
 
 - REPL is an acronym. What does REPL stand for?
 
-- Click the “New repl” button on the left-hand side of the screen. Under language, select “JavaScript.” You should see a small yellow icon next to the word JavaScript.
+- Under "Create", hit the "+" button to start a new repl. In the "Template" menu, search for and select Node.js. (Node.js is a *JavaScript Runtime Environment* -- more on this later).
 
   Today you’ll be learning how to use Repl.it. Instead of the default nonsense name, what would be a good name for this repl?
 
