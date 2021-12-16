@@ -19,7 +19,7 @@ Welcome to Pursuit! We can't wait to begin this journey with you. Before we dive
 - Node.js
 - postgreSQL
 - PSequel
-- Insomnia
+- Postman
 - Slack
 
 ## Installation Instructions!
@@ -205,13 +205,13 @@ Will allow us to try running different SQL calls on a database. Download it [her
 
 Unzip the zip file and drag the PSequel icon into your `Applications` folder.
 
-### Insomnia
+### Postman
 
-We will be using Insomnia to test making requests to our backend. Download it [here](https://insomnia.rest/download/#mac).
+We will be using Postman to test making requests to our backend. Download it [here](https://www.postman.com/downloads/).
 
-> Note: Download the `Core` version
+> Note: Download the version that corresponds to the type of CPU on your computer (there are different versions for Intel chips and Apple M1 chips)
 
-Double click the downloaded file. It will pop up a new window, then drag the Insomnia Icon to the Applications folder. Close the window when you're done.
+Double click the downloaded file. It will pop up a new window, then drag the Postman Icon to the Applications folder. Close the window when you're done.
 
 ### Slack
 
