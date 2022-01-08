@@ -213,6 +213,8 @@ Don't forget to format your code. You can slack yourself and edit your notes bef
 
 ### Samples to work with
 
+You can come up with your own, but if you need a place to start, here are some examples:
+
 - Numbers:
 
   - `10`
@@ -221,7 +223,7 @@ Don't forget to format your code. You can slack yourself and edit your notes bef
 
 - Strings:
 
-  - "Rose rose to admire her rose. "
+  - "Rose rose to admire her rosey rose. "
   - " I love lamp"
 
 - Arrays
