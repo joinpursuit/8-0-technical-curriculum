@@ -201,9 +201,15 @@ We'll give you time to work on looking up what the method does and how to use it
 
 Then you'll present your code to the rest of the class (through screen-sharing) and share your code example with the class by talking through it and then sharing your notes in slack.
 
+
+<hr />
 Example notes in Slack:
 
+Don't forget to format your code. You can slack yourself and edit your notes before copy and pasting them to the class
+
 ![](https://i.imgur.com/EFib4Mt.png)
+
+<hr />
 
 ### Samples to work with
 
