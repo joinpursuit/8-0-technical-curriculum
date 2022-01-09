@@ -247,7 +247,10 @@ const emergency = ["aspirin", "bandage", "deodorant", "lip balm"];
 
 ## Task
 
+You will have 15 minutes to research and prepare.
+
 Match your zoom room number to your task:
+
 
 1. `toLowerCase()`, `toUpperCase()`
 1. `trim()`
@@ -259,13 +262,15 @@ Match your zoom room number to your task:
 1. `typeof`
 1. `Number()`
 1. `toFixed()`
-1. `Increment ++`, `Decrement --` ,`+-`
+1. `Increment ++`, `Decrement --` ,`+=`, `-=`
 1. `join()`
 1. `includes()` (Array)
 1. `indexOf()`
 1. `pop()`, `shift()`
-1. `push()`, `shift()`
+1. `push()`, `unshift()`
 1. `reverse()`
 1. `slice()`
 1. `splice()`
-1. `concat()`
+1.  `Math.random()`
+1.  `Math.min()`, `Math.max()`
+3. `concat()`
