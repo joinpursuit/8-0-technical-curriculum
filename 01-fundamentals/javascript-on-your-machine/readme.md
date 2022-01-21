@@ -133,7 +133,7 @@ For example, imagine your `example.js` file contains the following code which ac
 function waveHello(name) {
   let result = "👋 Hello!";
   if (name) {
-    `👋 Hello, ${name}!`;
+    return `👋 Hello, ${name}!`;
   }
   return result;
 }
