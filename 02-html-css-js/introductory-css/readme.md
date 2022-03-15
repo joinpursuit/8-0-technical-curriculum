@@ -26,7 +26,7 @@ CSS works by applying rules to particular elements on the page. For example, you
 
 ### Cascading styles
 
-The "cascading" part of CSS refers to the fact that multiple rules can be applied to the same selections. For example, if you created a rule that every `h2` on your page should be the color `blue`, but later made _another_ rule that every `h2` should be `yellow`, whatever rule should up later in the file would be applied.
+The "cascading" part of CSS refers to the fact that multiple rules can be applied to the same selections. For example, if you created a rule that every `h2` on your page should be the color `blue`, but later made _another_ rule that every `h2` should be `yellow`, whatever rule showed up later in the file would be applied.
 
 This means the CSS can overwrite or add to other CSS, even in the same file. Below, you will see examples of how exactly this works.
 
