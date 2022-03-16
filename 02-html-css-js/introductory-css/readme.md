@@ -220,7 +220,7 @@ p {
 }
 ```
 
-In your HTML, you will then need to link this file. To do so, you will add a `link` element that has two attributes: `rel` and `src`. The `rel` attribute should be equal to "stylesheet" while the `src` attribute should be a path to your CSS file. The `link` element should be added to your HTML page's `head` element.
+In your HTML, you will then need to link this file. To do so, you will add a `link` element that has two attributes: `rel` and `href`. The `rel` attribute should be equal to "stylesheet" while the `href` attribute should be a path to your CSS file. The `link` element should be added to your HTML page's `head` element.
 
 ```html
 <head>
