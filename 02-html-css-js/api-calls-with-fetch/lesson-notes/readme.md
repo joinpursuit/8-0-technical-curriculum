@@ -41,7 +41,11 @@ You will also want to review the following API. Don't worry, you don't need to k
 
   Try typing that URL into your location bar. Do you receive any data back? Why or why not?
 
-- In your repl, use `fetch()` to make a request to that same URL. What shows up in the console? Why?
+- In your repl, use _just_ the `fetch()` function to make a request to that same URL. What shows up in the console? Why? Was the API call made?
+
+- In your repl, use the `fetch()` function _with `.then()` that converts the response to JSON._ What shows up in the console? Why? Was the API call made?
+
+- In your repl, use the `fetch()` function with `.then()` that converts the response to JSON _and a `.then()` to log out the response._ What shows up in the console? Why? Was the API call made?
 
 - You are now making requests to the PokeAPI! While this JSON API is pretty forgiving, in general you should be careful about making requests to APIs as many are rate-limited.
 
