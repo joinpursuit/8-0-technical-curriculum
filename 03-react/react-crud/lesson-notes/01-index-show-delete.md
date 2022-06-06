@@ -55,7 +55,7 @@ The goal will be to build out the page so that it looks like the image below.
 There are two components highlighted in the image above:
 
 1. This will be the `ShowsIndex` component.
-2. This will be a `ShowsListening` component.
+2. This will be a `ShowsListing` component.
 
 #### Handling an error
 
