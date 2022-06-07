@@ -201,7 +201,7 @@ There are a few different ways to set up this routing.
 
   There is not necessarily a right answer here. Describe the pros and cons of doing each.
 
-While there are multiple options here with different impacts, in this case use nested routing. This is what is suggested in the [React Router documentation](https://reactrouter.com/web/guides/quick-start/2nd-example-nested-routing).
+While there are multiple options here with different impacts, in this case use nested routing. This is what is suggested in the [React Router documentation](https://reactrouter.com/docs/en/v6/components/outlet), for a more in-depth explaination [React Router 6: Nested Routes by Robin Weiruch](https://www.robinwieruch.de/react-router-nested-routes/).
 
 1. Import `Switch` and `Route` into the `ShowsIndex` component.
 
