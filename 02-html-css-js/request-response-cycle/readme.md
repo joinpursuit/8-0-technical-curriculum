@@ -23,7 +23,7 @@ This, in a nutshell, is the request-response cycle. It is a pattern where one pr
 
 A client is any program that makes a request and receives a response.
 
-The browser your currently using, for example, is a client. Your browser is a special type of program that makes request to other websites on your behalf. What your browser receives can vary, but often one of the first pieces of data it receives is the contents of an HTML file.
+The browser you are currently using, for example, is a client. Your browser is a special type of program that makes request to other websites on your behalf. What your browser receives can vary, but often one of the first pieces of data it receives is the contents of an HTML file.
 
 ```html
 <!DOCTYPE html>
@@ -58,7 +58,7 @@ Each website has one or more servers that respond to each request made from a cl
 > **Note:** You are not expected to understand the code below. It's just to give you an idea of how much code is needed to start a server.
 
 ```js
-const express = require("express");
+const express = require('express');
 const app = express();
 const port = 3000;
 
