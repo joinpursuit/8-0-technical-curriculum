@@ -1,0 +1,13 @@
+{
+  "name": "8-0-accumulator-exercises",
+  "version": "1.0.0",
+  "description": "",
+  "main": "prompts.js",
+  "scripts": {
+    "test": "jest --runInBand",
+    "watch": "jest --watch-all"
+  },
+  "devDependencies": {
+    "jest": "^27.0.6"
+  }
+}
