@@ -45,7 +45,7 @@ You will work inside the `src` folder.
 
 You can also go into the `public` and change information in the `head` of the `index.html` file. For example, you can change the name of the app from `React App` to whatever you want.
 
-<details>
+</details>
 
 To start your app:
 
