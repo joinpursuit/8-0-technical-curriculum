@@ -32,7 +32,7 @@ React extends the function of properties (props) to allow values to be passed do
 
 In `App.js`, there is a variable called `dayCareName`.
 
-You can pass the name to the `Header component:
+You can pass the name to the `Header` component:
 
 You can name the key whatever you want, like `asdf`. But it's a good idea to pick an accurate and descriptive name for the key. The following code will add the key-value pair to an object called `props`.
 
@@ -112,8 +112,9 @@ How can we get a list of each dog's name as a list item?
 We can think of looping over the data and then adding `li` elements around each dog name:
 
 ```js
+const dogListItems = [];
 for (let i = 0; i < dogs.length; dog++) {
-  console.log(`<li>${dogs[i].name}<li>`);
+  dogListItems.push(`<li>${dogs[i].name}<li>`);
 }
 ```
 
