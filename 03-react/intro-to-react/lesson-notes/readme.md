@@ -68,9 +68,11 @@ Try to:
 
 ## Creating Components
 
-This app is very small. Production level apps are massive. One of the benefits of React is that it allows you to create small components. Each component is typically stored in its own file.
+This app is very small. Production level apps are massive. One of the benefits of React is that it allows you to create small custom components. Each component is typically stored in its own file.
 
 Inside of the **src** folder, add a new file called `Header.js`.
+
+Then, add a function called `Header`:
 
 ```js
 // Header.js
