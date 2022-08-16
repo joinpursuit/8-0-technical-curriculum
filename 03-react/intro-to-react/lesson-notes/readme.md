@@ -47,6 +47,12 @@ You can also go into the `public` and change information in the `head` of the `i
 
 <details>
 
+To start your app:
+
+```
+npm start
+```
+
 Go to the **src/App.js** file.
 
 What does each line of code do?

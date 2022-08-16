@@ -93,7 +93,7 @@ npm start
 
 It will host a website on `localhost:3000` that looks like this:
 
-![createReactAppInitial](./assets/createReactAppInitial.png)
+![createReactAppInitial](./assets/create-react-app-initial.png)
 
 Let's dig into the project and get a better understanding of how it works.
 
