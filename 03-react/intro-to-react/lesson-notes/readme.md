@@ -25,10 +25,10 @@ To use Create-React-App to create a new app:
 - In the terminal, navigate to a convenient location on your computer and type:
 
 - `npx create-react-app@5.0 my-app`
-- **npx** allows you to download what you need to create a new create-react-app one time and then delete the unnecessary set-up files.
-- **create-react-app** allows you to start a new Create React App project
-- **@5.0** allows you to download version 5.0 of Create React App. Setting the version is helpful for class. Utilizing the same version will allow you, your instructors, and the class notes to have the same version to learn and study. If you don't include this, it will download the latest version, which may have some variations to what you see in class.
-- **my-app** this is the name of your project and the file that will contain your Create React App. You can name it anything you want.
+  - **npx** allows you to download what you need to create a new create-react-app one time and then delete the unnecessary set-up files.
+  - **create-react-app** allows you to start a new Create React App project
+  - **@5.0** allows you to download version 5.0 of Create React App. Setting the version is helpful for class. Utilizing the same version will allow you, your instructors, and the class notes to have the same version to learn and study. If you don't include this, it will download the latest version, which may have some variations to what you see in class.
+  - **my-app** this is the name of your project and the file that will contain your Create React App. You can name it anything you want.
 
 Inside this project, you will see the following files.
 
@@ -50,7 +50,7 @@ Inside this project, you will see the following files.
 
 You will work inside the `src` folder.
 
-You can also go into the `public` and change information in the `head` of the `index.html` file. For example, you can change the app's name from `React App` to whatever you want.
+You can also go into the `public` and change information in the `head` of the `index.html` file. For example, you can change the app's `title` from `React App` to whatever you want.
 
 </details>
 
@@ -88,6 +88,8 @@ function Header() {
 }
 ```
 
+Add some JSX that will be rendered in the browser.
+
 ```js
 // Header.js
 function Header() {
@@ -116,7 +118,7 @@ export default Header;
 
 The default keyword allows the ability to rename this component in `App.js`.
 
-Return to `App.js` and import this component
+Return to `App.js` and import this component:
 
 ```js
 // App.js
