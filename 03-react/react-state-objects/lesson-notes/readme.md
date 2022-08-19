@@ -1,7 +1,5 @@
 # React State: Arrays
 
-# React State: Primitive Values
-
 ## Objectives
 
 - Review passed by reference
