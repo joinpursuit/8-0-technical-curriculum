@@ -20,9 +20,11 @@ There will be a list of dogs, we will build functionality to
 - update dog attendance
 - show details about a dog
 
-fork 'n clone
-
 ## Getting started
+
+Start by forking and cloning the following repository:
+
+[React State 2 Class Build](https://github.com/joinpursuit/class-build-react-state2)
 
 - `npm i`
 
