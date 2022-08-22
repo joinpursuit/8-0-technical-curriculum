@@ -203,6 +203,15 @@ function changeMode(modeChoice) {
 }
 ```
 
+Take some time to trace on the screen (or draw out on paper) the order of events:
+
+- There is a click handler on the button which listens for a click event.
+- The button is clicked.
+- The button click calls the function `changeMode`.
+- `changeMode` has some logic to toggle the value of `mode` from light to dark.
+- `setMode` changes the state of the variable `mode`
+- When `mode` changes, it triggers React to chang the `className` (CSS class) of the `div` from `light` to `dark`.
+
 ## Don't change state directly
 
 You may find yourself tempted to do this:
@@ -218,12 +227,3 @@ setMode("light");
 ```
 
 State will not update properly if you do not use the function. One of the main goals of React is to render and rerender components quickly. If you go back to the reading on the virtual DOM, you will remember that React uses some algorithms to check for changes and efficiently update the DOM. These updates can only be triggered correctly if the set state functions are called.
-
-Take a moment to trace on the screen (or draw out on paper) the order of events:
-
-- There is a click handler on the button which listens for a click event.
-- The button is clicked.
-- The button click calls the function `changeMode`.
-- `changeMode` has some logic to toggle the value of `mode` from light to dark.
-- `setMode` changes the state of the variable `mode`
-- When `mode` changes, it changes the `className` (CSS class) of the `div` from `light` to `dark`.

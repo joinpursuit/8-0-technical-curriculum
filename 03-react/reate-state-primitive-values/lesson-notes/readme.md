@@ -11,6 +11,8 @@
 
 ## Background-color changing app
 
+![background color changing app demo](../assets/ezgif.com-gif-maker-color-app.gif)
+
 ## Getting started
 
 - `npx create-react-app@5.0 color-app`
