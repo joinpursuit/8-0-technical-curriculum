@@ -1,6 +1,6 @@
-# React State: Arrays
+# React State: Arrays & Objects
 
-State is a core concept and feature of React. Learning to work with state in React takes practice. When you copy arrays and objects, you must be mindful to copy them properly, update the values and then update state. If you don't make a copy, you will end up manipulating state directly, which will not allow React to update properly.
+State is a core concept and feature of React. Learning to work with state in React takes practice. It is crucial to never update state directly. Because arrays and objects are passed by reference, when you copy arrays and objects, you must be mindful to copy them properly, then update the values and then update state. If you don't make a copy, you will end up manipulating state directly, which will not allow React to update properly.
 
 ## Objectives
 
@@ -9,7 +9,7 @@ State is a core concept and feature of React. Learning to work with state in Rea
 
 ## Passed by reference
 
-Unlike strings, numbers and booleans, arrays are passed by reference. That means that when you set an array to a value, it is stored in a specific place in menu. If you try to assign the array to a new variable, it will still point to the original array.
+Unlike strings, numbers and booleans, arrays are passed by reference. That means that when you set an array to a value, it is stored in a specific place in memory. If you try to assign the array to a new variable, it will still point to the original array in the same location in memory.
 
 Let's look at an example:
 
@@ -50,43 +50,46 @@ Shallow copies means one level deep. `someNums` is an example of an array that i
 Here is an array that has more levels:
 
 ```js
-[
-  {
-    name: "Fido",
-    toys: [
-      { name: "bone", monthsOld: 0.2 },
-      { name: "ball", monthsOld: 6 },
-      { name: "squeaky toy", monthsOld: 1 },
-    ],
-  },
-];
+const fido = {
+  name: "Fido",
+  toys: [
+    { name: "bone", cost: 6 },
+    { name: "ball", cost: 4 },
+    { name: "squeaky toy", cost: 8 },
+  ],
+};
 ```
 
-Try to change the name of the first tody:
+Try to copy and change the name of the dog and the first toy:
 
 ```js
-const dog = [
-  {
-    name: "Fido",
-    toys: [
-      { name: "bone", monthsOld: 0.2 },
-      { name: "ball", monthsOld: 6 },
-      { name: "squeaky toy", monthsOld: 1 },
-    ],
-  },
-];
+const dog = {
+  name: "Fido",
+  toys: [
+    { name: "bone", cost: 6 },
+    { name: "ball", cost: 4 },
+    { name: "squeaky toy", cost: 8 },
+  ],
+};
+const newFido = { ...dog, name: "Fido Jr." };
+// Will give same output:
+// const newFido = {...dog}
+// newFido.name = "Fido Jr.";
 
-const newFido = [...dog];
+newFido.toys[0].name = "Super-sized bone";
 
-newFido[0].toys[0].name = "Super-sized bone";
+console.log("Original dog");
+console.log(dog);
 
-console.log(dog[0].toys);
+console.log("=========");
+console.log("new dog");
+console.log(newFido);
 ```
 
-As you can see, the first toy name of the original array has been changed as well.
+Copying and then changing the top level dog name worked with destructuring. However, when updating the nested object toy, both `dog` and `newFido` had the value updated.
 
 There are a few strategies to deal with this issue.
 
-- Create logic that allows you to target the things you are trying to update properly
-- Turn the object into a string using `JSON.stringify`, copy the string, then convert it back to an (new) object
-- Add a code library that has functionality for deep copying
+- Create logic that allows you to target the things you are trying to update properly.
+- Turn the object into a string using `JSON.stringify`, copy the string, then convert it back to an (new) object.
+- Add a code library that has functionality for deep copying.

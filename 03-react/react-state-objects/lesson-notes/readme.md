@@ -9,7 +9,7 @@
 
 This app will revisit the Doggy Day Care app you built. It will just focus on the roster portion of the application.
 
-Show example/gif or explain more details
+![Doggy Daycare example gif](../assets/ezgif.com-gif-maker-class-build.gif)
 
 There will be a list of dogs, we will build functionality to
 
@@ -22,7 +22,7 @@ There will be a list of dogs, we will build functionality to
 
 Start by forking and cloning the following repository:
 
-[React State 2 Class Build](https://github.com/joinpursuit/class-build-react-state2)
+[React State 2 Class Build](https://github.com/joinpursuit/class-build-react-state-objects)
 
 - `npm i`
 
@@ -33,7 +33,7 @@ Typically, you will bring in data from a third-party API or your own data from a
 ```js
 // App.js
 
-import dogsData from "./data";
+import { dogsData } from "./data";
 ```
 
 Confirm the data is imported correctly:
@@ -66,6 +66,7 @@ const [dogs, setDogs] = useState(dogsData);
 ## Create an unordered list and make a list of dogs
 
 ```js
+
 <ul>
 {
   dogs.map((dog) => {
@@ -77,6 +78,7 @@ const [dogs, setDogs] = useState(dogsData);
   });
 }
 </ul>
+
 ```
 
 - What is the importance of the key prop? What is something important to remember about key props?
@@ -90,7 +92,7 @@ function addDog() {
 }
 ```
 
-Confirm that the button works:
+Create a button and confirm that the button's event listener/handler works:
 
 ```js
 <button onClick={addDog}>Add a new dog</button>
@@ -114,6 +116,9 @@ To add Rover, we must create a new array, which we can do with the spread operat
 
 ```js
 function addDog() {
+  // Create a new dog named Rover
+  // give the dog a "unique" id
+  // normally a database would handle the unique id logic for you
   const rover = {
     id: dogs.length + 500,
     name: "Rover",
@@ -121,6 +126,10 @@ function addDog() {
     grade: "100",
     notes: "The goodest new dog",
   };
+
+  // make a copy of the dogs array using destructuring
+  // add rover, in this case the dog is added to the first array position
+  // what would you need to change to add him as the last array item?
   setDogs([rover, ...dogs]);
 }
 ```
@@ -150,7 +159,9 @@ Add functionality to remove a dog:
 
 ```js
 function removeDog(dogID) {
+  // use the filter method to remove any dogs that have a matching id
   const filteredDogArray = dogs.filter((dog) => dog.id !== dogID);
+  // set the dogs array to the new array that will not have the removed dog
   setDogs(filteredDogArray);
 }
 ```
@@ -160,6 +171,8 @@ function removeDog(dogID) {
 ## Update dog attendance
 
 First add some logic so that if a dog is not present a line-through the dog's name appears.
+
+If `dog.present` is true, then set `textDecoration` to none. Else, `textDecoration` is set to `line-through`.
 
 ```js
 <span
@@ -173,7 +186,7 @@ First add some logic so that if a dog is not present a line-through the dog's na
 </span>
 ```
 
-Write a function to update the dog's attendance property.
+Write a function to update the dog's attendance property:
 
 ```js
 function updateDogAttendance(dogId) {
@@ -181,7 +194,7 @@ function updateDogAttendance(dogId) {
 }
 ```
 
-Add an event listener/handler to the span element.
+Add an event listener/handler to the span element:
 
 ```js
 <span
@@ -205,7 +218,7 @@ function updateDogAttendance(dogId) {
   // Find the dog with the matching id number's array position
   const index = dogArray.findIndex((dog) => dogId === dog.id);
   // Access the dog's present property and update the value
-  // By using ! it will change a true value to false or a false value to true
+  // By using ! it will toggle the value of present
   dogArray[index].present = !dogArray[index].present;
   // Put the updated array into setDogs to update the dogs array
   setDogs(dogArray);
