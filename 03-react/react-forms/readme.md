@@ -204,6 +204,13 @@ function handleTextChange(event) {
 }
 ```
 
+The inputs will require several properties:
+
+- `type` the type of input. Though `text`, `email`, `number`, and `password` are all text inputs, `email` , `number` and `password` have extra functionality to assist users in filling out the forms. [MDN Input element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
+- `value` this is the value seen in the input field and it is the value tracked and controlled by React. Notice that the keys match the user object created during initial state initialization.
+- `onChange` the function for the event listener/handler
+- `id` - this will be the `key` name and will match the user object. This value will be used to dynamically set the text in the different text inputs. Additionally, `id` is used in conjunction with `for`/`htmlFor` for [web accessibility ](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/for). if you are receiving an unexpected warning along the lines of `A component is changing an uncontrolled input to be controlled`, it is likely being caused by the `key` being missing or having a spelling mismatch between the initial state and the `id` value.
+
 ```js
 <form onSubmit={handleSubmit}>
   <input
@@ -218,9 +225,19 @@ function handleTextChange(event) {
     onChange={handleTextChange}
     id="lastName"
   />
-  <input type="number" value={user.zip} onChange={handleTextChange} />
-  <input type="email" value={user.email} onChange={handleTextChange} />
-  <input type="password" value={user.password} onChange={handleTextChange} />
+  <input type="number" value={user.zip} onChange={handleTextChange} id="zip" />
+  <input
+    type="email"
+    value={user.email}
+    onChange={handleTextChange}
+    id="email"
+  />
+  <input
+    type="password"
+    value={user.password}
+    onChange={handleTextChange}
+    id="password"
+  />
 
   <input type="submit" />
 </form>
@@ -228,7 +245,7 @@ function handleTextChange(event) {
 
 You will notice that when you've created these inputs, they are unlabeled, and it is unclear which input is for which field.
 
-Before styling, finish setting up the functionality. This will help clarify which form components are used for input functionality and to assist the user experience.
+Before styling, finish setting up the functionality. This will help clarify which form components are used for input functionality and which assist the user experience.
 
 ![unlabeled and unstyled forms](./assets/form-unlabled-and-unstyled.png)
 
@@ -253,6 +270,26 @@ function handleSubmit(event) {
   console.log(user);
 }
 ```
+
+## Reset the form
+
+To reset the user data, all the values must be returned to their initial state (empty strings in this example). Form resets typically happen after a form has been submitted, so a good place to do this is within the `handleSubmit` function.
+
+```js
+function handleSubmit(event) {
+  event.preventDefault();
+  console.log(user);
+  setUser({
+    firstName: "",
+    lastName: "",
+    zip: "",
+    email: "",
+    password: "",
+  });
+}
+```
+
+## Add labels and style for better user experience and web accessibility
 
 Add labels (and some style), and notice that the `htmlFor` property matches the `id`. This is a best practice for web accessibility:
 
