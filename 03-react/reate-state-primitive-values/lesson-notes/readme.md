@@ -76,7 +76,7 @@ const [color, setColor] = useState("azure");
 Add style to the App component's div:
 
 ```js
-    <div style={{height: "100vh", backgroundColor: color}}>
+\div style={{height: "100vh", backgroundColor: color}}>
 ```
 
 Add some logic to change the color:
