@@ -1,4 +1,4 @@
-# React State: Arrays
+# React State: Arrays & Objects
 
 ## Objectives
 
