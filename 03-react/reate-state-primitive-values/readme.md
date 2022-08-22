@@ -29,7 +29,7 @@ Stateful components change based on user interaction. A non-coding example is a 
 
 > **Toggle** - To alternate between two (or more) different options, states or activities.
 
-Here is a fancy switch designed by CSS that can toggle from day to night. When a user clicks on it, they toggle the state from day to night and back again.
+Here is a fancy switch styled by CSS that can toggle from day to night. When a user clicks on the switch, they toggle the state from day to night and back again.
 
 ![day night toggle from https://blog.prototypr.io/create-a-scenic-day-and-night-toggle-button-with-html-and-css-37a8e2532e68](./assets/day-night-toggle.gif)
 
