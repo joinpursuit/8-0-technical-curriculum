@@ -22,7 +22,7 @@ When adding inputs to React, you must give React control of the inputs to ensure
 
 Web accessibility is the inclusive practice of ensuring there are no barriers that prevent people with physical disabilities from using the web. Forms contain a lot of built-in web accessibility when they are set up correctly.
 
-For the sake of brevity and clarity in learning how to handle forms in React, many best practices are often skipped in tutorials teaching other skills.
+For the sake of brevity and clarity in learning how to handle forms in React, many best practices for web accessibility are not demonstrated at this time.
 
 When developing a professional-level app, be sure to take the time to, at a minimum, include:
 
