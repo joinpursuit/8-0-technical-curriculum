@@ -331,6 +331,122 @@ Add labels (and some style), and notice that the `htmlFor` property matches the 
 
 ![Form labeled and styled](./assets/form-labeled-and-styled.png)
 
+## Full code:
+
+```js
+import { useState } from "react";
+
+function App() {
+  const [checked, setChecked] = useState(false);
+  const [selectOption, setSelectOption] = useState("");
+  const [nickName, setNickName] = useState("");
+  const [user, setUser] = useState({
+    firstName: "",
+    lastName: "",
+    zp: "",
+    email: "",
+    password: "",
+  });
+
+  function handleCheckboxChange() {
+    setChecked(!checked);
+  }
+  function handleNickNameChange(event) {
+    setNickName(event.target.value);
+  }
+
+  function handleSelectChange(event) {
+    console.log(event.target.value);
+    setSelectOption(event.target.value);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    console.log(user);
+    setUser({
+      firstName: "",
+      lastName: "",
+      zip: "",
+      email: "",
+      password: "",
+    });
+  }
+
+  function handleTextChange(event) {
+    setUser({
+      ...user,
+      [event.target.id]: event.target.value,
+    });
+  }
+  return (
+    <div>
+      <header>
+        <h1>Form examples</h1>
+      </header>
+      <main>
+        <input
+          type="checkbox"
+          checked={checked}
+          onChange={handleCheckboxChange}
+        />
+
+        <select onChange={handleSelectChange}>
+          <option value=""></option>
+          <option value="cats">Cats!</option>
+          <option value="dogs">Dogs!</option>
+        </select>
+
+        <input type="text" onChange={handleNickNameChange}></input>
+        <h3>
+          {nickName} selected {selectOption}
+        </h3>
+        <form onSubmit={handleSubmit}>
+          <label htmlFor="firstName">First name:</label>
+          <input
+            type="text"
+            value={user.firstName}
+            onChange={handleTextChange}
+            id="firstName"
+          />
+          <label htmlFor="lastName">Last name:</label>
+          <input
+            type="text"
+            value={user.lastName}
+            onChange={handleTextChange}
+            id="lastName"
+          />
+          <label htmlFor="zip">Zip code:</label>
+          <input
+            type="number"
+            value={user.zip}
+            onChange={handleTextChange}
+            id="zip"
+          />
+          <label htmlFor="email">Email:</label>
+          <input
+            type="email"
+            value={user.email}
+            onChange={handleTextChange}
+            id="email"
+          />
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            value={user.password}
+            onChange={handleTextChange}
+            id="password"
+          />
+          <br />
+          <input type="submit" />
+        </form>
+      </main>
+    </div>
+  );
+}
+
+export default App;
+```
+
 Resources/Readings:
 
 - [W3 Making the Web Accessible](https://www.w3.org/WAI/)
