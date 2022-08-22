@@ -23,13 +23,13 @@ However, there was no way to interact with the web page. There was no way to add
 
 React components can be stateless or stateful. So far, all the components you've built have been stateless.
 
-A stateful component keeps track of user interactions. Since you have not interacted with your app (filling out a form, clicking a button), there was no need to track user interactions.
+A stateful component keeps track of user interactions. Since you have not added any interactivity with your app (fill out a form, click a button), there was no need to track user interactions.
 
-Stateful components change based on user interaction. A non-coding example is a light switch. Light switches (generally) have two states: on and off. Users can turn the lights on or off when they interact with the light switch (toggle the light switch). The lights will stay in that state until the user interacts with the light switch again.
+Stateful components change based on user interaction. A non-coding example is a light switch. Light switches (generally) have two states: on and off. Users can turn the lights on or off when they interact with the light switch (toggle the light switch). The lights will stay in that state until the user interacts with (toggles) the light switch again.
 
-> **Toggle** - To alternate between two different options, states or activities.
+> **Toggle** - To alternate between two (or more) different options, states or activities.
 
-Here is a fancy switch designed by CSS that can toggle from day to night:
+Here is a fancy switch designed by CSS that can toggle from day to night. When a user clicks on it, they toggle the state from day to night and back again.
 
 ![day night toggle from https://blog.prototypr.io/create-a-scenic-day-and-night-toggle-button-with-html-and-css-37a8e2532e68](./assets/day-night-toggle.gif)
 
@@ -76,6 +76,14 @@ function App() {
 }
 ```
 
+Take a moment to trace on the screen (or draw out on paper) the order of events:
+
+- There is a click handler on the button which listens for a click event.
+- The button is clicked.
+- The button click calls the function `changeMode`.
+
+In the next sections, you'll finish building out the functionality so that the state will change.
+
 ## React, arguments for the event listener/handler
 
 In some cases, you'll need to pass an argument, but there is a gotcha:
@@ -96,7 +104,7 @@ function App() {
 
 This code does not work as you might expect. The function is triggered immediately, and you cannot call it again when you press the button.
 
-To fix this, you must wrap your function inside an anonymous function. Since this arrow function is one line of code, curly braces are unnecessary.
+To fix this, you must wrap your function inside an anonymous function. Since this arrow function is one line of code, curly braces around the code block are unnecessary.
 
 ```js
 <button onClick={() => changeMode("Dark mode")}>
@@ -112,7 +120,6 @@ The new method is called **React hooks**. To use hooks, you must import the func
 
 ```js
 // App.js
-
 import { useState } from "react";
 ```
 
@@ -179,15 +186,6 @@ function changeMode(modeChoice) {
 }
 ```
 
-Take a moment to trace on the screen (or draw out on paper) the order of events:
-
-- There is a click handler on the button which listens for a click event.
-- The button is clicked.
-- The button click calls the function `changeMode`.
-- `changeMode` has some logic to toggle the value of `mode` from light to dark.
-- `setMode` changes the state of the variable `mode`
-- When `mode` changes, it changes the `className` (CSS class) of the `div` from `light` to `dark`
-
 ### Adding logic
 
 `setMode` has only one job to update the value of `mode`. In most cases, more logic must be set up to get the desired value.
@@ -220,3 +218,12 @@ setMode("light");
 ```
 
 State will not update properly if you do not use the function. One of the main goals of React is to render and rerender components quickly. If you go back to the reading on the virtual DOM, you will remember that React uses some algorithms to check for changes and efficiently update the DOM. These updates can only be triggered correctly if the set state functions are called.
+
+Take a moment to trace on the screen (or draw out on paper) the order of events:
+
+- There is a click handler on the button which listens for a click event.
+- The button is clicked.
+- The button click calls the function `changeMode`.
+- `changeMode` has some logic to toggle the value of `mode` from light to dark.
+- `setMode` changes the state of the variable `mode`
+- When `mode` changes, it changes the `className` (CSS class) of the `div` from `light` to `dark`.
