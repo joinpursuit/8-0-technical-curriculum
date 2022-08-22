@@ -172,7 +172,7 @@ function removeDog(dogID) {
 
 First add some logic so that if a dog is not present a line-through the dog's name appears.
 
-If `dog.present` is true, then set `textDecoration` to none. Else, `textDecoration` is set to `line-through`.
+Ternary operators are a different way to write if/else statements. Practice reading the following code: If `dog.present` is true, then set `textDecoration` to none. Else, `textDecoration` is set to `line-through`.
 
 ```js
 <span
