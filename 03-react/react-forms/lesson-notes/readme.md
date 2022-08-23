@@ -1,5 +1,7 @@
 # React Forms
 
+![](../assets/ezgif.com-gif-in-class-build.gif)
+
 > **Note:** CSS libraries [Normalize](https://necolas.github.io/normalize.css/) and [Skeleton](http://getskeleton.com) have been included in the `public/index.html`to assist with providing visual clarity with forms.
 
 > **Note:** Form inputs and labels, along with some properties, have been provided to allow focus on building functionality for this application.
