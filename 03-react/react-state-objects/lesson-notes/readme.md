@@ -112,7 +112,16 @@ function addDog() {
 }
 ```
 
-To add Rover, we must create a new array, which we can do with the spread operator. Then we can either add Rover to the start or end of the array. Additionally, since we are using `dog.id` for our app function, we need a way to be sure Rover will have a unique object id. This is just a hack for now. When you work with databases, they will handle the functionality of creating unique ids for new data.
+To add Rover, we must create a new array, which we can do with the spread operator. Then we can either add Rover to the start or end of the array. Additionally, since we are using `dog.id` for our app function, we need a way to be sure Rover will have a unique object id. Let's add an npm package [uuid](https://www.npmjs.com/package/uuid) to generate a unique id:
+
+```
+npm install uuid
+```
+
+```js
+// App.js
+import { v1 as generateUniqueID } from "uuid";
+```
 
 ```js
 function addDog() {
@@ -120,7 +129,7 @@ function addDog() {
   // give the dog a "unique" id
   // normally a database would handle the unique id logic for you
   const rover = {
-    id: dogs.length + 500,
+    id: generateUniqueID(),
     name: "Rover",
     present: false,
     grade: "100",
