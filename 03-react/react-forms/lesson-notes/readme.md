@@ -1,10 +1,40 @@
 # React Forms
 
+## Objectives
+
+- Controlled vs. uncontrolled components
+- Use React state to control a checkbox
+- Use React state to control an options menu
+- Use React state to control a single text input (demo in pre-reading only)
+- Use the form element correctly
+- Use React state to control multiple text inputs
+- Clearing the inputs after submitting the form
+
+## Doggy Day Care Application
+
+This application will allow the addition of a new dog using a form.
+
 ![](../assets/ezgif.com-gif-in-class-build.gif)
+
+There will be a number of fields to fill out including
+
+- checkbox
+- select options
+- multiple text inputs
 
 > **Note:** CSS libraries [Normalize](https://necolas.github.io/normalize.css/) and [Skeleton](http://getskeleton.com) have been included in the `public/index.html`to assist with providing visual clarity with forms.
 
 > **Note:** Form inputs and labels, along with some properties, have been provided to allow focus on building functionality for this application.
+
+## Getting started
+
+Start by forking and cloning the following repository:
+
+[React Forms Class Build](https://github.com/joinpursuit/class-build-react-state-forms/tree/main)
+
+```
+npm i
+```
 
 ## Checkbox
 
