@@ -197,8 +197,8 @@ The inputs will require several properties:
 
 - `type` the type of input. Though `text`, `email`, `number`, and `password` are all text inputs, `email` , `number` and `password` have extra functionality to assist users in filling out the forms. [MDN Input element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)
 - `value` this is the value seen in the input field and it is the value tracked and controlled by React. Notice that the keys match the user object created during initial state initialization.
-- `onChange` the function for the event listener/handler
-- `id` - this will be the `key` name and will match the user object. This value will be used to dynamically set the text in the different text inputs. Additionally, `id` is used in conjunction with `for`/`htmlFor` for [web accessibility ](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/for). if you are receiving an unexpected warning along the lines of `A component is changing an uncontrolled input to be controlled`, it is likely being caused by the `key` being missing or having a spelling mismatch between the initial state and the `id` value.
+- `onChange` the event listener/handler that will call `handleTextChange`
+- `id` - this will be the `key` name and will match the user object. This value will be used to dynamically set the text in the different text inputs. Additionally, `id` is used in conjunction with `for`/`htmlFor` for [web accessibility ](https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/for). if you are receiving an unexpected warning along the lines of `A component is changing an uncontrolled input to be controlled`, it is likely because the `key` is missing or there is a spelling mismatch between the initial state and the `id` value.
 
 ```js
 <form onSubmit={handleSubmit}>
