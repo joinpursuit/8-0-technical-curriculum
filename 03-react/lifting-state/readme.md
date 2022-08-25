@@ -63,7 +63,7 @@ In the example of the sketchpad:
 
 ![](./assets/share-state-sketchpad.png)
 
-the color must be set ast state go in `App.js`. App is the most recent common ancestor of the components that share this data. Color is then passed down to the Sketchpad and the Aside components.
+The color must be set as state go in `App.js`. App is the most recent common ancestor of the components that share this data. Color is then passed down to the Sketchpad and the Aside components.
 
 ![sketchpad data flow](./assets/sketchpad-dataflow.png)
 
