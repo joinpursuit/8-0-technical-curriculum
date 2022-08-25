@@ -16,42 +16,53 @@ According to the [React documents](https://reactjs.org/docs/thinking-in-react.ht
 There are several key steps:
 
 1. Start with a mock
-   - Take the time to make wireframes and write out other details about your app
-   - Refactoring a React app can be very challenging, so when you already start with a great layout, it will be easier to stick with it.
-1. Break the UI ito a component hiearchy
-   - Clarify within your wireframe which elements are going to be React components and determine which elements go inside other elements.
+
+- Take the time to make wireframes and write out other details about your app
+- Refactoring a React app can be very challenging, so when you have already started with a great layout, it will be easier to stick with it.
+
+1. Break the UI into a component hierarchy
+
+- Clarify which elements will be React components within your wireframe and determine which elements go inside other elements.
+
 1. Build a static version first
-   - Before adding conditional rendering, forms or other functionality, first create a static view.
+
+- Before adding conditional rendering, forms, or other functionality, first create a static view.
+
 1. Identify the minimal complete representation of UI state
-   - Determine which data will have state and which data will be passed on as props.
-   - Add props to your app, it's ok to use some mock data/mock array of objects.
+
+- Determine which data will have state and which data will be passed on as props.
+- Add props to your app. It's ok to use some mock data/mock array of objects.
+
 1. Identify where your state should live
-   - State should go down to the lowest (most nested) component possible.
-   - If state must be shared across components, put state in the lowest common ancestor.
-   - If you can't find a good common ancestor, create one.
-   - Add state to start replacing your mock data.
+
+- State should go down to the lowest (most nested) component possible.
+- If state must be shared across components, put state in the lowest common ancestor.
+- If you can't find a good common ancestor, create one.
+- Add state to start replacing your mock data.
+
 1. Add inverse data flow (lift state)
-   - There are times where state must be shared across components, this should be the final piece you work on.
+
+- There are times when state must be shared across components. This should be the final piece you work on.
 
 ## Data flow and management in React
 
-Data flows down from the parent component to children. The advantages of this are:
+Data flows down from the parent component to the children components. The advantages of this are:
 
-- Debugging is easier when the deveoper knows where the data is coming from and where it is going.
+- Debugging is easier when the developer knows where the data is coming from and where it is going.
 - Unidirectional data flow makes the program less prone to errors because there is only one way to do it.
 
 ![data folows down](./assets/data-flows-down.png)
 
 Here is an example situation. In this sketchpad, there are four components:
 
-- Top level `App`
-  - Color indicator div
-  - Sketchpad
-  - Color palette
+- Top-level `App`
+- Color indicator div
+- Sketchpad
+- Color palette
 
 ![](./assets/share-state-sketchpad.png)
 
-The color selection happens in the color palette component, but in order for the sketchpad to use that color, the color must be lifted up to the `App` component and then go into the sketchpad and color indicator div.
+The color selection happens in the color palette component. Still, for the sketchpad to use that color, the color must be lifted up to the `App` component and then go into the sketchpad and color indicator div.
 
 Even though data flows down, event handlers can send data upwards.
 
@@ -63,7 +74,7 @@ In the example of the sketchpad:
 
 ![](./assets/share-state-sketchpad.png)
 
-The color must be set as state go in `App.js`. App is the most recent common ancestor of the components that share this data. Color is then passed down to the Sketchpad and the Aside components.
+The color must be set as state goes in `App.js`. App is the most recent common ancestor of the components that share this data. Color is then passed down to the Sketchpad and the Aside components.
 
 ![sketchpad data flow](./assets/sketchpad-dataflow.png)
 
@@ -90,7 +101,7 @@ function App() {
 }
 ```
 
-The funtion that updates state, `chooseColor`, also goes in App.js and it is passed down to the the color `Palette` component.
+The function that updates state, `chooseColor`, also goes in App.js and is passed down to the color `Palette` component.
 
 This is a color square:
 
@@ -106,7 +117,7 @@ export default function Square({ colors, chooseColor }) {
 }
 ```
 
-`chooseColor` has been passed down to the square. When the click event listner/handler is triggered, it will call `chooseColor` which is a function that is in `App.js`. When this funtion is called in `App.js` it will be able to change the state of `color` and then updated color will be passed down to the Sketchpad and Aside components.
+`chooseColor` has been passed down to the square. When the click event listener/handler is triggered, it will call `chooseColor`, a function in `App.js`. When this function is called in `App.js` it will be able to change the state of `color`, and then the updated color will be passed down to the Sketchpad and Aside components.
 
 ## Resources (optional)
 
