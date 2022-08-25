@@ -25,9 +25,9 @@ npm i
 
 ## Thinking in React
 
-You may find this lesson quite challenging to code along with, as refactoring as a class is challenging work. Or, if you want a big challenge, you can go back to the last version of this app (completed build from react-forms) and try to refactor the app to have a separate form and list item components.
+You may find this lesson quite challenging to code along with, as refactoring as a class is challenging work. Or, if you are looking to be challenged more, you can go back to the last version of this app (completed build from react-forms) and try to refactor the app to have a separate form and list item components.
 
-Refactoring in React is challenging and time-consuming. The best way to avoid it is to plan by [Thinking in React](https://reactjs.org/docs/thinking-in-react.html)
+Refactoring in React is challenging and time-consuming. The best way to avoid it is to plan by [Thinking in React](https://reactjs.org/docs/thinking-in-react.html).
 
 ## Data flows down
 
@@ -35,11 +35,7 @@ Props allow you to send data down into child components. However, you cannot sen
 
 ## Where should state go
 
-In the following wireframe is the Doggy Day Care App.
-
-The following variables represent state.
-
-Take some time to label where each of these state variables goes:
+Knowing that data flows down in React, use the following wireframe of the Doggy Day Care App to take some time to label where each of these state variables goes:
 
 - `dogs` An array of dogs
 - `showNewDogForm` a true/false value to show/hide the new dog form
@@ -82,19 +78,19 @@ The functionality to update attendance should have returned.
 
 We'll follow the same pattern.
 
-- Pass down `removeDog` to the `DogListItem` component
-- Add it as a parameter in the `DogListItem` component
-- Uncomment the `remove` button in the `DogListItem` component
+- Pass down `removeDog` to the `DogListItem` component.
+- Add it as a parameter in the `DogListItem` component.
+- Uncomment the `remove` button in the `DogListItem` component.
 
 ### Add a dog
 
-- Pass down `handleAddDog` from `App.js` to `NewDogForm`
-- Add it as a parameter in the `NewDogForm` component
-- Uncomment the line that calls this function inside `addDog` at or around line 29
+- Pass down `handleAddDog` from `App.js` to `NewDogForm`.
+- Add it as a parameter in the `NewDogForm` component.
+- Uncomment the line that calls this function inside `addDog` at or around line 29.
 
 ### Your Turn
 
-Try to get the form to toggle back to hidden after the form submit
+Try to get the form to toggle back to hidden after the form submit.
 
 ### Completed build
 
