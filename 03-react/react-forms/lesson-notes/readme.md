@@ -36,9 +36,13 @@ Start by forking and cloning the following repository:
 npm i
 ```
 
+The form is already built. You'll be adding the functionality to make all the form components controlled by React and then using the form to create a new dog to add to the list.
+
 ## Checkbox
 
 ```js
+// App.js
+
 const [checked, setChecked] = useState(false);
 ```
 
@@ -78,6 +82,7 @@ function handleCheckboxChange() {
 Add state and a function to change the state for the checkbox:
 
 ```js
+// App.js
 const [selectOption, setSelectOption] = useState("");
 ```
 
@@ -89,13 +94,17 @@ function handleSelectChange() {}
 
 Add the event handler/listener to the `select` tag.
 
+```js
+<select id="favFlavor" onChange="{handleSelectChange}">
+```
+
 How do you set the value for the selected option?
 
 <details><summary>Answer:</summary>
 
 ```js
 function handleSelectChange(event) {
-  console.log(event.target.value);
+  setSelectOption(event.target.value);
 }
 ```
 
@@ -106,6 +115,7 @@ function handleSelectChange(event) {
 Add the function to handle a form submit:
 
 ```js
+// App.js
 function handleSubmit(event) {
   console.log("form submitted");
 }
@@ -139,6 +149,7 @@ function handleSubmit(event) {
 The `handleTextChange` function has already been included in `App.js`. Additionally, it has been added as the event listener/handler for each text `input`.
 
 ```js
+// App.js
 function handleTextChange(event) {
   setNewDog({
     ...newDog,
@@ -160,9 +171,10 @@ The `handleSubmit` function is to make sure all the things that need to occur on
 
 Rather than putting all the logic into this function, new functions with their specific role should be created and called.
 
-Use the `addDog` function to put all the values together:
+Use the `addDog` function to put all the values together (remove the hard-coded Rover object):
 
 ```js
+// App.js
 function addDog() {
   const createDog = {
     id: generateUniqueID(),
