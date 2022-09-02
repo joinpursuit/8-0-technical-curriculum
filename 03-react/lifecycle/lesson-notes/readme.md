@@ -1,22 +1,22 @@
 # Component Lifecycle and useEffect
 
-Today you'll be building a small app that demonstrates how `useEffect` works within the lifecycle of a component.
+Today you'll be building a small app that demonstrates how `useEffect()` works and how to customize when it is called.
 
-By default, components rerender when state or props change. However, there are other times that you may want to trigger a rerender. For example:
+By default, components rerender when state and/or props change. However, there are other times that you may want to trigger a rerender. For example:
 
 - When a component is mounted into the DOM
 - After another state variable has changed
 
-When using hooks, rerenders can be triggered by the method `useEffect`.
+When you are using hooks, rerenders are handled by the method `useEffect()`.
 
-> **Note:** Some examples are contrived; there are better ways to solve some of the app's functionality (making more components, passing props). However, to keep the examples simple and focused on the component lifecycle and `useEffect`, the app will have a lot of state in one component.
+> **Note:** Some of the examples are contrived; there are better ways to solve some of the functionality this app has (making more components, passing props), but to keep the examples simple, focused on lifecycle methods and `useEffect()` the app will have a lot of state in one component.
 
 ## Learning objectives
 
 - Describe the overall lifecycle of React components, from mounting to unmounting
 - Use effect hooks to run code when a component has mounted
 - Use the dependency array inside of effect hooks to propagate data changes to the view
-- Use `useEffect` to make a fetch request on component load.
+- Use `useEffect()` to make a fetch request on component load.
 
 ## Getting started
 
@@ -30,14 +30,14 @@ Start by forking and cloning the following repository:
 
 ## On component mount
 
-Be sure to import `useEffect` into your component.
+Be sure to import `useEffect()` into your component.
 
 ```js
 // App.js
 import { useState, useEffect } from "react";
 ```
 
-If you want to call a function that does not update state on component mounting (in this case, page load), use useEffect.
+If you want to call a function that does not update state on component mounting (in this case, page load), use, `useEffect()`.
 
 ```js
 function App() {
@@ -52,7 +52,7 @@ function App() {
 
 > **Note:** Once you have tested the above code, comment it out or remove it so that your console stays clear.
 
-If you are updating state but only want the function to run on mount, you must use a dependency array:
+If you are updating state, but only want the function to run on mount, you must use a dependency array:
 
 ```js
 useEffect(() => {
@@ -64,9 +64,9 @@ useEffect(() => {
 - What happens if you don't include the dependency array in this example?
 - Why did the previous example not require a dependency array?
 
-## Multiple `useEffect` functions
+## Multiple `useEffect()` functions
 
-There may be times when you need to load state for different variables. If you update state in the same `useEffect` function, you will cause an infinite loop because as one state updates, the other will be triggered to update. Once the other has updated, it will trigger the first one to update again... and again and again.
+There may be times where you need to load state for different variables. If you update state in the same `useEffect()` function, you will cause an infinite loop, because as one state updates, the other will be triggered to update. Once the other has updated, it will trigger the first one to update again... and again and again.
 
 The following would cause an infinite loop:
 
@@ -78,7 +78,7 @@ useEffect(() => {
 }, []);
 ```
 
-To avoid an infinite loop, add another `useEffect` function to handle different state changes.
+To avoid an infinite loop, you add another `useEffect()` function to handle different state changes.
 
 ```js
 // On page load
@@ -105,7 +105,7 @@ useEffect(() => {
 
 ## Call some functionality after state has been updated
 
-In this example, the console log will appear to be "one behind" state. This is because JavaScript is asynchronous, and `console.log` gets called before `setVibe` has been completed.
+In this example, the console log will appear to be "one behind" state. This is because JavaScript is asynchronous and `console.log()` gets called before `setVibe` has completed.
 
 ```js
 function handleOnChange(event) {
@@ -114,7 +114,7 @@ function handleOnChange(event) {
 }
 ```
 
-To fix this, you can create another `useEffect` that will have a dependency on `vibe`. In this case, you must pass in `vibe` as a dependency to trigger this `useEffect`:
+To fix this, you can create another `useEffect()` that will have a dependency of `vibe`. In this case you must pass in `vibe` as a dependency to trigger this `useEffect()`:
 
 ```js
 function handleOnChange(event) {
@@ -126,7 +126,7 @@ useEffect(() => {
 }, [vibe]);
 ```
 
-> **Note:** Comment this `useEffect` out once you've seen it in action to keep your console clean.
+> **Note:** Comment this `useEffect()` out once you've seen it in action, to keep your console clean.
 
 ## The values in the dependency array must be primitive values
 
@@ -139,7 +139,7 @@ const anotherObj = { foo: "bar" };
 console.log(oneObj === anotherObj); // false
 ```
 
-New objects are created every time when a component is rerendered, so the previous state objects are recreated.
+When a component is rerendered, new objects are created every time, so the previous state objects are recreated.
 
 In this app, the header should change color when the month changes:
 
@@ -149,7 +149,7 @@ useEffect(() => {
 }, [today]);
 ```
 
-However, the color will change every time you use the `today` object.
+However, if you use the `today` object, the color will change every time.
 
 Instead, you can choose a specific value in the object:
 
@@ -161,25 +161,25 @@ useEffect(() => {
 
 Now the color of the header will only change when the month changes.
 
-> **Note:** you will likely see an `ESLint` warning about this `useEffect`. It will tell you to add `index` to the dependency array. If you do that, the color will change every time.
+> **Note:** you will likely see an `ESLint` warning about this `useEffect()`. It will tell you to add `index` to the dependency array. If you do that, the color will change every time.
 
 Example warning:
 
 ```
- React Hook useEffect has a missing dependency: 'index'. Either include it or remove the dependency array. You can also replace multiple useState variables with useReducer if 'setColor' needs the current value of 'index' react-hooks/exhaustive-deps
+ React Hook useEffect has a missing dependency: 'index'. Either include it or remove the dependency array. You can also replace multiple useState variables with useReducer if 'setColor' needs the current value of 'index'  react-hooks/exhaustive-deps
 
 ```
 
-This warning is usually a good one. While you have code that works, it likely is not the best way to achieve what you are looking for, and further coding may lead to bugs.
+This warning is usually a good one that while you have code that works, it likely is not the best way to achieve what you are looking for and further coding may lead to bugs.
 
-Before confirming that your code is ok, review [the docs](https://reactjs.org/docs/hooks-faq.html#performance-optimizations), which recommend trying the following steps first:
+Before confirming that your code is ok, review [the docs](https://reactjs.org/docs/hooks-faq.html#performance-optimizations) which recommend trying the following steps first:
 
-- Move the entire function into `useEffect`.
-- Move the function outside the component (if the function does not reference any props or state).
-- Have the function return a value outside of `useEffect`.
-- Use `useCallback`.
+- Move the entire function into `useEffect()`
+- Move the function outside the component (if the function does not reference any props or state)
+- Have the function return a value outside of `useEffect()`
+- Use `useCallback`
 
-In this case, the goal is to demonstrate how the dependency array compares values (object versus primitive).
+In this case, the goal is a simple demonstration of how the dependency array compares values (object versus primitive).
 
 ## Making a fetch request on page load
 
@@ -200,7 +200,7 @@ function getFeaturedDog() {
 }
 ```
 
-To make the equivalent timing of `on page load` or `on component mount`. You would use `useEffect`:
+To make the equivalent timing of `on page load` or `on component mount`. You would use `useEffect()`:
 
 ```js
 useEffect(() => {
