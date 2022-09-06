@@ -1,26 +1,26 @@
 # Component Lifecycle and useEffect
 
-Today you'll be building a small app that demonstrates how `useEffect()` works and how to customize when it is called.
-
 By default, components rerender when state and/or props change. However, there are other times that you may want to trigger a rerender. For example:
 
-- When a component is mounted into the DOM
-- After another state variable has changed
+- When a component is mounted into the DOM.
+- Waiting until after another state variable has changed.
 
-When you are using hooks, rerenders are handled by the method `useEffect()`.
+When you are using hooks, rerenders outside of state updates are handled by the method `useEffect()`.
 
 > **Note:** Some of the examples are contrived; there are better ways to solve some of the functionality this app has (making more components, passing props), but to keep the examples simple, focused on lifecycle methods and `useEffect()` the app will have a lot of state in one component.
 
+Today you'll be building a small app that demonstrates how the lifecycle method `useEffect()` works and how to customize when it is called.
+
 ## Learning objectives
 
-- Describe the overall lifecycle of React components, from mounting to unmounting
-- Use effect hooks to run code when a component has mounted
-- Use the dependency array inside of effect hooks to propagate data changes to the view
+- Describe the overall lifecycle of React components, from mounting to unmounting.
+- Use effect hooks to run code when a component has mounted.
+- Use the dependency array inside of effect hooks to propagate data changes to the view.
 - Use `useEffect()` to make a fetch request on component load.
 
 ## Getting started
 
-Today we'll build a ...
+Today we'll build a Daily Home Page:
 
 ![finished build](../assets/ezgif.com-class-build.gif)
 
@@ -37,7 +37,7 @@ Be sure to import `useEffect()` into your component.
 import { useState, useEffect } from "react";
 ```
 
-If you want to call a function that does not update state on component mounting (in this case, page load), use, `useEffect()`.
+If you want to call a function that does not update state on component mounting (in this case, on page load), use, `useEffect()`.
 
 ```js
 function App() {
@@ -66,7 +66,7 @@ useEffect(() => {
 
 ## Multiple `useEffect()` functions
 
-There may be times where you need to load state for different variables. If you update state in the same `useEffect()` function, you will cause an infinite loop, because as one state updates, the other will be triggered to update. Once the other has updated, it will trigger the first one to update again... and again and again.
+There may be times where you need to load state for different variables. If you update state in the same `useEffect()` function, you can cause an infinite loop, because as one state updates, the other will be triggered to update. Once the other has updated, it will trigger the first one to update again... and again and again.
 
 The following would cause an infinite loop:
 
@@ -126,7 +126,7 @@ useEffect(() => {
 }, [vibe]);
 ```
 
-> **Note:** Comment this `useEffect()` out once you've seen it in action, to keep your console clean.
+> **Note:** Comment out or remove this `useEffect()` out once you've seen it in action, to keep your console clean.
 
 ## The values in the dependency array must be primitive values
 
@@ -177,15 +177,15 @@ Before confirming that your code is ok, review [the docs](https://reactjs.org/do
 - Move the entire function into `useEffect()`
 - Move the function outside the component (if the function does not reference any props or state)
 - Have the function return a value outside of `useEffect()`
-- Use `useCallback`
+- Use the method `useCallback()` (Learning to use this method is not needed for class or labs).
 
-In this case, the goal is a simple demonstration of how the dependency array compares values (object versus primitive).
+In this case, the goal is a simple demonstration of how the dependency array compares values (object versus primitive), and only rely on the value of `month`, so this ESLint warning will be ignored.
 
 ## Making a fetch request on page load
 
-Fetch requests are the same as you've done in the previous unit.
+Fetch requests are the same as you've done in the previous unit. `fetch` is native to the browser and works with plain JavaScript or React.
 
-How did you control when a fetch request was called previously?
+- How did you control when a fetch request was called previously?
 
 ```js
 function getFeaturedDog() {
@@ -200,7 +200,7 @@ function getFeaturedDog() {
 }
 ```
 
-To make the equivalent timing of `on page load` or `on component mount`. You would use `useEffect()`:
+To make the equivalent timing of `on page load` or `on component mount`; you would use `useEffect()`:
 
 ```js
 useEffect(() => {

@@ -1,6 +1,6 @@
 # Component Lifecycle and useEffect
 
-So far, you have learned how to trigger rerenders when state changes. However, there are other times you may want to trigger a rerender or prevent one from happening. For example, you may want to update state when a component loads.
+So far, you have learned how to trigger rerenders when state changes. However, there are other times you may want to trigger a rerender or prevent one from happening. For example, you may want to update state after a component loads.
 
 ## Vocabulary
 
@@ -10,9 +10,9 @@ So far, you have learned how to trigger rerenders when state changes. However, t
 
 ## Objectives
 
-- Describe the overall lifecycle of React components, from mounting to unmounting
-- Use effect hooks to run code when a component has mounted
-- Use the dependency array inside of effect hooks to propagate data changes to the view
+- Describe the overall lifecycle of React components, from mounting to unmounting.
+- Use the `useEffect()` method to run code when a component has mounted.
+- Use the dependency array inside of `useEffect()` to propagate data changes to the view.
 - Use `useEffect()` to make a fetch request on component load.
 
 # Introduction to component lifecycle
@@ -26,7 +26,7 @@ Withing a React application, components can be:
 
 These different terms are used to describe the lifecycle of a component.
 
-Every component serves the purpose of providing a view. Sometimes that view is ever-present, like a header with navigation; the header will only be mounted once on page load. For other components, component will be loaded (mounted) onto the DOM when a user has interacted with the app.
+Every component serves the purpose of providing a view. Sometimes that view is ever-present, like a header with navigation; the header will only be mounted once on page load. For other components,the component will be loaded (mounted) onto the DOM when a user has interacted with the app (for example, a success message when a form has been submitted).
 
 So far, you've dealt with static views, initial state, and state that has changed after user interaction. But there are still other times you may want to change state.
 
@@ -68,7 +68,10 @@ function App() {
       .then((response) => response.json())
       .then((response) => setData(response.text));
   }
+
+  // Call it before the return statement?
   makeFetchRequest();
+
   return (
     <div>
       <h2>{data}</h2>
@@ -102,11 +105,11 @@ useEffect(() => {
 
 ## useEffect gets called after every render
 
-By default, `useEffect()` gets called after every render. So if state changes elsewhere in the app, useEffect will get called again. Sometimes this is what you want to happen. Often, this will call useEffect too many times or even cause an infinite loop.
+By default, `useEffect()` gets called after every render. So if state changes elsewhere in the app, `useEffect()` will get called again. Sometimes this is what you want to happen. Often, this will call `useEffect()` too many times or even cause an infinite loop.
 
-In the above example, no state changes, so no rerender happens, and therefore `useEffect()` is only called on page load.
+In the above example, no state changes inside of `useEffect()`, so it does not trigger rerender, and therefore `useEffect()` is only called on page load.
 
-Let's update the example so that data changes every time:
+Let's update the example so that `useEffect()` changes state:
 
 ```js
 useEffect(() => {
@@ -114,9 +117,9 @@ useEffect(() => {
 });
 ```
 
-Yikes! An infinite loop. Every time state is updated, it triggers a rerender, `useEffect()` is called on rerender, which then updates state again, and an infinite loop is activated.
+Yikes! An infinite loop. Every time state is updated, it triggers a rerender, then `useEffect()` is called on rerender, which then updates state again, and an infinite loop is activated.
 
-## useEffect dependency array
+## `useEffect()` dependency array
 
 Because of this, `useEffect()` has a second argument: an array. The array is called the dependency array. The values inside the dependency array will determine when `useEffect()` should be called. If a dependency's value changes, `useEffect()` will be called.
 
@@ -147,6 +150,7 @@ Rather, you can use `useEffect()` multiple times in the same component:
 useEffect(() => {
   getOrderInfo();
 }, []);
+
 useEffect(() => {
   getUser();
 }, []);
@@ -175,7 +179,7 @@ const anotherObj = {};
 console.log(oneObj == anotherObj); // false
 ```
 
-Every time state is rerendered, a new `user` object is created, so even if the values of `user` are unchanged, it will still call `getData`.
+Every time state is rerendered, a new `user` object is created, so even if the values of `user` are unchanged, it will still call `getData()`.
 
 To only trigger an update when there is a new user, you can pass in a specific value of user that should not change, like `user.id`.
 
@@ -185,13 +189,13 @@ useEffect(() => {
 }, [user.id]);
 ```
 
-Further, suppose you have an array of objects. In that case, it makes more sense to figure out which value (or values) would serve as a good check (like a userId of the first user) and place that into the dependency array rather than creating complex logic to check all the values inside.
+Further, suppose you have an array of objects. In that case, it can make more sense to figure out which value (or values) would serve as a good check (like a userId of the first user) and place that into the dependency array rather than creating complex logic to check all the values inside.
 
 ## Update a value after state has changed
 
 In some situations, you may need to update a value after state has been set.
 
-Because JavaScript is asynchronous, `useUpdatedNewValue` will get called before `setNewValue` has completed:
+Because JavaScript is asynchronous, `useUpdatedNewValue()` will get called before `setNewValue()` has completed:
 
 ```js
 function handleOnChange(event) {
@@ -220,14 +224,14 @@ Warnings are not errors, and your app should still run. However, warnings are wo
 A missing dependency warning can have several solutions:
 
 - Add the missing the dependency.
-- Move the entire function you are calling inside `useEffect()` if the function relies on state or props.
-- Move the entire function outside of useEffect, if the function does not use state or props.
+- Move the entire function you are calling inside `useEffect()`, if the function relies on state or props.
+- Move the entire function outside of `useEffect()`, if the function does not use state or props.
 - Write the function to return a value outside `useEffect()`.
 - Create more complex solutions like using the methods `useCallback`, `useMemo`, and `useReducer` (However, these tend to solve more complex issues than you will encounter during labs and assessments).
 
 ## Resources (optional)
 
-The above reading is a non-exhaustive list of uses for `useEffect()`. However, they will be the most likely ones you will need during this course. For further study, read these docs and articles.
+The above reading is a non-exhaustive list of uses for `useEffect()`. However, they will be the most likely ones you will need during this course. For further study, read these docs and articles:
 
 - [React Docs Hooks and useEffect](https://reactjs.org/docs/hooks-effect.html)
 - [React Docs Hooks FAQ](https://reactjs.org/docs/hooks-faq.html#should-i-use-one-or-many-state-variables)
