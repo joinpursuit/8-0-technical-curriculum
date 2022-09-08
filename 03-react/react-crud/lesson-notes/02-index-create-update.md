@@ -4,9 +4,8 @@
 
 By the end of this lesson you should be able to:
 
-- Build an Index page that loads all of a particular resource.
-- Build an individual Show page that loads a single resource.
-- Allow for the destruction of an individual resource through user interaction.
+- Use a form to create a new show.
+- Use a form to edit a show
 
 ---
 
@@ -14,37 +13,19 @@ By the end of this lesson you should be able to:
 
 Start by forking and cloning the following repository.
 
+TODO CREATE A VERSION AT THIS POINT
+
 - [React CRUD Lab](https://github.com/joinpursuit/8-0-react-crud-lab)
 
 Follow the instructions in that repository to get the application up and working.
 
-> **Note:** You will also have to start a server on your computer. This will mimic a third-party-api, but instead of the resource being somewhere on the internet, it will be on your machine.
+> **Note:** You will also have to start the server on your computer. This will mimic a third-party-api, but instead of the resource being somewhere on the internet, it will be on your machine.
 
 ## Guiding questions and tasks
 
 First, once your application is up and running, review the code that exists in the React CRUD Lab repository. Answer the following questions.
 
-- Take a look at the `src/App.js` file. React Router has already been set up for you. How do you know?
-
-- What is the `.env.development` file? You can view [this page](https://create-react-app.dev/docs/adding-custom-environment-variables/) to get some help.
-
-- Describe the following code which can be found in `src/api/shows/ShowsIndex.js`
-
-  ```js
-  const URL = process.env.REACT_APP_API_BASE_URL;
-  ```
-
-- Take a look at the `src/common` directory. What kind of components are in this folder?
-
-- Take a look at both `src/common/Nav.js` and `src/App.js`. What routes are available to the user in this application?
-
-In this lesson, the goal is to build out the following pages:
-
-1. An _Index_ page for television shows.
-1. A _Show_ page for television shows.
-1. The _Delete_ functionality for an individual show.
-
-### Index page
+### New Page
 
 The goal will be to build out the page so that it looks like the image below.
 
