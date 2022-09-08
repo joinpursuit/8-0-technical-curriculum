@@ -14,7 +14,7 @@ The Pursuit program is split up into six distinct modules.
 | ------------------- |
 | Fundamentals        |
 | Building Web Apps   |
-| React + Redux       |
+| React      |
 | Backend Development |
 | Capstone            |
 | Computer Science    |
