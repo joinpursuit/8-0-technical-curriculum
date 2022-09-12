@@ -226,7 +226,7 @@ A missing dependency warning can have several solutions:
 - Add the missing the dependency.
 - Move the entire function you are calling inside `useEffect()`, if the function relies on state or props.
 - Move the entire function outside of `useEffect()`, if the function does not use state or props.
-- Write the function to return a value outside `useEffect()`.
+- Write the function to return a value outside the component.
 - Create more complex solutions like using the methods `useCallback`, `useMemo`, and `useReducer` (However, these tend to solve more complex issues than you will encounter during labs and assessments).
 
 ## Resources (optional)
