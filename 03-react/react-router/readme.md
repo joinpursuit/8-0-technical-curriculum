@@ -1,4 +1,4 @@
-# Props and Component Structuring
+# Using React Router to Create Page Views
 
 React allows us to build UI (User Interfaces) for websites with components. Front-end frameworks like React are known as SPAs (Single Page Applications), and so far, that's what we've been building - single pages with a lot of functionality. As we've been building React Apps, you may have noticed that we can't use the URL or forward/back buttons in the browser. So if we wanted to have an `about` page and a `main` page, we could only use conditional rendering, and if we wanted to send someone a link to the `about` page, we can't. We'd have to send them to the main page and then tell them to click on the `about` page.
 
