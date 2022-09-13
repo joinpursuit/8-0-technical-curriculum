@@ -15,18 +15,25 @@ Today's lesson will be a walk-through on how to get a Create-React App deployed 
 - `cd` into this new application
 - Go to GitHub and create a new public repository.
 - DO NOT select the following options (your create-react-app will already have these things)
+
   - Create a readme
   - Add a `.gitignore`
   - choose a license
-- In your `create-react-app`, add the new GitHub remote link.
+
+    ![GitHub new repository options](../assets/github-new-repo-options.png)
+
+- Return to your create-react-app:
   - `git add .`
   - `git commit -m 'first commit'`
 - Follow the commands listed in GitHub to push an existing repository to GitHub
+
+![GitHub new repo from existing project](../assets/github-new-repo-from-existing-project.png)
+
+> **Note:** If you do not have the above view for a new GitHub repository, the easiest thing is to delete it and start again. If you see a different view it is likely you selected some options from the previous menu.
+
 - Confirm your `create-react-app` code is now on GitHub.
 
 **IMPORTANT:** Make sure your application runs locally. If it does not run locally, there is no hope of it working on deployment.
-
-**IMPORTANT:** With continuous deployment, you only want the working code to be on `main`. Use branches like `dev` to build new features in your app and confirm that they work as expected before merging into `main`.
 
 **IMPORTANT:** Deploy early and often. The best time to deploy is right after you run `create-react-app` - the less code you have written, the less work it will take to debug each deployment in case of an issue.
 
@@ -148,6 +155,8 @@ Add, edit and delete environmental variables here.
 The name of these variables should match what is in your app.
 
 In summary, you will have a `.env` file that will only be on your computer. It will not be tracked with git, and it should not end up on GitHub. To add the values inside the `.env` file, you will go to your app's Netlify settings page and add them there to make them available for the live version of your application.
+
+> **Note:** This method of hiding the API key is sufficient for free API keys. If you are using more valuable keys (ones that required you to use a credit card), you will want to take extra steps for security. You can read about [further steps to take on the Netlify website](https://answers.netlify.com/t/support-guide-how-do-i-keep-my-api-keys-tokens-safe-using-netlify-functions/293).
 
 ## Allow for links to different views
 

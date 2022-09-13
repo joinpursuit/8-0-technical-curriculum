@@ -19,7 +19,7 @@ You've been learning React, and soon you'll build a project using React. How do 
 
 Soon, you will build a React application that you will want to put on the web so that you can share it with people. How can you achieve this goal?
 
-You could use your laptop. However, to provide uninterrupted access, you must always have your laptop on.
+You could use your laptop. However, to provide uninterrupted access, you must always have your laptop on and connected to the internet.
 
 You could buy another computer whose specific task is to host applications online (often referred to as a server).This approach would cost you money for the hardware and add to your electric bill. You would also have to learn how to configure the computer correctly. Another thing to consider is how important is it that your application still runs if there is a power outage? If it needs to run during a power outage, do you have a backup generator?
 
@@ -27,7 +27,7 @@ If you know very few people will ever visit your application, you could buy a si
 
 Another possibility is that your application is about a big event (for example, a huge party for the 2022 Sturgeon moon). You would expect that your application's popularity would increase as the event approaches, but then your application would have few visitors after the event. Would it make sense for you to purchase and set up 100 servers and then try to sell them?
 
-These are real problems that many companies face with their applications, and one way to solve them is to outsource the issue. Many companies like AWS (Amazon Web Services), Heroku, Cloudflare, and more take applications and put them online and figure out the scaling, and other potential challenges of hosting for companies.
+These are real problems that many companies face with their applications, and one way to solve them is to outsource these issues. Many companies like AWS (Amazon Web Services), Heroku, Cloudflare, and more take applications and put them online and figure out the scaling, and other potential challenges of hosting for companies.
 
 Many of these services provide a free tier for hobby applications (they also may be referred to as toy apps). These will be for things like your portfolio or demo applications to show to potential employers. These apps will be available to limited audience for small amounts of time, usually with the goal of being able to see a sample of your work.
 
@@ -51,6 +51,6 @@ This advanced system allows developers to build smaller sets of features and fix
 
 ## Netlify
 
-[Netlify](https://www.netlify.com) offers a service to host React applications. It is a reasonably straightforward process to set up an application.
+[Netlify](https://www.netlify.com) offers a service to host React applications and has a free tier. It is a reasonably straightforward process to set up an application.
 
 In this class, you will use Netlify to host your React applications.
