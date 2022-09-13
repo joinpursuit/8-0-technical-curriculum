@@ -4,19 +4,19 @@ Today's lesson will be a walk-through on how to get a Create-React App on Netlif
 
 ## Learning objectives
 
-- Create `.env` configuration files that can be used within a React application created by the create-react-app program.
 - Deploy a React application to the web using Netlify.
+- Create `.env` configuration files that can be used within a React application created by the create-react-app program.
 - Configure environment variables on the Netlify platform.
-- Configure Netlify’s continuous deployment options to regularly deploy whenever a commit is pushed to main.
+- Configure Netlify’s continuous deployment options to deploy whenever a commit is pushed to the `main` branch regularly.
 
 ## Getting Started
 
 - In the terminal, make sure you are not already inside a git repository, and then type `npx create-react-app YOUR_APP_NAME` (replace `YOUR_APP_NAME` with the actual name of your app)
 - `cd` into this new application
 - Go to GitHub and create a new public repository.
-- DO NOT (your create-react-app will already have these things)
-- create a readme
-- add a `.gitignore`
+- DO NOT select the following options (your create-react-app will already have these things)
+- Create a readme
+- Add a `.gitignore`
 - choose a license
 - In your `create-react-app`, add the new GitHub remote link.
 - `git add .`
@@ -26,11 +26,11 @@ Today's lesson will be a walk-through on how to get a Create-React App on Netlif
 
 **IMPORTANT:** Make sure your application runs locally. If it does not run locally, there is no hope of it working on deployment.
 
-**IMPORTANT:** With continuous deployment, you only want the working code to be on `main`. Use branches like `dev` to build and confirm a functional app before merging into `main`.
+**IMPORTANT:** With continuous deployment, you only want the working code to be on `main`. Use branches like `dev` to build new features in your app and confirm that they work as expected before merging into `main`.
 
 **IMPORTANT:** Deploy early and often. The best time to deploy is right after you run `create-react-app` - the less code you have written, the less work it will take to debug each deployment in case of an issue.
 
-**IMPORTANT:** You should check your application every time you have changed to the main branch to make sure it still works online.
+**IMPORTANT:** You should check your application every time you have pushed changes to the main branch to make sure your application still works online.
 
 ## Netlify Settings
 
@@ -70,7 +70,7 @@ See the status of your deployment. Click on it to see more details.
 
 ![Status of deployment](../assets/9.see-status.png)
 
-Check the logs. It is good to get familiar with what is there. When errors occur with the build, this is where you would go to debug.
+Check the logs. It is good to get familiar with what is there. When errors occur with the build, this is where you would go to learn what to debug.
 
 ![Netlify logs](../assets/10.check-logs.png)
 
@@ -84,17 +84,22 @@ Go to the `Deploys` tab, and click on the link to see your site live. You can al
 
 To continue to update your Netlify live site:
 
-- On the `main` branch, confirm that your app works. While working on your app, work on another branch like `dev` and only merge into `main` when your new features are working.
-- Add, commit, and push your code to main.
+- On the `main` branch, confirm that your app works. While adding to your app, you should work on another branch like `dev` and only merge into `main` when your new features are working.
 
 ```bash
 git add -A
 git commit -m "New feature added"
-git push origin main
+git push origin dev
 ```
 
+Then go to GitHub, open a pull request for your `dev` branch, and follow the steps to merge your changes from `dev` into `main`.
+
+Once continuous deployment is set up, a change to `main` will trigger Netlify to start a new build.
+
+Note:
+
 - Give your site a few minutes to build.
-- Be sure to check the dashboard and live site to ensure everything is working correctly.
+- Check the Netlify dashboard and live site to ensure everything works correctly.
 
 ## Adding environmental variables to your application
 
@@ -116,13 +121,15 @@ Notice that this file is not written in JavaScript, so do not use quotes or semi
 
 To use this variable in your application. Choose a component where you will use this variable and write:
 
-```
-process.env.REACT_APP_API_KEY
+```js
+// Example file: src/App.js
+process.env.REACT_APP_API_KEY;
 ```
 
 You can confirm that you are getting the expected value by logging it:
 
 ```js
+// Example file: src/App.js
 console.log(`${process.env.REACT_APP_API_KEY}`);
 ```
 
@@ -138,11 +145,13 @@ Add, edit and delete environmental variables here.
 
 The name of these variables should match what is in your app.
 
+In summary, you will have a `.env` file that will only be on your computer. It will not be tracked with git, and it should not end up on GitHub. To add the values inside the `.env` file, you will go to your app's Netlify settings page and add them there to make them available for the live version of your application.
+
 ## Allow for links to different views
 
-The way your app is currently configured on Netlify, if configured React Router and had an about page, if you send a link to the `/about` page to a friend, it will give a 404 or redirect back to the home view.
+The default configuration on Netlify only shows a Create React App's first/home view. If you have configured React Router and had an `about` page and sent a URL to the `/about` page to a friend, it will give a 404 or redirect back to the home view.
 
-To configure the ability to send a specific page view, you must create a file called `_redirects` inside the `public` folder of your app.
+To configure the ability to send a specific page view URL, you must create a file called `_redirects` inside the `public` folder of your app.
 
 This file must contain the following text:
 
