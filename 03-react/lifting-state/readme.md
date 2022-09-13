@@ -1,6 +1,6 @@
 # Data Flow and Lifting State
 
-As you've seen, data flows down in React. When you add a prop, it becomes available inside the child component. But what if you need to pass a value to a parent component (lift state)?
+As you've seen, data flows down in React. When you add a prop, it becomes available inside the child component. But what if you need to pass a value to a parent or sibling component (lift state)?
 
 ## Objectives
 
