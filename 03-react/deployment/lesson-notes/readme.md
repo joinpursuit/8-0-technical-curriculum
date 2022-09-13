@@ -1,6 +1,6 @@
-# React Props
+# Deploying a Create React App with Netlify
 
-Today's lesson will be a walk-through on how to get a Create-React App on Netlify.
+Today's lesson will be a walk-through on how to get a Create-React App deployed on Netlify.
 
 ## Learning objectives
 
@@ -15,12 +15,12 @@ Today's lesson will be a walk-through on how to get a Create-React App on Netlif
 - `cd` into this new application
 - Go to GitHub and create a new public repository.
 - DO NOT select the following options (your create-react-app will already have these things)
-- Create a readme
-- Add a `.gitignore`
-- choose a license
+  - Create a readme
+  - Add a `.gitignore`
+  - choose a license
 - In your `create-react-app`, add the new GitHub remote link.
-- `git add .`
-- `git commit -m 'first commit'`
+  - `git add .`
+  - `git commit -m 'first commit'`
 - Follow the commands listed in GitHub to push an existing repository to GitHub
 - Confirm your `create-react-app` code is now on GitHub.
 
@@ -34,7 +34,7 @@ Today's lesson will be a walk-through on how to get a Create-React App on Netlif
 
 ## Netlify Settings
 
-Log onto Netlify, go to `Team Overview`, and select `New site from Git`.
+Log on to (or create an account on) Netlify, go to `Team Overview`, and select `New site from Git`.
 
 ![Team overview](../assets/1.team-overview.png)
 
@@ -82,9 +82,11 @@ Go to the `Deploys` tab, and click on the link to see your site live. You can al
 
 ![Deploys view](../assets/12.deploys-view.png)
 
-To continue to update your Netlify live site:
+While adding to your app, you should work on another branch like `dev` and only merge into `main` when your new features are working.
 
-- On the `main` branch, confirm that your app works. While adding to your app, you should work on another branch like `dev` and only merge into `main` when your new features are working.
+Think about a professional setting. If you visit your favorite website and it is down, you will be very unhappy. Therefore it is critical that applications are built and tested on other branches and that only working changes are merged to the `main` branch.
+
+This workflow would look similar to this:
 
 ```bash
 git add -A
@@ -149,11 +151,11 @@ In summary, you will have a `.env` file that will only be on your computer. It w
 
 ## Allow for links to different views
 
-The default configuration on Netlify only shows a Create React App's first/home view. If you have configured React Router and had an `about` page and sent a URL to the `/about` page to a friend, it will give a 404 or redirect back to the home view.
+The default configuration on Netlify only shows a Create React App's first/home view. If you have configured React Router and have an `about` page (or any other page view) and sent a URL to the `/about` page to a friend, it will give a 404 or redirect back to the home view.
 
 To configure the ability to send a specific page view URL, you must create a file called `_redirects` inside the `public` folder of your app.
 
-This file must contain the following text:
+This file (**public/\_redirects**) must contain the following text:
 
 ```
 /* /index.html 200
