@@ -75,13 +75,22 @@ The checkbox should now work.
 
 ## Select options
 
+Add state to select an option:
+
+```js
+const [selectOption, setSelectOption] = useState("");
+```
+
+Add a function to handle the changes:
+
+````js
 Set up state and the event handler:
 
 ```js
 const [selectOption, setSelectOption] = useState("");
 
 function handleSelectChange() {}
-```
+````
 
 Add the select menu:
 
@@ -165,7 +174,12 @@ function handleSubmit(event) {
   event.preventDefault();
   console.log("form submitted");
 }
+<form onSubmit={handleSubmit}>
+  <input type="submit" />
+</form>;
 ```
+
+````
 
 You should now be able to see the console log because the page is no longer reloading.
 
@@ -183,7 +197,7 @@ const [user, setUser] = useState({
   email: "",
   password: "",
 });
-```
+````
 
 Create a function to handle the change
 
