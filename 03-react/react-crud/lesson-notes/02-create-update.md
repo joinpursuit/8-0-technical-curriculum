@@ -187,3 +187,7 @@ Take a few minutes to test all your features.
 - Find the show you created using the search bar
 - Edit this show
 - Delete this show
+
+## Completed Build
+
+[See the complete build here](https://github.com/joinpursuit/8-0-react-crud-lab/tree/build-complete)
