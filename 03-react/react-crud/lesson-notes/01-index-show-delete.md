@@ -47,13 +47,13 @@ The app will have the following views and actions:
 |   `/shows/:id`    |      none      | DELETE |   `ShowsNewForm`    |
 |    `/shows/:id    |      none      |  PUT   |   `ShowsEditForm`   |
 
-If there is no action, that page will not load any data. The home page and new form are examples where no data is needed for the view.
+If there is no `GET` action, that page will not load any data. The home page and new form are examples where no data is needed for the view.
 
 When there is a `GET` action, the app must `GET` data from the server and then load it into the view. The index, show, and edit form views are examples of data needed to complete the view.
 
-To complete CRUD, three more actions are needed: `POST` (create), `PUT` (edit), `DELETE` (delete/destroy). These actions will send requests to the server, for example, when a form has been filled out and submitted.
+To complete CRUD, three more actions are needed: `POST` (create), `PUT` (edit), `DELETE` (delete/destroy). These actions will also send requests to the server, but instead of getting data, they will modify data by creating, updating or deleting.
 
-In this lesson, the goal is to build out the following pages:
+In this lesson, the plan is to build out the following pages:
 
 1. An _Index_ page for television shows.
 1. A _Show_ page for television shows.
@@ -86,7 +86,7 @@ In this case, show them a generic error message, like the image below.
 
 ## ShowsIndex
 
-The `ShowsIndex` view is available at `/shows` in the browser.
+The `ShowsIndex` view is available at `/shows` in the browser. The file is located at `/src/components/shows/ShowsIndex.js`.
 
 ### ShowsIndex Error Handling
 
@@ -133,6 +133,7 @@ Add this fetch request inside the `getAllShows()` function
 
 ```js
 // src/api/fetch
+// Index/Get all
 export function getAllShows() {
   return fetch(`${URL}/shows`).then((response) => response.json());
 }
@@ -193,6 +194,8 @@ Import the component
 import ShowListing from "./ShowListing";
 ```
 
+Replace the `section` element and the comment inside it with:
+
 ```js
 <section className="shows-index">
   {shows.map((show) => {
@@ -200,6 +203,8 @@ import ShowListing from "./ShowListing";
   })}
 </section>
 ```
+
+Now, you should see a list of all the shows in your browser.
 
 ### ShowsIndex Search Bar
 
@@ -251,6 +256,8 @@ function handleTextChange(event) {
   setSearchTitle(title);
 }
 ```
+
+Update the input to match the following:
 
 ```js
 <label htmlFor="searchTitle">
@@ -330,6 +337,8 @@ You will need to make a `GET` request.
 Open `src/api/fetch.js`
 
 ```js
+// src/api/fetch.js
+// Show/Get one
 export function getOneShow(id) {
   return fetch(`${URL}/shows/${id}`).then((response) => response.json());
 }
@@ -373,14 +382,17 @@ useEffect(() => {
 
 ### Show view: delete a show
 
-Currently, there is a `Remove show` button, but if you click it, it does not work. Let's add the functionality.
+Currently, there is a `Remove show` button in the show view, but if you click it, it does not work. Let's add the functionality.
 
 Go to `src/api/fetch.js`. So far, all your requests have been `GET` requests. But to delete an item, you will make a `DELETE` request.
 
 When you use `fetch()`, the default is to make a `GET` request. You can pass an option to change the method of the request.
 
+Open `src/api/fetch.js`
+
 ```js
 // src/api/fetch.js
+// Delete
 export function destroyShow(id) {
   const options = { method: "DELETE" };
   return fetch(`${URL}/shows/${id}`, options);
@@ -401,7 +413,7 @@ When a show is successfully deleted, you want to send the user back to the index
 First, import it:
 
 ```js
-import { Link, useParams } from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 ```
 
 Configure it
@@ -410,7 +422,7 @@ Configure it
 let navigate = useNavigate();
 ```
 
-Add the `destroyShow()` function to the `handleDelete()` function.
+Add the `destroyShow()` function to the `handleDelete()` function. Then upon successful delete, navigate back to the index page. If there is an error deleting the show, show the loading error instead.
 
 ```js
 function handleDelete() {

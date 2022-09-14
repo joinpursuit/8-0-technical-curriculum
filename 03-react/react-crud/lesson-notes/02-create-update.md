@@ -31,7 +31,7 @@ The request to create will be a `POST` request. Additionally, the user has input
 
 ```js
 // src/api/fetch.js
-
+// Create
 export function createShow(show) {
   const options = {
     method: "POST",
@@ -58,7 +58,7 @@ When the user has filled out the form, on successful creation, you can navigate 
 Import `useNavigate()` from React Router.
 
 ```js
-import { useParams, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 ```
 
 Configure `useNavigate()` inside the functional component.
@@ -92,6 +92,7 @@ The request to create will be a `PUT` request.
 
 ```js
 // src/api/fetch.js
+// Update
 export function updateShow(id, show) {
   const options = {
     method: "PUT",
@@ -104,25 +105,26 @@ export function updateShow(id, show) {
 }
 ```
 
-Go to the `src/components/shows/ShowsNewForm.js` file.
+Go to the `src/components/shows/ShowsEditForm.js` file.
 
 Import `updateShow()`:
 
 ```js
-// src/components/shows/ShowsNewForm.js
+// src/components/shows/ShowsEditForm.js
 import { updateShow } from "../../api/fetch";
 ```
 
-Import `useNavigate()` from React Router.
+Import `useNavigate()` from React Router and`useParams()`.
 
 ```js
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 ```
 
-Configure `useNavigate()` inside the functional component.
+Configure `useNavigate()` and `useParams()` inside the functional component.
 
 ```js
 let navigate = useNavigate();
+const { id } = useParams();
 ```
 
 Inside of the `handleSubmit()` function:
@@ -155,18 +157,6 @@ Import `getOneShow()`:
 
 ```js
 import { updateShow, getOneShow } from "../../api/fetch";
-```
-
-Import `useParams()`:
-
-```js
-import { useParams, useNavigate } from "react-router-dom";
-```
-
-Configure `useParams()`:
-
-```js
-const { id } = useParams();
 ```
 
 Load the data from one show:
