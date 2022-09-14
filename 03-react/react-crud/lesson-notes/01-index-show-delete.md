@@ -93,7 +93,7 @@ The `ShowsIndex` view is available at `/shows` in the browser.
 - Add state to the `ShowsIndex` component with `useState`
 
 ```js
-// src/shows/ShowsIndex.js
+// src/components/shows/ShowsIndex.js
 // Top of file
 import { useState } from "react";
 ```
@@ -335,12 +335,12 @@ export function getOneShow(id) {
 }
 ```
 
-Open the `src/shows/Show.js` file.
+Open the `src/components/shows/Show.js` file.
 
 Import `getOneShow()`
 
 ```js
-// src/shows/Show.js
+// src/components/shows/Show.js
 import { getOneShow } from "../../api/fetch";
 ```
 
@@ -387,12 +387,12 @@ export function destroyShow(id) {
 }
 ```
 
-Return to `/src/shows/Show.js`
+Return to `/src/components/shows/Show.js`
 
 Import the `destroyShow` function.
 
 ```js
-// src/shows/Show.js
+// src/components/shows/Show.js
 import { destroyShow, getOneShow } from "../../api/fetch";
 ```
 
