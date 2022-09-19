@@ -4,7 +4,7 @@ Until now, you've learned how to use React to render content using JavaScript. Y
 
 You may be surprised to learn that there's not much else to React than what you've learned so far. Much of the challenge as you advance will be to synthesize what you have learned and apply it to increasingly complex projects.
 
-That said, building a typical application you might see on the web is quite complex if you start from scratch. In this lesson, you'll focus on learning about the key actions on just about every website. Doing so will get you prepared for building all kinds of applications.
+That said, building a typical application you might see on the web is quite complex. In this lesson, you'll focus on learning about the key actions that interact with data on just about every website.
 
 ## Learning objectives
 
@@ -24,13 +24,14 @@ Recall why you're learning React and how it will interact with other parts of a 
 - When you interact on a web application, more requests are sent back to the server. Some of these requests to the server are then sent to a database, where information is stored.
 - Data stored in the database is requested by the server, which then serves that information up to your browser.
 
-Using Spotify as an example, when you add a new song to a playlist through the browser version of Spotify
-You interact with the app (click on a song and then click to add it to a playlist)
-This interaction triggered two things:
-The update of the page to show a successful interaction
-Send a request to a server that will update the data (This will allow the playlist to be updated everywhere, not just in the browser)
+Using Spotify (browser version) as an example, when you add a new song to a playlist, you interact with the app (click on a song and then click to add it to a playlist).
 
-This concert of requests and promises allows you to have a unique experience on a website. React allows you to build a rich and complex front-end experience for your user. However, it also needs to play its part in facilitating this concert of requests.
+This interaction triggered two main things:
+
+- It sent a request to a server that will update the data (This will allow the changes to be saved so the playlist will be updated everywhere, not just in the browser in this one session).
+- The update of the page to show a successful interaction (You now see the song on the playlist or if it didn't work, an error message).
+
+This concert of requests and promises allows you to have a unique experience on a website. React allows you to build a rich and complex front-end experience. You will learn how React plays its part in facilitating this concert of requests and provides the user with a smooth and robust experience.
 
 ### The big picture
 
@@ -40,13 +41,13 @@ For example, consider the [Veterinarian API](https://github.com/joinpursuit/reso
 
 However, imagine you want to build an application that doesn't just display information but _modifies it._ How can you add new clients? Change the titles of existing staff?
 
-This lesson will be the first of many to show you how to do the above. In doing so, you'll be able to build real complex applications that are highly interactive and responsive to users.
+This lesson will be the first in a small serries to show you how to do the above. In doing so, you'll be able to build real complex applications that are highly interactive and responsive to users.
 
 ## Resources
 
-Remember that code represents real processes and concepts in the real world. For example, when you go to an online store, you typically add "products" to your "cart" before placing an "order" to purchase those products. Based on the "address" you've stored in the "account" you've created, a new "delivery" may be made to track your shipment.
+Remember that code represents real processes and concepts in the real world. For example, when you go to an online store, you typically add `products` to your `cart` before placing an `order` to purchase those products. Based on the `address` you've stored in the `account` you've created, a new `delivery` may be made to track your shipment.
 
-Each of these concepts could be a resource. A resource is typically a conceptual representation that has a set of properties with different potential values. Typically, resources are also something you want to "save" or store.
+Each of the highlighted words represent a concept that could be a resource. A resource is typically a conceptual representation of data that has a set of properties with different potential values. Typically, resources are also something you want to save or store.
 
 For example, an online store might have dozens of products. Each of these products is different in that they may have other names, colors, weights, costs, images, and more. And yet, they are all similar in that they can all be purchased in the same way. In this example, "Products" are a resource. Each individual "product" shares the same structure (e.g., having a name, color, and price property), but each is likely to differ from other products.
 
@@ -60,7 +61,7 @@ The concept of a resource can feel quite abstract. However, you're likely intera
 
 ## Create, Read, Update, and Delete
 
-For many web applications, the entire purpose is to interact with resources. Social media sites are a good example of this. Social media "posts" don't do anything on their own. They are meant to be created, looked at, and occasionally updated or deleted. That is their entire purpose.
+For many web applications, the entire purpose is to interact with resources. Social media sites are a good example of this. Social media "posts" don't do anything on their own. They are meant to be `created`, `read`, and occasionally `updated` or `deleted`.
 
 This standard set of interactions is called CRUD, representing the actions of create, read, update, and delete.
 
@@ -77,7 +78,7 @@ One place you have already seen CRUD actions is on the command line. For example
 | Update | `mv`            | Allows for the renaming of a file. |
 | Delete | `rm`            | Deletes a file.                    |
 
-You can perform these same actions on the command line:
+You can perform these same actions on the command line for files as well:
 
 | Action | Command        | Effect                                              |
 | ------ | -------------- | --------------------------------------------------- |
@@ -95,7 +96,7 @@ You've also performed CRUD commands on JavaScript objects. Consider how you can 
 | Action | Syntax                   | Effect                                                         |
 | ------ | ------------------------ | -------------------------------------------------------------- |
 | Create | `obj[key] = "value"`     | Creates a new key-value pair on an existing object.            |
-| Read   | `obj[key]`               | Accesses the value of a particular key in an object.           |
+| Read   | `obj[key]` or `obj.key`  | Accesses the value of a particular key in an object.           |
 | Update | `obj[key] = "new value"` | Replaces an existing value with a new value for the given key. |
 | Delete | `delete obj[key]`        | Removes the key-value pair from the object.                    |
 
@@ -152,7 +153,7 @@ Not all index pages are created equal. The image below is from Amazon and shows 
 
 ### Show
 
-A Show page features a single resource. Unlike the Index page, which reads multiple, show pages typically read a single resource.
+A Show page features a single resource. Unlike the Index page, which reads multiple, show pages typically read a single resource in more detail and/or with more options for interaction.
 
 That's it! Take a look at the following Show page for a Brilliant.org course.
 
@@ -164,7 +165,7 @@ This same concept can be seen on Amazon when looking at a particular product pag
 
 ![Amazon product page.](./assets/amazon-show.png)
 
-In the image above, a single product is highlighted from Amazon.
+In the image above, a single product is highlighted from Amazon. Unlike the index view, you can look at ratings or add your own, you can see more images, see the product dimensions and more.
 
 ### New
 

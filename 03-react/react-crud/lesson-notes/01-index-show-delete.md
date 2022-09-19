@@ -18,23 +18,27 @@ Start by forking and cloning the following repository.
 
 Follow the instructions in that repository to get the application up and working.
 
-> **Note:** You will also have to start a server on your computer. This server will mimic a third-party API, but instead of the resource being somewhere on the internet, it will be on your machine.
+- Then fork and clone the API that is linked in the lab. You'll have to open another new tab and keep that application running throughout the build along with the React application.
 
-## Guiding questions and tasks
+> **Note:** The second application will be a server on your computer. This server will mimic a third-party API, but instead of the resource being somewhere on the internet, it will be on your machine. You will not need to edit the code in this application to complete the build.
 
-First, once your application is up and running, review the code in the React CRUD Lab repository. Answer the following questions.
+In class you will build out the `shows` resource. During lab, you'll use what you learned in class to build out the `movies` resource.
+
+## Guiding questions and app exploration
+
+First, once your applications are up and running, review the code in the React CRUD Lab repository. Answer the following questions.
 
 - Take a look at the `src/App.js` file. React Router has already been set up for you. How do you know?
 
 - What is the `.env.development` file? You can view [this page](https://create-react-app.dev/docs/adding-custom-environment-variables/) to get some help.
 
-- Take a look at the `src/common` directory. What kind of components are in this folder?
+- Take a look at the `src/components/common` directory. What kind of components are in this folder?
 
-- Take a look at both `src/common/Nav.js` and `src/App.js`. What routes are available to the user in this application?
+- Take a look at both `src/components/common/Nav.js` and `src/App.js`. What routes are available to the user in this application?
 
 - Take a look at both `src/components/shows`.
 
-The app will have the following views and actions:
+The app will have the following views and actions once you have completed the build. Some of these views are already available:
 
 |       route       |      view      | action | top-level component |
 | :---------------: | :------------: | :----: | :-----------------: |
@@ -51,7 +55,7 @@ If there is no `GET` action, that page will not load any data. The home page and
 
 When there is a `GET` action, the app must `GET` data from the server and then load it into the view. The index, show, and edit form views are examples of data needed to complete the view.
 
-To complete CRUD, three more actions are needed: `POST` (create), `PUT` (edit), `DELETE` (delete/destroy). These actions will also send requests to the server, but instead of getting data, they will modify data by creating, updating or deleting.
+To complete CRUD, three more actions are needed: `POST` (create), `PUT` (edit), `DELETE` (delete/destroy). These actions will also send requests to the server, but instead of getting data, they will modify data by creating, updating or deleting. These actions are typically represented as buttons and links, they do not have a view. Once the action is complete, the user will typically be rerouted to another view.
 
 In this lesson, the plan is to build out the following pages:
 
@@ -84,9 +88,11 @@ In this case, show them a generic error message, like the image below.
 
 ![Error displaying on the television shows index page.](../assets/lesson-notes/shows-index-error.png)
 
+## Begin coding
+
 ## ShowsIndex
 
-The `ShowsIndex` view is available at `/shows` in the browser. The file is located at `/src/components/shows/ShowsIndex.js`.
+The `ShowsIndex` view is available at `/shows` in the browser (use the `All Shows` link in the nav bar). The file is located at `/src/components/shows/ShowsIndex.js`.
 
 ### ShowsIndex Error Handling
 
@@ -114,6 +120,8 @@ const [loadingError, setLoadingError] = useState(false);
  {loadingError ? (
  <ErrorMessage />
 ```
+
+To test that this component loads, you can change the initial state for `loadingError` to `true`. However, for a better user experience, the initial value should be `false`.
 
 ### ShowsIndex load and render shows data
 
@@ -379,6 +387,8 @@ useEffect(() => {
     });
 }, [id]);
 ```
+
+Be sure to test that this view works. What is the URL for a single show?
 
 ### Show view: delete a show
 

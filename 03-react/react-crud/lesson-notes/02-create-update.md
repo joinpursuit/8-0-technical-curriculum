@@ -19,8 +19,6 @@ Follow the instructions in that repository to get the application up and running
 
 > **Note:** You will also have to start the server on your computer. This will mimic a third-party API, but instead of the resource being somewhere on the internet, it will be on your machine.
 
-##
-
 ### New Page
 
 The goal will be to build out the form's functionality so you can create a new show.
@@ -81,6 +79,15 @@ function handleSubmit(event) {
     });
 }
 ```
+
+Test it! Create a new show.
+
+- Make sure all the fields are filled out as expected.
+- Make sure it appears on the index page.
+- Make sure you can delete it.
+- Make sure the views update in the browser as expected (don't require a page reload or fiddling with the forward and back buttons).
+
+Are there any other things you should test to make sure it works as expected?
 
 ### Edit Page
 
