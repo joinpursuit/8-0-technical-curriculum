@@ -41,7 +41,7 @@ React is a third-party library that you can download and use to make building ro
 
 ## Introduction to React
 
-React is a JavaScript library that was created by Facebook. Developers use React to build web applications' UI and front-end logic. Until now, we have been building our UI by writing a single large HTML file, then linking it to a JavaScript file. The JavaScript file uses [DOM manipulation](https://github.com/joinpursuit/Pursuit-Core-Web/tree/master/html_css_dom/dom_1) to edit, add, and remove elements in response to user interaction. This approach has worked well for us but has some challenges when scaling to larger applications. Consider the following image:
+React is a JavaScript library that was created by Facebook. Developers use React to build web applications' UI and front-end logic. Until now, you have been building UI by writing a single large HTML file, then linking it to a JavaScript file. The JavaScript file uses [DOM manipulation](https://github.com/joinpursuit/Pursuit-Core-Web/tree/master/html_css_dom/dom_1) to edit, add, and remove elements in response to user interaction. This approach has worked well for us but has some challenges when scaling to larger applications. Consider the following image:
 
 ![Facebook homepage redesign](<https://cdn.vox-cdn.com/thumbor/0KnV_DIxDm00kPsX8hR0f4ZzMIU=/0x0:2048x1410/920x613/filters:focal(861x542:1187x868):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/63696407/facebook_website_redesign_1.9.jpg>)
 
@@ -56,11 +56,7 @@ These are illustrated here:
 
 ![Facebook redesign separated into components](./assets/fbInterface.jpg)
 
-We would have to put all this content together from scratch using our DOM manipulation approach. This would involve assembling HTML, CSS, and JS by hand to implement all the functionalities we'd like to implement. We'd have to add event listeners to respond to user interaction, and we'd have to manipulate the DOM directly if anything changed. All of this is really expensive: it's not great performance-wise, and it'd certainly take a lot of development time.
-
-React solves these problems by introducing `Components`. Instead of laying out all our HTML, JS, and CSS and hooking these disparate functionalities, we can combine our logic and render them into files based on the specific segment of the UI they handle. We then import these files, organize them, and let React combine their markup and functionality into a single, cohesive page. If we have an issue in one component, we simply open that component's file, and the code we need to fix is right there.
-
-Remember, however, that a web browser can't read and combine components by itself. The browser still needs a single HTML page even if a developer would like neatly separated files. To handle this, React must assemble all of our components into a cohesive DOM tree, which the browser can render to the user as HTML. React aims to improve developers' quality of life while packaging front-end applications in a format that browsers can still read and render efficiently.
+With React, you will be able to organize the code for this kind of application by UI elements (components) in a more maintainable way.
 
 ## Virtual DOM
 
@@ -69,8 +65,6 @@ How does React put all these components on a page so the user can see it? How do
 First, React converts all the code into HTML, CSS, and JavaScript, which the browser understands, and bundles all the code into one file. This is done behind the scenes. An app like Create React App is configured to handle this for you.
 
 To handle the updates based on user interaction, React has a different approach than what you have done with vanilla JavaScript. React uses a **virtual DOM**. This DOM isn't the one you see on the page. The virtual DOM works behind the scenes. The virtual DOM keeps track of what to update in the real DOM. Whenever a React component changes, it updates the virtual DOM first. Then, the virtual DOM is compared to the actual DOM. React has algorithms that will only update only the necessary components of the page. This makes updates relatively fast or `Reactive`.
-
-Now that we better understand React's inner workings let's create our first React application.
 
 ## React in terms of code
 
@@ -120,7 +114,7 @@ npm start
 
 > **Note:** The app can take a long time to download and start the first time.
 
-Let's break down what each file and folder does. There is a lot of boilerplate code you will not need to use or change for labs, assessments, or even some projects for this course. However, they will be explained below so you can comfortably navigate the application.
+Take a moment to break down what each file and folder does. There is a lot of boilerplate code you will not need to use or change for labs, assessments, or even some projects for this course. However, they will be explained below so you can comfortably navigate the application.
 
 > **Note** The only file you will be heavily editing for your in-class builds is `src/App.js`.
 
@@ -205,7 +199,7 @@ This allows you to organize your CSS in two different ways, which can help with 
 
 #### `App.test.js` and `setUpTests.js`
 
-This is an example of one way to set up testing. We will not use these files in this course because we will use Cypress, which requires a different configuration.
+This is an example of one way to set up testing. These files will not be used because this course uses Cypress, which requires a different configuration.
 
 #### `logo.svg`
 
@@ -338,9 +332,9 @@ const hello = <h1>Hello, {formatName(user)}!</h1>;
 
 ## Child Components
 
-`App.js` is just one small component. However, if the goal were to build our own simple social media site, this file would quickly grow very large. One of the main features of React is the ability to create and render many components at a time in an organized and maintainable way.
+`App.js` is just one small component. However, if the goal were to build your own simple social media site, this file would quickly grow very large. One of the main features of React is the ability to create and render many components at a time in an organized and maintainable way.
 
-Let's create a new child component that `App.js` will import and render. This component will list some contacts.
+Create a new child component that `App.js` will import and render. This component will list some contacts.
 
 Create a file called `ContactList.js` inside the `src` folder.
 
@@ -404,7 +398,7 @@ function ContactList() {
 }
 ```
 
-Returning to our `App.js` file, you first must `import` the `ContactList` before being able to display the component.
+Returning to `App.js` file, you first must `import` the `ContactList` before being able to display the component.
 
 ```js
 // src/App.js
@@ -466,7 +460,7 @@ Forgetting to export is a common error.
 
 ## Duplicating Components
 
-Now, let's build a feed that will mimic the main feed of a social media application. Like any social feed, this feed should be set up to render any number of posts.
+Now, build a feed that will mimic the main feed of a social media application. Like any social feed, this feed should be set up to render any number of posts.
 
 This is where components become highly advantageous. A Facebook post will be the same format no matter who posts it. Different posts might include text, an image, or comments, but the template is the same every time. This allows the developers to create one template for a post and then allows the data to be embedded into the template to create the posts dynamically. This allows for automatic updates based on data rather than requiring developers to handcraft HTML for each update.
 
@@ -516,7 +510,7 @@ function App() {
 
 There is only one `Post` component. This means: that `Post` has to be reusable. A single feed has to be able to render multiple `Post` components.
 
-The `Post` component below uses `{}` to embed values from the `postInfo` variable. For now, that means all of our posts will have the same content. In later lessons, we'll see how we can pass in different properties for different posts:
+The `Post` component below uses `{}` to embed values from the `postInfo` variable. For now, that means all of the posts will have the same content. In later lessons, passing in different properties for different posts will be demonstrated.
 
 ```jsx
 import postInfo from "./data.js";
