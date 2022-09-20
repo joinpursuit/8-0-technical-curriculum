@@ -3,7 +3,9 @@
 ## Learning Objectives
 
 - Understand what React is and what problem it solves
-- Create an application that uses React to render its front end
+- Use Create React App to start a React project
+- Understand the role of the files and folders in Create React App starter code
+- Create an application that uses React to render its front-end
 
 ## Getting Started
 
@@ -22,13 +24,7 @@ There are several ways to [create an application with React or add React to a cu
 
 To use Create-React-App to create a new app:
 
-- In the terminal, navigate to a convenient location on your computer and type:
-
 - `npx create-react-app@5.0 my-app`
-  - **npx** allows you to download what you need to create a new create-react-app one time and then delete the unnecessary set-up files.
-  - **create-react-app** allows you to start a new Create React App project
-  - **@5.0** allows you to download version 5.0 of Create React App. Setting the version is helpful for class. Utilizing the same version will allow you, your instructors, and the class notes to have the same version to learn and study. If you don't include this, it will download the latest version, which may have some variations to what you see in class.
-  - **my-app** this is the name of your project and the file that will contain your Create React App. You can name it anything you want.
 
 Inside this project, you will see the following files.
 
@@ -49,8 +45,6 @@ Inside this project, you will see the following files.
 <details><summary>Answer</summary>
 
 You will work inside the `src` folder.
-
-You can also go into the `public` and change information in the `head` of the `index.html` file. For example, you can change the app's `title` from `React App` to whatever you want.
 
 </details>
 
@@ -247,7 +241,7 @@ Use curly braces for JSX to evaluate the inside value: `{}`.
 
 There are several ways to include CSS in a Create React App.
 
-You will notice some default styles have been placed in **src/index.css**. This is an excellent place to store CSS that should impact the entire app. For example, making sure the whole app has the same font.
+You will notice some default styles have been placed in **src/index.css**. This is an excellent place to store CSS that should impact the entire app. For example, making sure the whole app has the same base font.
 
 Another way to add CSS is to add it for every component. This will assist in keeping your CSS code organized.
 
