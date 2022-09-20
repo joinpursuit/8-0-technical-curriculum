@@ -27,7 +27,7 @@ You have built interactive web pages with vanilla JavaScript (vanilla refers to 
 
 - The files became very large.
 - The code was hard to organize.
-- The code was lengthy, and it could be hard to find what you were looking for.
+- The lines of code were lengthy, and it could be hard to find what you were looking for.
 - It was likely hard to update a small piece because all the surrounding code was particular to specific HTML element ids and classes.
 - It could be hard to create a reusable bit of code for all the reasons above.
 - Creating logic to update multiple components likely led to [spaghetti code](https://en.wikipedia.org/wiki/Spaghetti_code).
@@ -56,7 +56,7 @@ These are illustrated here:
 
 ![Facebook redesign separated into components](./assets/fbInterface.jpg)
 
-With React, you will be able to organize the code for this kind of application by UI elements (components) in a more maintainable way. Each UI element will be its own component. Each component will have its own file, allowing for smaller files and better organization.
+With React, you will be able to organize the code for this kind of application by UI elements (components) in a more maintainable way. Each UI element will be its own component. Each component will have its own file, allowing for smaller files and better project organization.
 
 ## Virtual DOM
 
@@ -101,7 +101,7 @@ Inside this project, you will see the following folders and files.
 └── src/
 ```
 
-> **Note:** If node modules are missing, use `npm install` to install the needed packages.
+> **Note** If node modules are missing, use `npm install` to install the needed packages.
 
 To start the app, follow the instructions in the terminal. They should look like the following:
 
@@ -110,7 +110,7 @@ cd my-social-media-app
 npm start
 ```
 
-> **Note:** The app can take a long time to download and start.
+> **Note** The app can take a long time to download and start.
 
 ## Create React App files and folders
 
@@ -184,7 +184,7 @@ The `robots.txt` allows you to set some preference for what to crawl and scrape.
 
 ### `src/`
 
-The `src/` folder (short for source) is where you will build your React application. All the code in this file will be bundled to build your React application. If you try to add code or assets outside of this folder, they will not be able to be loaded into your React application (which will be loaded inside the `div` with the id of `root` from `public/index.html`).
+The `src/` folder (short for source) is where you will build your React application. All the code in this folder will be bundled to build your React application. If you try to add code or assets outside of this folder, they will not be able to be loaded into your React application (which will be loaded inside the `div` with the id of `root` from `public/index.html`).
 
 There are several files here that demonstrate how to set up some common application elements, including:
 
@@ -221,7 +221,7 @@ Then there is a `root` variable. This will be discussed in more detail below.
 
 If you have started the Create React App and it has loaded in the browser, you can see the contents of this file.
 
-**Note:** If a view has not opened in the browser, try going to http://localhost:3000
+**Note** If a view has not opened in the browser, try going to http://localhost:3000
 
 ![Create React App initial view](./assets/create-react-app-initial.png)
 
@@ -345,7 +345,7 @@ Try to a new child component that `App.js` will import and render. This componen
 
 First, create a file called `ContactList.js` inside the `src` folder.
 
-> **Note:** This code has some errors, which are important to understand and debug.
+> **Note** This code has some errors, which are important to understand and debug.
 
 ```js
 // src/ContactList.js
@@ -390,6 +390,8 @@ function ContactList() {
 ```
 
 The next issue is that JavaScript functions can only return one thing. In the above code, `h2` and `ul` are sibling elements, and the expression attempts to return both. However, only one element can be returned. To fix this issue, everything must be wrapped in a single tag. You can use `<> </>`. This empty tag is known as a _fragment_ and is standard practice for rendering multiple elements in a single component if you don't want to use another HTML element (like a `div` or `section` tag) to contain them.
+
+> **Note** You can have as many nested HTML or React components inside your component. Only the top level must be one component/HTML element.
 
 ```js
 function ContactList() {
@@ -521,7 +523,7 @@ There is only one `Post` component so far and it has hard-coded values.
 
 Import the data and change the `Post` component below to use `{}` to embed values from the `postInfo` data. For now, that means all of the posts will have the same data. In later lessons, you will learn how to have the same component with different data.
 
-> **Note:** you can rename `postData` to `PostInfo` during import:
+> **Note** you can rename `postData` to `PostInfo` during import:
 
 ```jsx
 import postInfo from "./data.js";
@@ -577,7 +579,7 @@ root.render(
 );
 ```
 
-> **Note:** `React.StrictMode` is a special wrapper that enforces best practices for React and also will disallow older React syntax that will eventually become obsolete.
+> **Note** `React.StrictMode` is a special wrapper that enforces best practices for React and also will disallow older React syntax that will eventually become obsolete. It will also cause your components to render twice while in development: when you debug by adding console logs, you may notice things log twice, it is might be caused by this wrapper. [Strict Mode](https://reactjs.org/docs/strict-mode.html)
 
 You can remove it to simplify this example:
 
