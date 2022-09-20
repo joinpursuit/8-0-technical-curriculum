@@ -64,9 +64,9 @@ To handle the updates based on user interaction, React has a different approach 
 
 ## React in terms of code
 
-You can begin coding in react by [Trying React](https://reactjs.org/docs/getting-started.html#try-react)from the examples in the docs. To summarize here, you have a few options:
+You can begin coding in react by [Trying React](https://reactjs.org/docs/getting-started.html#try-react) from the examples in the docs. To summarize here, you have a few options:
 
-- Use an online playground like CodePen or CodeSandbox. These are useful for essential learning and experimentation: just like you used repl.it (or similar) at the start of your coding journey, this zero-configuration that works in any browser and on any computer option can be great to get started.
+- Use an online playground like CodePen or CodeSandbox. These are useful for essential learning and experimentation: just like you used repl.it (or similar) at the start of your coding journey, this zero-configuration that works in any browser and on any computer and can be a great option to get started.
 - You can add React to a website with script tags. This is another fast and easy way to try React.
 - You can use a Create React App. This application has many useful basic configurations and features to help make your code ready for production.
 
@@ -579,7 +579,7 @@ root.render(
 );
 ```
 
-> **Note** `React.StrictMode` is a special wrapper that enforces best practices for React and also will disallow older React syntax that will eventually become obsolete. It will also cause your components to render twice while in development: when you debug by adding console logs, you may notice things log twice, it is might be caused by this wrapper. [Strict Mode](https://reactjs.org/docs/strict-mode.html)
+> **Note** `React.StrictMode` is a special wrapper that enforces best practices for React and also will disallow older React syntax that will eventually become obsolete. It will also cause your components to render twice while in development: when you debug by adding console logs, you may notice things log twice, it might be caused by this wrapper. [Strict Mode](https://reactjs.org/docs/strict-mode.html)
 
 You can remove it to simplify this example:
 
