@@ -41,7 +41,7 @@ React is a third-party library that you can download and use to make building ro
 
 ## Introduction to React
 
-React is a JavaScript library that was created by Facebook. Developers use React to build web applications' UI and front-end logic. Until now, you have been building UI by writing a single large HTML file, then linking it to a JavaScript file. The JavaScript file uses [DOM manipulation](https://github.com/joinpursuit/Pursuit-Core-Web/tree/master/html_css_dom/dom_1) to edit, add, and remove elements in response to user interaction. This approach has worked well for us but has some challenges when scaling to larger applications. Consider the following image:
+React is a JavaScript library that was created by Facebook. Developers use React to build web applications' UI and front-end logic. Until now, you have been building UI by writing a single large HTML file, then linking it to a JavaScript file. The JavaScript file uses [DOM manipulation](https://github.com/joinpursuit/Pursuit-Core-Web/tree/master/html_css_dom/dom_1) to edit, add, and remove elements in response to user interaction. This approach has worked well for so far, but has some challenges when scaling to larger applications. Consider the following image:
 
 ![Facebook homepage redesign](<https://cdn.vox-cdn.com/thumbor/0KnV_DIxDm00kPsX8hR0f4ZzMIU=/0x0:2048x1410/920x613/filters:focal(861x542:1187x868):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/63696407/facebook_website_redesign_1.9.jpg>)
 
@@ -56,40 +56,38 @@ These are illustrated here:
 
 ![Facebook redesign separated into components](./assets/fbInterface.jpg)
 
-With React, you will be able to organize the code for this kind of application by UI elements (components) in a more maintainable way.
+With React, you will be able to organize the code for this kind of application by UI elements (components) in a more maintainable way. Each UI element will be its own component. Each component will have its own file, allowing for smaller files and better organization.
 
 ## Virtual DOM
 
-How does React put all these components on a page so the user can see it? How does it update when something on the page changes?
-
-First, React converts all the code into HTML, CSS, and JavaScript, which the browser understands, and bundles all the code into one file. This is done behind the scenes. An app like Create React App is configured to handle this for you.
-
-To handle the updates based on user interaction, React has a different approach than what you have done with vanilla JavaScript. React uses a **virtual DOM**. This DOM isn't the one you see on the page. The virtual DOM works behind the scenes. The virtual DOM keeps track of what to update in the real DOM. Whenever a React component changes, it updates the virtual DOM first. Then, the virtual DOM is compared to the actual DOM. React has algorithms that will only update only the necessary components of the page. This makes updates relatively fast or `Reactive`.
+To handle the updates based on user interaction, React has a different approach than what you have done with vanilla JavaScript. React uses a **virtual DOM**. This DOM isn't the one you see on the page. The virtual DOM works behind the scenes. The virtual DOM keeps track of what to update in the real DOM. Whenever a React component changes, it updates the virtual DOM first. Then, the virtual DOM is compared to the actual DOM. React has algorithms that will only update only the necessary components of the page. This makes updates relatively fast or `reactive`.
 
 ## React in terms of code
 
-You can [Try React](https://reactjs.org/docs/getting-started.html#try-react) by following the docs. You have a few options:
+You can begin coding in react by [Trying React](https://reactjs.org/docs/getting-started.html#try-react)from the examples in the docs. To summarize here, you have a few options:
 
-- Use an online playground like CodePen or CodeSandbox. These are useful for essential learning and experimentation: just like you used Repl.it (or similar) at the start of your coding journey, this zero-configuration option can be great to get started.
+- Use an online playground like CodePen or CodeSandbox. These are useful for essential learning and experimentation: just like you used repl.it (or similar) at the start of your coding journey, this zero-configuration that works in any browser and on any computer option can be great to get started.
 - You can add React to a website with script tags. This is another fast and easy way to try React.
 - You can use a Create React App. This application has many useful basic configurations and features to help make your code ready for production.
 
-In this unit, you will use Create React App because of the following features:
+In this unit, you will use Create React App primarily for the following features:
 
-- Automatic browser reloading when you make a change and other pre-configurations that make using it very easy
-- Helpful error messages
-- File and folder structure that is easy to use and maintain
-- Configured for easy deployment
+- Automatic browser reloading when you make a change and other pre-configurations that make using it very easy.
+- Helpful error messages.
+- File and folder structure already configured for easy use and maintenance.
+- Configured for easy deployment.
 
-To get started (Please feel free to read through or code along):
+## Getting Started with React
+
+Please feel free to read through or code along with the following code examples.
 
 In the terminal, navigate to a convenient location on your computer and type:
 
 - `npx create-react-app@5.0 my-social-media-app`
-- **npx** allows you to download what you need to create a new create-react-app one time and then delete the unnecessary set-up files.
-- **create-react-app** allows you to start a new Create React App project
-- **@5.0** allows you to download version 5.0 of Create React App. Setting the version is helpful for class. Utilizing the same version will allow you, your instructors, and the class notes to have the same version to learn and study. If you don't include this, it will download the latest version, which may have some variations to what you see in class.
-- **my-social-media-app** this is the name of your project and the file that will contain your Create React App. You can name it anything you want.
+  - **npx** allows you to download what you need to create a new create-react-app one time and then delete the unnecessary set-up files.
+  - **create-react-app** allows you to start a new Create React App project
+  - **@5.0** allows you to download version 5.0 of Create React App. Setting the version is helpful for class. Utilizing the same version will allow you, your instructors, and the class notes to have the same version to learn and study. If you don't include this, it will download the latest version, which may have some variations to what you see in class.
+  - **my-social-media-app** this is the name of your project and the folder that will contain your Create React App. You can name it anything you want.
 
 Inside this project, you will see the following folders and files.
 
@@ -108,13 +106,15 @@ Inside this project, you will see the following folders and files.
 To start the app, follow the instructions in the terminal. They should look like the following:
 
 ```
-cd my-app
+cd my-social-media-app
 npm start
 ```
 
-> **Note:** The app can take a long time to download and start the first time.
+> **Note:** The app can take a long time to download and start.
 
-Take a moment to break down what each file and folder does. There is a lot of boilerplate code you will not need to use or change for labs, assessments, or even some projects for this course. However, they will be explained below so you can comfortably navigate the application.
+## Create React App files and folders
+
+This section will break down what each file and folder does. There is a lot of boilerplate code you will not need to use or change for labs, assessments, or even some projects for this course. However, they will be explained below so you can comfortably navigate the application.
 
 > **Note** The only file you will be heavily editing for your in-class builds is `src/App.js`.
 
@@ -136,7 +136,7 @@ This is a file that contains metadata about this project.
 
 Metadata is data about data. One of the most common examples of metadata is the data attached to a digital photograph. The data most people are interested in is the photograph. But it will also contain more data that is not visible in the picture - like the time the photo was taken, what device took the photo, the location and camera settings, and more - all of this hidden data is metadata.
 
-The `package.json` is the metadata for this project. You can edit some of the content here (like the `author` field - you can put your name in there). However, you must keep the format in proper [JSON](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON).
+The `package.json` is the metadata for this project. You can edit some of the content here (like adding an `author` field - so you can put your name in this project). However, you must keep the format in proper [JSON](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON).
 
 #### `.gitignore`
 
@@ -186,7 +186,7 @@ The `robots.txt` allows you to set some preference for what to crawl and scrape.
 
 The `src/` folder (short for source) is where you will build your React application. All the code in this file will be bundled to build your React application. If you try to add code or assets outside of this folder, they will not be able to be loaded into your React application (which will be loaded inside the `div` with the id of `root` from `public/index.html`).
 
-There are several files here that demonstrate how to set up some functionality, including:
+There are several files here that demonstrate how to set up some common application elements, including:
 
 #### `index.css` and `App.css`
 
@@ -203,7 +203,7 @@ This is an example of one way to set up testing. These files will not be used be
 
 #### `logo.svg`
 
-SVG (scalable vector graphics)[https://en.wikipedia.org/wiki/Scalable_Vector_Graphics] are a modern way to create assets like logos that can size up or down without losing the quality of the image. This example is imported into `App.js` to demonstrate how to import and use one.
+SVG [scalable vector graphics](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics) are a modern way to create assets like logos that can size up or down without losing the quality of the image. This example is imported into `App.js` to demonstrate how to import and use one.
 
 #### `index.js`
 
@@ -223,21 +223,21 @@ If you have started the Create React App and it has loaded in the browser, you c
 
 **Note:** If a view has not opened in the browser, try going to http://localhost:3000
 
+![Create React App initial view](./assets/create-react-app-initial.png)
+
 You can edit this file and see changes reload when you have saved the file. Try to edit the text `Learn React` to something else; for example, `React is very cool!`
 
-Now that you have oriented yourself inside Create React app and have looked at some simple code examples, you can return to learning how React updates the DOM differently than vanilla JavaScript.
+Now that you have oriented yourself inside Create React App and have looked at some of the provided code examples, you can return to learning how React's syntax and strategy is different from vanilla JavaScript.
 
 ## Introduction to JSX
 
-To the user, the React app looks like any other web page.
+Look at the `src/App.js` file and lok at it in the browser again. To the user, the React app looks like any other web page.
 
-However, looking at `App.js`, you will note that this code doesn't look quite like HTML or JavaScript. It actually looks like a mix of the two.
+However, looking at `App.js`, you will note that some of this code doesn't look quite like HTML or JavaScript. It actually looks like a mix of the two.
 
 This mix is called `JSX`, and it [extends the syntax of JavaScript](https://reactjs.org/docs/introducing-jsx.html). In short, it allows for creating dynamic HTML components in a syntax that is easy to read and update.
 
 Simplify the `App.js` file so that you can focus on each line of code and understand what it does. The following code should give you a blank but functional web page:
-
-## Importing and using CSS
 
 ```js
 // src/App.js
@@ -250,7 +250,14 @@ function App() {
 export default App;
 ```
 
+## Importing and using CSS
+
 The top line imports and applies the CSS from the file `App.css`.
+
+```js
+// src/App.js
+import "./App.css";
+```
 
 Go into `src/App.css`, remove the other CSS and add:
 
@@ -334,9 +341,11 @@ const hello = <h1>Hello, {formatName(user)}!</h1>;
 
 `App.js` is just one small component. However, if the goal were to build your own simple social media site, this file would quickly grow very large. One of the main features of React is the ability to create and render many components at a time in an organized and maintainable way.
 
-Create a new child component that `App.js` will import and render. This component will list some contacts.
+Try to a new child component that `App.js` will import and render. This component will list some contacts.
 
-Create a file called `ContactList.js` inside the `src` folder.
+First, create a file called `ContactList.js` inside the `src` folder.
+
+> **Note:** This code has some errors, which are important to understand and debug.
 
 ```js
 // src/ContactList.js
@@ -352,7 +361,7 @@ function ContactList() {
 }
 ```
 
-You will first notice that your text editor probably turned your code all red when you added this component.
+You will first notice that your text editor probably triggered a lot of error messages when you added this component.
 
 This is because there are some gotchas with JSX and JavaScript.
 
@@ -364,7 +373,7 @@ function ContactList() {
 }
 ```
 
-To return the expression as one line of code, but to also allow for formatting, you must wrap the expression in parentheses, and the parenthesis must start on the same line as the return statement, or else the return statement will return `null`.
+To return the expression as one line of code, but to also allow for formatting, you must wrap the expression in parentheses, and the opening parenthesis must start on the same line as the return statement, or else the return statement will return `null`.
 
 ```jsx
 // src/ContactList.js
@@ -417,7 +426,7 @@ or
 <ContactList />
 ```
 
-If you are not putting any code inside the component, self-closing tags are usually the best practice.
+If you are not putting any more components or HTML elements inside the component, self-closing tags are usually the best practice.
 
 ```jsx
 // src/App.js
@@ -435,7 +444,7 @@ function App() {
 export default App;
 ```
 
-However, there is an error with this code. This is because `ContactList` must be exported before it can be imported.
+However, there is still an error with this code. This is because `ContactList` must be exported before it can be imported.
 
 Return to the `ContactList.js` file and add `export default`:
 
@@ -462,7 +471,7 @@ Forgetting to export is a common error.
 
 Now, build a feed that will mimic the main feed of a social media application. Like any social feed, this feed should be set up to render any number of posts.
 
-This is where components become highly advantageous. A Facebook post will be the same format no matter who posts it. Different posts might include text, an image, or comments, but the template is the same every time. This allows the developers to create one template for a post and then allows the data to be embedded into the template to create the posts dynamically. This allows for automatic updates based on data rather than requiring developers to handcraft HTML for each update.
+This is where components become highly advantageous. A Facebook post will be the same format no matter who posts it. Different posts might include text, an image, or comments, but the template is the same every time. This allows the developers to create one template for a post and which allows data to be embedded into the template to create the posts dynamically. This strategy allows for automatic updates based on data rather than requiring developers to handcraft custom HTML for each update.
 
 First, create some data. Create a file `data.js` inside the `src` folder:
 
@@ -477,7 +486,7 @@ const postData = {
 export default postData;
 ```
 
-Create another file, `Post.js`. Notice you can rename `postData` to `PostInfo` during import:
+Create another file, `Post.js`.
 
 ```js
 export default function Post() {
@@ -508,9 +517,11 @@ function App() {
 }
 ```
 
-There is only one `Post` component. This means: that `Post` has to be reusable. A single feed has to be able to render multiple `Post` components.
+There is only one `Post` component so far and it has hard-coded values.
 
-The `Post` component below uses `{}` to embed values from the `postInfo` variable. For now, that means all of the posts will have the same content. In later lessons, passing in different properties for different posts will be demonstrated.
+Import the data and change the `Post` component below to use `{}` to embed values from the `postInfo` data. For now, that means all of the posts will have the same data. In later lessons, you will learn how to have the same component with different data.
+
+> **Note:** you can rename `postData` to `PostInfo` during import:
 
 ```jsx
 import postInfo from "./data.js";
@@ -535,6 +546,7 @@ function App() {
   return (
     <div className="App">
       {hello}
+      <h2>Feed</h2>
       <Post />
       <Post />
       <ContactList />
@@ -545,7 +557,7 @@ function App() {
 
 ![feedImgNoCSS](./assets/feedImgNoCSS.png)
 
-Now there are multiple components rendered on the page all at once. The Post component is reusable. In a later lesson, you will learn how to work with an array of objects, allowing the reusable components to render different data from each object in the array.
+Now there are multiple `Post` components rendered on the page all at once. This is a very simple demonstration of how a component is reusable in React.
 
 # Bonus: A deeper dive into React render
 
@@ -575,7 +587,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<App />);
 ```
 
-`ReactDOM.createRoot()` function accepts an argument that will be a DOM element. It uses vanilla JavaScript to find this element in the DOM (from `public/index.html`). It returns an object that has a method `render()`. Render will accept a single element like `App`.
+`ReactDOM.createRoot()` function accepts an argument that will be an existing DOM element where you want to load React. It uses vanilla JavaScript to find this element in the DOM (from `public/index.html`). It returns an object that has a method `render()`. Render will accept a single element like `App`, which will be the top level component loaded into the DOM.
 
 Learn more about [Rendering Elements](https://reactjs.org/docs/rendering-elements.html) from the official React documentation.
 
