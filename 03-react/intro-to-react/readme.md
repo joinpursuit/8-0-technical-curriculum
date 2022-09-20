@@ -19,7 +19,7 @@
 
 ## Demo app
 
-- [link](https://github.com/joinpursuit/Pursuit-Core-Web-React-Introduction-Project)
+This is the full code for the examples in this pre-reading. You may try to code out the examples to learn or to use the final code as a reference. [link](https://github.com/joinpursuit/Pursuit-Core-Web-React-Introduction-Project)
 
 ## Motivation for learning React
 
