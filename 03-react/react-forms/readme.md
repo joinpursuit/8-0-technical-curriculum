@@ -58,7 +58,7 @@ Initially, when you add an input element, you can interact with it. This [checkb
 React will need two more properties to give React control: one that adds the `checked` key-value pair, which will show the checkbox as checked or unchecked. An event handler `onChange` will be called whenever a change on the element occurs.
 
 ```html
-<input type="checkbox" checked="{checked}" onChange="{handleCheckboxChange}" />
+<input type="checkbox" checked={checked} onChange="{handleCheckboxChange}" />
 ```
 
 You'll notice that after adding these properties, when you check the checkbox, it stays unchecked because React is now controlling the state, and checked is always set to the initial value of `false`.
