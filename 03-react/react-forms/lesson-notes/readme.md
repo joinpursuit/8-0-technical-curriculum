@@ -95,7 +95,7 @@ function handleSelectChange() {}
 Add the event handler/listener to the `select` tag.
 
 ```js
-<select id="favFlavor" onChange="{handleSelectChange}">
+<select id="favFlavor" onChange={handleSelectChange}>
 ```
 
 How do you set the value for the selected option?
