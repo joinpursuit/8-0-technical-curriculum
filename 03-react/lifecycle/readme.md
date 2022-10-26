@@ -131,31 +131,6 @@ useEffect(() => {
 }, []);
 ```
 
-## Multiple useEffects
-
-If you want to set state for more than one thing on page load, you must use multiple `useEffect()` functions.
-
-If you put both functions into one `useEffect()` you will get an infinite loop:
-
-```js
-useEffect(() => {
-  getOrderInfo();
-  getUser();
-}, []);
-```
-
-Rather, you can use `useEffect()` multiple times in the same component:
-
-```js
-useEffect(() => {
-  getOrderInfo();
-}, []);
-
-useEffect(() => {
-  getUser();
-}, []);
-```
-
 ## Adding values to the dependency array
 
 Right now, `getData` is only called on page load. If you needed to get a different data set depending on the user, you could pass in the user object to trigger another `getData` call.
@@ -190,6 +165,33 @@ useEffect(() => {
 ```
 
 Further, suppose you have an array of objects. In that case, it can make more sense to figure out which value (or values) would serve as a good check (like a userId of the first user) and place that into the dependency array rather than creating complex logic to check all the values inside.
+
+## Multiple useEffects
+
+If you want to set state for more than one thing on page load, you must use multiple `useEffect()` functions.
+
+If you put both functions into one `useEffect()` you will get an infinite loop:
+
+```js
+useEffect(() => {
+  getOrderInfo();
+  getUser();
+}, [orderInfo, user]);
+```
+
+Rather, you can use `useEffect()` multiple times in the same component:
+
+```js
+useEffect(() => {
+  getOrderInfo();
+}, [orderInfo]);
+
+useEffect(() => {
+  getUser();
+}, [user]);
+```
+
+It's also best practice to call useEffect once for every concern/feature even if you are not creating an infinite loop. [useEffect best practices, react docs](https://reactjs.org/docs/hooks-effect.html#tip-use-multiple-effects-to-separate-concerns)
 
 ## Update a value after state has changed
 
