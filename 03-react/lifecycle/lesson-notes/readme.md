@@ -75,12 +75,27 @@ The following would cause an infinite loop:
 useEffect(() => {
   getSomeValue();
   getAnotherValue();
-}, []);
+}, [someValue, anotherValue]);
 ```
 
-To avoid an infinite loop, you add another `useEffect()` function to handle different state changes.
+To avoid an infinite loop, you add another `useEffect()` function to handle different state changes.  
 
 ```js
+// DEMO, do not code:
+useEffect(() => {
+  getSomeValue();
+}, [someValue]);
+
+useEffect(() => {
+ getAnotherValue();
+}, [anotherValue]);
+```
+
+It's also best practice to call useEffect once for every concern/feature. In the case of our Daily Home Page App, we have two concerns on page load: getting a random number and setting the day.
+
+```js
+// App.js
+
 // On page load
 useEffect(() => {
   setNumber(Math.random());
